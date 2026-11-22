@@ -183,15 +183,89 @@
 
   /* ---------- ইনস্টল ---------- */
   var ib = document.getElementById('install'), prompt_ = null;
+
+  var installed = navigator.standalone === true ||
+                  matchMedia('(display-mode: standalone)').matches ||
+                  matchMedia('(display-mode: window-controls-overlay)').matches;
+  if (installed && ib) ib.hidden = true;
+
+  // ব্রাউজার নিজে ডায়ালগ দেখাতে না পারলে হাতে-কলমে পথটা বলে দিই
+  function manual(why) {
+    var ua = navigator.userAgent;
+    var mobile = /Android|Mobile/i.test(ua);
+    var steps = mobile
+      ? 'ব্রাউজারের <b>মেনু (⋮)</b> খুলুন, তারপর <b>“Install app”</b> বা <b>“Add to Home screen”</b> বেছে নিন।'
+      : 'অ্যাড্রেস বারের ডান পাশে <b>ইনস্টল আইকন (⊞)</b> আছে কিনা দেখুন, অথবা <b>মেনু (⋮)</b> → ' +
+        '<b>“Cast, save and share”</b> → <b>“Install page as app”</b> (Edge-এ <b>“Apps” → “Install this site as an app”</b>)।';
+
+    var box = document.getElementById('manualtip');
+    if (!box) {
+      box = document.createElement('div');
+      box.id = 'manualtip'; box.className = 'iostip';
+      box.innerHTML = '<div></div><button type="button" aria-label="বন্ধ করুন">&times;</button>';
+      var w = document.querySelector('.wrap'), h = w && w.querySelector('header');
+      if (h && h.nextSibling) w.insertBefore(box, h.nextSibling);
+      else if (w) w.appendChild(box);
+      box.querySelector('button').addEventListener('click', function () { box.remove(); });
+    }
+    box.querySelector('div').innerHTML = '<b>' + why + '</b> ' + steps;
+    box.hidden = false;
+    box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
   window.addEventListener('beforeinstallprompt', function (e) {
     e.preventDefault(); prompt_ = e;
-    if (ib) ib.hidden = false;
+    if (ib && !installed) ib.hidden = false;
   });
+
   if (ib) ib.addEventListener('click', function () {
-    if (!prompt_) return;
-    prompt_.prompt();
-    prompt_.userChoice.then(function () { prompt_ = null; ib.hidden = true; });
+    if (!prompt_) {
+      manual('ব্রাউজার এখন ইনস্টলের ডায়ালগ দিতে পারছে না —');
+      return;
+    }
+    var p = prompt_;
+    prompt_ = null;                       // prompt() একবারই ডাকা যায়
+    var choice;
+    try { choice = p.prompt(); } catch (e) {
+      manual('ইনস্টলের ডায়ালগ খোলা গেল না —'); return;
+    }
+    Promise.resolve(choice).then(function () { return p.userChoice; })
+      .then(function (res) {
+        if (res && res.outcome === 'accepted') {
+          ib.hidden = true;
+          toast('ইনস্টল হয়ে গেছে — হোম স্ক্রিনে দেখুন');
+        } else {
+          // বাতিল হলে বোতামটি থাকুক, যেন আবার চেষ্টা করা যায়
+          toast('ইনস্টল বাতিল হয়েছে — আবার চাপ দিতে পারেন');
+        }
+      })
+      .catch(function () { manual('ইনস্টল সম্পন্ন হয়নি —'); });
   });
+  /* ---------- iOS: ইনস্টল বোতাম নেই, তাই হাতে-কলমে ইঙ্গিত ---------- */
+  var tip = document.getElementById('iostip');
+  if (tip) {
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var isSafari = /^((?!chrome|android|crios|fxios|edgios).)*safari/i.test(navigator.userAgent);
+    var standalone = navigator.standalone === true ||
+                     matchMedia('(display-mode: standalone)').matches;
+    var hid = ls(function () { return localStorage.getItem('rad-iostip'); }, null);
+    if (isIOS && !standalone && !hid) {
+      if (!isSafari) {
+        // iOS-এ হোম স্ক্রিনে বসানো শুধু Safari-তেই সম্ভব — Edge/Chrome/Firefox সবই WebKit
+        tip.querySelector('div').innerHTML =
+          '<b>ফোনে অ্যাপের মতো রাখতে Safari লাগবে</b> — iPhone-এ এই সুবিধা অ্যাপল শুধু Safari-কেই দেয়। ' +
+          'পাতাটি <b>Safari</b>-তে খুলে <b>Share</b> → <b>“Add to Home Screen”</b> করুন। ' +
+          'এখানে পড়তে কোনো অসুবিধা নেই, শুধু ইনস্টল হবে না।';
+      }
+      tip.hidden = false;
+    }
+    tip.querySelector('button').addEventListener('click', function () {
+      tip.hidden = true;
+      try { localStorage.setItem('rad-iostip', '1'); } catch (e) {}
+    });
+  }
+
   window.addEventListener('appinstalled', function () {
     prompt_ = null; if (ib) ib.hidden = true;
   });

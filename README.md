@@ -81,8 +81,9 @@ git add . && git commit -m "ruqyah — ayat o dua" && git push
 
 ## ফোনে ইনস্টল
 
-- **অ্যান্ড্রয়েড / ক্রোম** — নিচে বাঁয়ে **⤓ ইনস্টল করুন** বোতাম, অথবা মেনু → *Add to Home screen*
-- **iOS / Safari** — **Share** → *Add to Home Screen*
+- **অ্যান্ড্রয়েড — Chrome / Edge / Brave** — নিচে বাঁয়ে **⤓ ইনস্টল করুন** বোতাম, অথবা মেনু → *Add to Home screen*
+- **ডেস্কটপ — Chrome / Edge** — অ্যাড্রেস বারের ইনস্টল আইকন, অথবা Edge-এ মেনু → *Apps → Install this site as an app*
+- **iOS — শুধু Safari** — **Share** → *Add to Home Screen*। অ্যাপল সব ব্রাউজারকে WebKit ব্যবহার করতে বাধ্য করে এবং হোম স্ক্রিনে PWA বসানো শুধু Safari-তেই দেয়, তাই iOS-এর Edge/Chrome দিয়ে ইনস্টল হবে না — পাতা দেখা যাবে, ইনস্টল হবে না। হোম পাতায় iOS ব্যবহারকারীদের জন্য ইঙ্গিত দেখানো হয়।
 - আইকন লম্বা চাপ দিলে চারটি সংকলনে সরাসরি যাওয়ার শর্টকাট
 
 ## আপডেট

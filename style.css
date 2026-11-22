@@ -185,3 +185,13 @@ h2.ch .chx,.ti .tix{font-family:'Noto Naskh Arabic','Traditional Arabic',serif;
      background:var(--soft);border:1px solid var(--line);border-radius:999px;
      padding:2px 11px;white-space:nowrap;}
 .tag.warn{color:var(--acc2);border-color:var(--acc2);background:transparent;}
+
+/* ---------- iOS ইনস্টলের ইঙ্গিত ---------- */
+.iostip{display:flex;gap:12px;align-items:flex-start;background:var(--soft);
+        border:1px solid var(--line);border-left:4px solid var(--t);border-radius:9px;
+        padding:14px 16px;margin-bottom:22px;font-size:14.5px;color:var(--mut);line-height:1.64;}
+.iostip[hidden]{display:none;}
+.iostip b{color:var(--ink);font-weight:600;}
+.iostip button{flex:0 0 auto;background:none;border:none;color:var(--mut);font-size:20px;
+               line-height:1;cursor:pointer;padding:0 2px;font-family:inherit;}
+.iostip button:hover{color:var(--ink);}
