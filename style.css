@@ -195,3 +195,59 @@ h2.ch .chx,.ti .tix{font-family:'Noto Naskh Arabic','Traditional Arabic',serif;
 .iostip button{flex:0 0 auto;background:none;border:none;color:var(--mut);font-size:20px;
                line-height:1;cursor:pointer;padding:0 2px;font-family:inherit;}
 .iostip button:hover{color:var(--ink);}
+
+/* ---------- নিজে রুকইয়াহ করার নিয়ম ---------- */
+.method{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);
+        border-radius:11px;margin-bottom:20px;overflow:hidden;}
+.method summary{display:flex;align-items:center;gap:9px;padding:14px 18px;cursor:pointer;
+                font-family:'Noto Serif Bengali','Nirmala UI',serif;font-size:17px;font-weight:600;
+                color:var(--ink);list-style:none;-webkit-tap-highlight-color:transparent;}
+.method summary::-webkit-details-marker{display:none;}
+.method summary .mi{color:var(--acc);font-size:13px;}
+.method summary .mx{margin-left:auto;font-family:inherit;font-size:13px;font-weight:400;
+                    color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:2px 11px;}
+.method:not([open]) summary .mx::after{content:"দেখুন";}
+.method[open] summary .mx::after{content:"লুকান";}
+.method summary .mx{font-size:0;}
+.method summary .mx::after{font-size:13px;}
+.method .mb{padding:0 18px 16px;border-top:1px solid var(--line);}
+.method h4{font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;
+           color:var(--acc2);margin:16px 0 8px;}
+.method .mp{font-size:15.5px;line-height:1.7;color:var(--mut);}
+.method .mp b{color:var(--ink);font-weight:600;}
+.mq{background:var(--soft);border-left:3px solid var(--acc2);border-radius:7px;
+    padding:12px 15px;font-size:15.5px;line-height:1.72;color:var(--ink);}
+.mrow{display:flex;gap:12px;align-items:baseline;padding:7px 0;border-bottom:1px dotted var(--line);}
+.mrow:last-child{border-bottom:none;}
+.mrow .ml{flex:0 0 auto;min-width:76px;font-size:14.5px;font-weight:700;color:var(--acc2);}
+.mrow .mv{flex:1 1 auto;font-size:15.5px;color:var(--mut);line-height:1.6;}
+.mrow.tot .ml,.mrow.tot .mv{color:var(--ink);font-weight:700;}
+ul.mu{list-style:none;margin:0;}
+ul.mu li{position:relative;padding-left:19px;margin-bottom:8px;font-size:15.5px;line-height:1.68;color:var(--mut);}
+ul.mu li:last-child{margin-bottom:0;}
+ul.mu li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--acc);}
+ul.mu li b{color:var(--ink);font-weight:600;}
+ol.mo{list-style:none;counter-reset:m;margin:0;}
+ol.mo li{counter-increment:m;position:relative;padding-left:32px;margin-bottom:10px;
+         font-size:15.5px;line-height:1.68;color:var(--mut);}
+ol.mo li:last-child{margin-bottom:0;}
+ol.mo li::before{content:counter(m,bengali);position:absolute;left:0;top:1px;width:22px;height:22px;
+                 border-radius:50%;background:var(--acc);color:var(--on-head);font-size:12.5px;
+                 font-weight:700;display:grid;place-items:center;}
+ol.mo li b{color:var(--ink);font-weight:600;}
+.mflow{display:flex;flex-wrap:wrap;align-items:center;gap:7px;}
+.mflow span{flex:0 1 auto;background:var(--soft);border:1px solid var(--line);border-radius:8px;
+            padding:7px 12px;font-size:14px;font-weight:600;color:var(--ink);line-height:1.4;}
+.mflow span i{display:block;font-style:normal;font-size:12.5px;font-weight:400;color:var(--mut);}
+.mflow b{color:var(--acc2);font-size:15px;}
+.mn2{margin-top:14px;padding:11px 14px;background:var(--soft);border-radius:8px;
+     font-size:14.5px;line-height:1.66;color:var(--mut);}
+.mn2 b{color:var(--ink);font-weight:600;}
+
+/* কারীন পাতার সূরা-তালিকা */
+table.sur{margin-top:12px;font-size:15px;}
+table.sur th{font-size:13px;}
+table.sur td{vertical-align:top;}
+table.sur td:last-child,table.sur th.sx{text-align:center;}
+table.sur td.sx{font-weight:700;color:var(--on-head);background:var(--acc);
+                width:1%;white-space:nowrap;}

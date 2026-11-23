@@ -1,6 +1,6 @@
 /* রুকইয়াহ — আয়াত ও দোয়া · সার্ভিস ওয়ার্কার
    নথি বদলালে VERSION বাড়িয়ে দিন (v1 → v2), নইলে পুরনো ক্যাশ থেকেই দেখাবে */
-const VERSION = 'ruqyah-ayat-dua-v3';
+const VERSION = 'ruqyah-ayat-dua-v4';
 
 const ASSETS = [
   './',
@@ -9,6 +9,7 @@ const ASSETS = [
   './dua.html',
   './kobor-ayat.html',
   './kobor-dua.html',
+  './qareen.html',
   './style.css',
   './app.js',
   './manifest.json',
