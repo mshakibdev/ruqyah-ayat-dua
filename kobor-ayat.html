@@ -16,22 +16,100 @@
 <script>try{var t=localStorage.getItem('rad-theme');if(t)document.documentElement.setAttribute('data-theme',t);
 var f=localStorage.getItem('rad-ar');if(f)document.documentElement.style.setProperty('--arsize',f+'px');}catch(e){}</script>
 </head>
-<body>
-<div class="wrap">
+<body class="g-mul">
 
-<div class="topbar">
-    <a href="index.html">হোম</a>
-    <a href="tair.html">আয়াতুত তাইর</a>
-    <a href="dua.html">রুকইয়াহর দোয়াসমূহ</a>
-    <a href="kobor-ayat.html" aria-current="page">কবরের জাদুর আয়াত</a>
-    <a href="kobor-dua.html">কবরের জাদুর দোয়া</a>
-    <a href="qareen.html">কারীনের দোয়া</a>
-    <a href="nokkhotro.html">নক্ষত্র ও আসমানের আয়াত</a>
-    <a href="atke.html">আটকে থাকা কাজ ও প্রোডাক্টিভিটি</a>
-    <a href="rizq.html">ফাক্কুত তা‌তিল — রিযিকের বাধা</a>
-    <a href="git-pa.html">পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</a>
-    <a href="sthulota.html">স্থূলতা ও ওজন বৃদ্ধি</a>
-</div>
+<header class="bar">
+  <a class="brand" href="index.html">রুকইয়াহ<i>আয়াত ও দোয়া</i></a>
+
+  <nav class="dnav" aria-label="সংকলনের তালিকা">
+    <a class="dgh" href="index.html">হোম</a>
+    <div class="dg g-mul" data-on="1">
+      <button class="dgb" aria-expanded="false" aria-controls="dp0">মূল সংকলন<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp0" hidden>
+      <a href="tair.html">আয়াতুত তাইর</a>
+      <a href="dua.html">রুকইয়াহর দোয়াসমূহ</a>
+      <a href="kobor-ayat.html" aria-current="page">কবরের জাদুর আয়াত</a>
+      <a href="kobor-dua.html">কবরের জাদুর দোয়া</a>
+      <a href="qareen.html">কারীনের দোয়া</a>
+      <a href="nokkhotro.html">নক্ষত্র ও আসমানের আয়াত</a>
+      </div>
+    </div>
+    <div class="dg g-jinn">
+      <button class="dgb" aria-expanded="false" aria-controls="dp1">জিন ও জাদু<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp1" hidden>
+      <a href="hereditary.html">বংশগত জিন (তাবিআ)</a>
+      <a href="marid.html">মারিদ জিন</a>
+      <a href="danaoala.html">ডানাওয়ালা জিন</a>
+      <a href="otyachar.html">জিনের অত্যাচার ও দখলদারি</a>
+      <a href="chalan.html">জিন চালান ও মনের কথা প্রকাশ</a>
+      <a href="tafreej.html">ঘর ও শরীরের তাহরীজ</a>
+      <a href="biched.html">বিচ্ছেদের সিহর</a>
+      </div>
+    </div>
+    <div class="dg g-mon">
+      <button class="dgb" aria-expanded="false" aria-controls="dp2">মন, মাথা ও ঘুম<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp2" hidden>
+      <a href="mathar-nazar.html">মাথার বদনজর</a>
+      <a href="mathar-waswasa.html">মাথার ওয়াসওয়াসা</a>
+      <a href="karin-waswasa.html">কারিন ও ওয়াসওয়াসা</a>
+      <a href="sopno.html">স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ</a>
+      </div>
+    </div>
+    <div class="dg g-deho">
+      <button class="dgb" aria-expanded="false" aria-controls="dp3">শরীর, রিযিক ও কাজ<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp3" hidden>
+      <a href="rizq.html">ফাক্কুত তা‌তিল — রিযিকের বাধা</a>
+      <a href="atke.html">আটকে থাকা কাজ ও প্রোডাক্টিভিটি</a>
+      <a href="git-pa.html">পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</a>
+      <a href="sthulota.html">স্থূলতা ও ওজন বৃদ্ধি</a>
+      <a href="chul.html">চুল পড়া ও সৌন্দর্য নষ্ট হওয়া</a>
+      </div>
+    </div>
+  </nav>
+
+  <span class="now">কবরের জাদুর আয়াত</span>
+  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="menu">
+    <span class="bars" aria-hidden="true"></span>সূচি
+  </button>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<nav class="menu" id="menu" aria-label="সংকলনের তালিকা" hidden>
+  <div class="mh">
+    <b>সব সংকলন</b>
+    <button class="mx" id="menuclose" aria-label="মেনু বন্ধ করুন">&times;</button>
+  </div>
+  <div class="ml">
+  <a href="index.html">হোম</a>
+  <div class="mg g-mul">মূল সংকলন</div>
+  <a class="g-mul" href="tair.html">আয়াতুত তাইর</a>
+  <a class="g-mul" href="dua.html">রুকইয়াহর দোয়াসমূহ</a>
+  <a class="g-mul" href="kobor-ayat.html" aria-current="page">কবরের জাদুর আয়াত</a>
+  <a class="g-mul" href="kobor-dua.html">কবরের জাদুর দোয়া</a>
+  <a class="g-mul" href="qareen.html">কারীনের দোয়া</a>
+  <a class="g-mul" href="nokkhotro.html">নক্ষত্র ও আসমানের আয়াত</a>
+  <div class="mg g-jinn">জিন ও জাদু</div>
+  <a class="g-jinn" href="hereditary.html">বংশগত জিন (তাবিআ)</a>
+  <a class="g-jinn" href="marid.html">মারিদ জিন</a>
+  <a class="g-jinn" href="danaoala.html">ডানাওয়ালা জিন</a>
+  <a class="g-jinn" href="otyachar.html">জিনের অত্যাচার ও দখলদারি</a>
+  <a class="g-jinn" href="chalan.html">জিন চালান ও মনের কথা প্রকাশ</a>
+  <a class="g-jinn" href="tafreej.html">ঘর ও শরীরের তাহরীজ</a>
+  <a class="g-jinn" href="biched.html">বিচ্ছেদের সিহর</a>
+  <div class="mg g-mon">মন, মাথা ও ঘুম</div>
+  <a class="g-mon" href="mathar-nazar.html">মাথার বদনজর</a>
+  <a class="g-mon" href="mathar-waswasa.html">মাথার ওয়াসওয়াসা</a>
+  <a class="g-mon" href="karin-waswasa.html">কারিন ও ওয়াসওয়াসা</a>
+  <a class="g-mon" href="sopno.html">স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ</a>
+  <div class="mg g-deho">শরীর, রিযিক ও কাজ</div>
+  <a class="g-deho" href="rizq.html">ফাক্কুত তা‌তিল — রিযিকের বাধা</a>
+  <a class="g-deho" href="atke.html">আটকে থাকা কাজ ও প্রোডাক্টিভিটি</a>
+  <a class="g-deho" href="git-pa.html">পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</a>
+  <a class="g-deho" href="sthulota.html">স্থূলতা ও ওজন বৃদ্ধি</a>
+  <a class="g-deho" href="chul.html">চুল পড়া ও সৌন্দর্য নষ্ট হওয়া</a>
+  </div>
+</nav>
+
+<div class="wrap">
 
 
 <header>

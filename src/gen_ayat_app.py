@@ -60,6 +60,30 @@ PAGES = [
      'চলাফেরায় বাধা ও পথে ছিটিয়ে রাখা সিহরের আয়াত'),
     ('sthulota.html',  'sthulota', 'স্থূলতা ও ওজন বৃদ্ধি', 'السُّمْنَةُ',
      'সিহর, নজর, হাসাদ ও গিঁটের সন্দেহে স্থূলতার রুকইয়াহ'),
+    ('hereditary.html', 'hereditary', 'বংশগত জিন (তাবিআ)', 'التَّابِعَة',
+     'বংশপরম্পরায় চলে আসা তাবিআ জিনের আয়াত ও দোয়া'),
+    ('marid.html',     'marid',    'মারিদ জিন', 'الْجِنُّ الْمَارِد',
+     'উদ্ধত ও শক্তিশালী মারিদ জিনের আয়াত ও দোয়া'),
+    ('danaoala.html',  'danaoala', 'ডানাওয়ালা জিন', 'الْجِنُّ ذُو الْجَنَاحَيْنِ',
+     'ঘরে ও ঘুমে কষ্ট দেওয়া ডানাওয়ালা জিনের আয়াত ও দোয়া'),
+    ('mathar-nazar.html', 'mathar-nazar', 'মাথার বদনজর', 'عَيْنُ الرَّأْسِ',
+     'মাথায় লাগা বদনজরের আয়াত ও দোয়া'),
+    ('mathar-waswasa.html', 'mathar-waswasa', 'মাথার ওয়াসওয়াসা', 'وَسْوَاسُ الرَّأْسِ',
+     'মাথা ও মস্তিষ্কের ওয়াসওয়াসার আয়াত ও দোয়া'),
+    ('tafreej.html',   'tafreej',  'ঘর ও শরীরের তাহরীজ', 'التَّحْرِيج',
+     'ঘরে ও শরীরে আশ্রয় নেওয়া জিন ও জাদু বের করার রুকইয়াহ'),
+    ('otyachar.html',  'otyachar', 'জিনের অত্যাচার ও দখলদারি', 'ظُلْمُ الْجِنِّ وَتَسَلُّطُهُ',
+     'শরীর, মন ও ঘরে জিনের অন্যায় প্রভাব থেকে মুক্তির আয়াত ও আমল'),
+    ('chalan.html',    'chalan',   'জিন চালান ও মনের কথা প্রকাশ', 'إِرْسَالُ الْجِنِّ',
+     'জিনের মাধ্যমে গোপন তথ্য জানানো ও অনুসরণ বন্ধ করার রুকইয়াহ'),
+    ('karin-waswasa.html', 'karin-waswasa', 'কারিন ও ওয়াসওয়াসা', 'الْقَرِينُ وَالْوَسْوَسَة',
+     'সঙ্গী-শয়তানের কুমন্ত্রণা, সন্দেহ ও অবসেসিভ চিন্তার রুকইয়াহ'),
+    ('sopno.html',     'sopno',    'স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ', 'الرُّؤْيَا وَالْحُلْم',
+     'দুঃস্বপ্ন প্রতিরোধ, প্রশান্ত ঘুম ও সত্য স্বপ্নের আয়াত'),
+    ('biched.html',    'biched',   'বিচ্ছেদের সিহর', 'سِحْرُ التَّفْرِيق',
+     'স্বামী-স্ত্রীর মাঝে বিচ্ছেদ ও বিদ্বেষ সৃষ্টিকারী জাদু ধ্বংসের রুকইয়াহ'),
+    ('chul.html',      'chul',     'চুল পড়া ও সৌন্দর্য নষ্ট হওয়া', 'تَسَاقُطُ الشَّعْر',
+     'অস্বাভাবিক চুল পড়া ও চেহারার উজ্জ্বলতা হারানোর রুকইয়াহ'),
 ]
 
 # ---------------------------------------------------------------------------
@@ -195,18 +219,108 @@ METHODS = {
   নিচের দোয়াগুলো সাতটি আলাদা উৎস থেকে, তাই প্রতিটির পাশে উৎসের অক্ষর দেওয়া আছে।</div>''',
 }
 
-METHODS['nokkhotro'] = protocol_method(
-    'নক্ষত্র ও আসমানের আয়াতের ক্ষেত্রে ফোকাস — <b>মাথার তালু, কপাল ও বুক</b>।',
-    'ফরজ নামাজ জামাতে · ইস্তিগফার ১০০ বার · দরূদ ১০০ বার · সাধ্যমতো সাদাকাহ')
-for _k, (_f, _d) in {'atke': ('আটকে থাকা কাজের ক্ষেত্রে ফোকাস — <b>মাথার তালু, ঘাড়, বুক ও দুই হাত</b>।', 'ফরজ নামাজ জামাতে · ইস্তিগফার ১০০ বার · দরূদ ১০০ বার · সাধ্যমতো সাদাকাহ'), 'rizq': ('ফাক্কুত তা\u200cতিলের ক্ষেত্রে ফোকাস — <b>মাথা, ঘাড় ও বুকে</b>।', 'ফরজ নামাজ জামাতে · ইস্তিগফার ১০০ বার · দরূদ ১০০ বার · সাধ্যমতো সাদাকাহ'), 'git': ('পা ও হাঁটুর গিঁটের ক্ষেত্রে ফোকাস — <b>দুই পায়ের তলা, গোড়ালি, হাঁটু ও কোমর</b>।', 'ফরজ নামাজ জামাতে · ইস্তিগফার ১০০ বার · দরূদ ১০০ বার · সাধ্যমতো সাদাকাহ'), 'sthulota': ('স্থূলতার ক্ষেত্রে ফোকাস — <b>পেট ও গ্রন্থি-অঞ্চল (গলার সামনে, কোমর)</b>।', 'ফরজ নামাজ জামাতে · ইস্তিগফার ১০০ বার · দরূদ ১০০ বার · সাধ্যমতো সাদাকাহ')}.items():
-    METHODS[_k] = protocol_method(_f, _d)
+_DAILY = 'ফরজ নামাজ জামাতে · ইস্তিগফার ১০০ বার · দরূদ ১০০ বার · সাধ্যমতো সাদাকাহ'
+
+# প্রোটোকল ছাঁচের দশটি সংকলন — শুধু পড়া তেল ম্যাসাজের জায়গাটা বিষয়ভেদে আলাদা
+for _k, _f in {
+    'nokkhotro':      'নক্ষত্র ও আসমানের আয়াতের ক্ষেত্রে ফোকাস — <b>মাথার তালু, কপাল ও বুক</b>।',
+    'atke':           'আটকে থাকা কাজের ক্ষেত্রে ফোকাস — <b>মাথার তালু, ঘাড়, বুক ও দুই হাত</b>।',
+    'rizq':           'ফাক্কুত তা\u200cতিলের ক্ষেত্রে ফোকাস — <b>মাথা, ঘাড় ও বুকে</b>।',
+    'git':            'পা ও হাঁটুর গিঁটের ক্ষেত্রে ফোকাস — <b>দুই পায়ের তলা, গোড়ালি, হাঁটু ও কোমর</b>।',
+    'sthulota':       'স্থূলতার ক্ষেত্রে ফোকাস — <b>পেট ও গ্রন্থি-অঞ্চল (গলার সামনে, কোমর)</b>।',
+    'hereditary':     'বংশগত জিনের ক্ষেত্রে ফোকাস — <b>মাথার তালু, ঘাড়, পিঠ ও যেসব স্থানে ব্যথা বা অস্বস্তি অনুভূত হয়</b>।',
+    'marid':          'মারিদ জিনের ক্ষেত্রে ফোকাস — <b>মাথার তালু, কপাল, ঘাড়, মেরুদণ্ড ও বুক</b>।',
+    'danaoala':       'ডানাওয়ালা জিনের ক্ষেত্রে ফোকাস — <b>বুক, ঘাড় ও দুই কাঁধের ব্লেড বরাবর পিঠের উপরিভাগ</b>।',
+    'mathar-nazar':   'মাথার বদনজরের ক্ষেত্রে ফোকাস — <b>মাথার তালু, দুই কানের পেছনে, কপাল ও ঘাড়</b>।',
+    'mathar-waswasa': 'মাথার ওয়াসওয়াসার ক্ষেত্রে ফোকাস — <b>মাথার তালু, কপাল ও ঘাড়ের পেছনের অংশ</b>।',
+    'tafreej':        'ঘর ও শরীরের তাহরীজের ক্ষেত্রে ফোকাস — <b>সমস্ত শরীরে, বিশেষত যেখানে ব্যথা, জ্বালাপোড়া বা অস্বস্তি অনুভূত হয়</b>।',
+    'otyachar':       'জিনের অত্যাচার ও দখলদারির ক্ষেত্রে ফোকাস — <b>মাথার তালু, কপাল, বুক, ঘাড়-কাঁধ ও দুই হাতের তালু</b>।',
+    'chalan':         'জিন চালান ও মনের কথা প্রকাশের ক্ষেত্রে ফোকাস — <b>মাথার তালু, দুই কান ও ঘাড়</b>।',
+    'karin-waswasa':  'কারিন ও ওয়াসওয়াসার ক্ষেত্রে ফোকাস — <b>মাথার তালু, কপাল ও বুক</b>।',
+    'sopno':          'স্বপ্ন ও দুঃস্বপ্নের ক্ষেত্রে ফোকাস — <b>কপাল ও মাথার তালু — ঘুমানোর ঠিক আগে</b>।',
+    'biched':         'বিচ্ছেদের সিহরের ক্ষেত্রে ফোকাস — <b>মাথা, ঘাড় ও বুকে</b>।',
+    'chul':           'চুল পড়া ও সৌন্দর্য নষ্ট হওয়ার ক্ষেত্রে ফোকাস — <b>মাথার তালু ও চুলের গোড়া — রাতে ম্যাসাজ করে সকালে ধুয়ে ফেলুন</b>।',
+}.items():
+    METHODS[_k] = protocol_method(_f, _DAILY)
 
 NAV = [('index.html', 'হোম')] + [(f, t) for f, _, t, _, _ in PAGES]
 
+# সংকলনগুলো বিভাগে ভাগ করা — মেনুতে এই ক্রমেই দেখাবে
+GROUPS = [
+    ('মূল সংকলন', 'mul', [
+        'tair.html', 'dua.html', 'kobor-ayat.html', 'kobor-dua.html',
+        'qareen.html', 'nokkhotro.html']),
+    ('জিন ও জাদু', 'jinn', [
+        'hereditary.html', 'marid.html', 'danaoala.html', 'otyachar.html',
+        'chalan.html', 'tafreej.html', 'biched.html']),
+    ('মন, মাথা ও ঘুম', 'mon', [
+        'mathar-nazar.html', 'mathar-waswasa.html', 'karin-waswasa.html',
+        'sopno.html']),
+    ('শরীর, রিযিক ও কাজ', 'deho', [
+        'rizq.html', 'atke.html', 'git-pa.html', 'sthulota.html', 'chul.html']),
+]
+
+# ফাইল → (দলের নাম, slug)
+GOF = {f: (g, sl) for g, sl, fs in GROUPS for f in fs}
+
+def menu_html(cur):
+    """উপরের বার — ডেস্কটপে দলভিত্তিক মেনুবার, মোবাইলে ড্রয়ার।
+
+    দুটি আলাদা nav: `.dnav` (≥900px) আর `#menu` (<900px)। একটাকে আরেকটার
+    ছদ্মবেশে বসানোর চেয়ে প্রতিটিকে তার নিজের মতো রাখাই পরিষ্কার — যেটা
+    দেখা যাচ্ছে না সেটা display:none, তাই ট্যাব-অর্ডারেও আসে না।
+    """
+    by = {f: t for f, _, t, _, _ in PAGES}
+    title = by.get(cur, 'হোম')
+    home = ' aria-current="page"' if cur == 'index.html' else ''
+    curgrp = GOF.get(cur, ('', ''))[1]
+
+    dgroups, mrows = [], []
+    for gi, (gname, slug, files) in enumerate(GROUPS):
+        items = [f for f in files if f in by]
+        if not items:
+            continue
+        links = []
+        for f in items:
+            a = ' aria-current="page"' if f == cur else ''
+            links.append('      <a href="%s"%s>%s</a>' % (f, a, esc(by[f])))
+        on = ' data-on="1"' if slug == curgrp else ''
+        dgroups.append(
+            '    <div class="dg g-%s"%s>\n'
+            '      <button class="dgb" aria-expanded="false" aria-controls="dp%d">'
+            '%s<span class="cv" aria-hidden="true"></span></button>\n'
+            '      <div class="dgp" id="dp%d" hidden>\n%s\n      </div>\n'
+            '    </div>' % (slug, on, gi, esc(gname), gi, '\n'.join(links)))
+
+        mrows.append('  <div class="mg g-%s">%s</div>' % (slug, esc(gname)))
+        for f in items:
+            a = ' aria-current="page"' if f == cur else ''
+            mrows.append('  <a class="g-%s" href="%s"%s>%s</a>' % (slug, f, a, esc(by[f])))
+
+    return (
+        '\n<header class="bar">\n'
+        '  <a class="brand" href="index.html"%s>রুকইয়াহ<i>আয়াত ও দোয়া</i></a>\n\n'
+        '  <nav class="dnav" aria-label="সংকলনের তালিকা">\n'
+        '    <a class="dgh" href="index.html"%s>হোম</a>\n%s\n'
+        '  </nav>\n\n'
+        '  <span class="now">%s</span>\n'
+        '  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="menu">\n'
+        '    <span class="bars" aria-hidden="true"></span>সূচি\n'
+        '  </button>\n'
+        '</header>\n'
+        '<div class="scrim" id="scrim" hidden></div>\n'
+        '<nav class="menu" id="menu" aria-label="সংকলনের তালিকা" hidden>\n'
+        '  <div class="mh">\n'
+        '    <b>সব সংকলন</b>\n'
+        '    <button class="mx" id="menuclose" aria-label="মেনু বন্ধ করুন">&times;</button>\n'
+        '  </div>\n'
+        '  <div class="ml">\n'
+        '  <a href="index.html"%s>হোম</a>\n%s\n'
+        '  </div>\n'
+        '</nav>\n'
+    ) % (home, home, '\n'.join(dgroups), esc(title), home, '\n'.join(mrows))
+
 def head(title, cur):
-    links = '\n    '.join(
-        '<a href="%s"%s>%s</a>' % (f, ' aria-current="page"' if f == cur else '', t)
-        for f, t in NAV)
     return f'''<!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -225,12 +339,9 @@ def head(title, cur):
 <script>try{{var t=localStorage.getItem('rad-theme');if(t)document.documentElement.setAttribute('data-theme',t);
 var f=localStorage.getItem('rad-ar');if(f)document.documentElement.style.setProperty('--arsize',f+'px');}}catch(e){{}}</script>
 </head>
-<body>
+<body class="g-{GOF.get(cur, ('', 'mul'))[1] or 'mul'}">
+{menu_html(cur)}
 <div class="wrap">
-
-<div class="topbar">
-    {links}
-</div>
 '''
 
 FOOT = '''
@@ -267,8 +378,9 @@ REP_RE = re.compile(r'পুনরাবৃত্তি\s*[:：]\s*[“"\'‘]?(
 
 def counter(label, cid):
     """সংখ্যা থাকলে গোনার বোতাম, না থাকলে শুধু লেখা"""
-    # '৭ বার / ৩ বার' — উৎস দুটি ভিন্ন সংখ্যা বলছে, তাই কোনোটি বেছে নেওয়া হচ্ছে না
-    if '/' in (label or ''):
+    # '৭ বার / ৩ বার', '৭ অথবা ২১ বার' — উৎস দুটি ভিন্ন সংখ্যা বলছে,
+    # তাই কোনোটি বেছে নেওয়া হচ্ছে না
+    if '/' in (label or '') or 'অথবা' in (label or ''):
         return f'<span class="cnt flat">{esc(label)}</span>'
     tgt = bn_max(label)
     if not tgt:
@@ -437,44 +549,43 @@ def build():
 
     # ---------- হোম ----------
     counts = {k: len(d[k]['items']) for k in d}
-    cards = []
-    meta = [('tair.html',  'আয়াতুত তাইর', 'آيَاتُ الطَّيْرِ',
-             'উড়ন্ত জ্বীন সংক্রান্ত ১৩টি আয়াত ও সম্বোধন, তিন অধ্যায়ে। প্রতিটির নির্দিষ্ট অংশ আলাদা করে পড়ার নির্দেশ আছে।',
-             counts['tair'], '#1b3a4b'),
-            ('dua.html', 'রুকইয়াহর দোয়াসমূহ', 'أَدْعِيَةُ الرُّقْيَةِ',
-             'উড়ন্ত জ্বীন, জাদুকর, জাদুর গিঁট ও শয়তানের ঢাল ভাঙার ১৫টি দোয়া, চার অধ্যায়ে।',
-             counts['dua'], '#5c3b6e'),
-            ('kobor-ayat.html', 'কবরের জাদুর আয়াত', 'آيَاتُ السِّحْرِ الْمَدْفُونِ',
-             'পুঁতে রাখা জাদু ভাঙার ১৪টি আয়াত ও দোয়া, পাঠসংখ্যা ও নিয়তসহ।',
-             counts['kayat'], '#6b4522'),
-            ('kobor-dua.html', 'কবরের জাদুর দোয়া', 'أَدْعِيَةُ السِّحْرِ الْمَدْفُونِ',
-             'পূর্ণ সেশনের ১৪টি দোয়া — শুরু, বিশেষ দোয়া, জিন ধ্বংস ও সমাপ্তি।',
-             counts['kdua'], '#2f5d44'),
-            ('qareen.html', 'কারীনের দোয়া', 'أَدْعِيَةُ الْقَرِين',
-             'সাতটি কর্মসূচি থেকে বেছে নেওয়া ১১টি পাঠযোগ্য দোয়া ও যিকির, উৎসের অক্ষরসহ।',
-             counts['qareen'], '#7a3b3b'),
-            ('nokkhotro.html', 'নক্ষত্র ও আসমানের আয়াত', 'آيَاتُ النُّجُومِ وَالسَّمَاءِ',
-             'তারকা, চাঁদ ও আকাশ সংক্রান্ত ১৩টি আয়াত, শুরুর ও সমাপ্তির দোয়াসহ পূর্ণ প্রোটোকল।',
-             counts['nokkhotro'], '#2b4a6f'),
-            ('atke.html', 'আটকে থাকা কাজ ও প্রোডাক্টিভিটি', 'عَوَائِقُ الْعَمَلِ',
-             'কাজে বাধা, গড়িমসি ও অলসতা — ১৮টি আয়াত ও ৫টি বিশেষ দোয়াসহ পূর্ণ প্রোটোকল।',
-             counts['atke'], '#6b4a1f'),
-            ('rizq.html', 'ফাক্কুত তা‌তিল — রিযিকের বাধা', 'فَكُّ التَّعْطِيلِ',
-             'লুক্কায়িত বাধা ও রিযিকের ব্লকেজ — ১০টি আয়াত ও ১১টি বিশেষ দোয়া।',
-             counts['rizq'], '#1f5f4a'),
-            ('git-pa.html', 'পা ও হাঁটুর গিঁট এবং ছিটানো জাদু', 'عُقَدُ الْقَدَمَيْنِ',
-             'চলাফেরায় বাধা ও পথে ছিটানো সিহর — ২৫টি আয়াত, দুই অংশে।',
-             counts['git'], '#4a3a6b'),
-            ('sthulota.html', 'স্থূলতা ও ওজন বৃদ্ধি', 'السُّمْنَةُ',
-             'সিহর, নজর ও গিঁটের সন্দেহে স্থূলতা — ৬টি আয়াত ও ১৫টি দোয়া।',
-             counts['sthulota'], '#7a5a2b')]
-    for f, t, a, p, n, c in meta:
-        cards.append(f'''  <a class="tc" href="{f}" style="--tc:{c}">
-    <h3>{esc(t)}</h3>
-    <div class="ar">{esc(a)}</div>
-    <p>{esc(p)}</p>
-    <div class="go">{bn(n)}টি অংশ · খুলুন →</div>
-  </a>''')
+    # প্রথম পাঁচটির বিবরণ আলাদা করে লেখা; বাকিগুলোর জন্য PAGES-এর উপশিরোনামই যথেষ্ট
+    DESC = {
+     'tair.html': 'উড়ন্ত জ্বীন সংক্রান্ত আয়াত ও সম্বোধন, তিন অধ্যায়ে। প্রতিটির নির্দিষ্ট অংশ আলাদা করে পড়ার নির্দেশ আছে।',
+     'dua.html': 'উড়ন্ত জ্বীন, জাদুকর, জাদুর গিঁট ও শয়তানের ঢাল ভাঙার দোয়া, চার অধ্যায়ে।',
+     'kobor-ayat.html': 'পুঁতে রাখা জাদু ভাঙার আয়াত ও দোয়া — পাঠসংখ্যা ও নিয়তসহ।',
+     'kobor-dua.html': 'পূর্ণ সেশনের দোয়া — শুরু, বিশেষ দোয়া, জিন ধ্বংস ও সমাপ্তি।',
+     'qareen.html': 'সাতটি কর্মসূচি থেকে বেছে নেওয়া পাঠযোগ্য দোয়া ও জিকির, উৎসের অক্ষরসহ।',
+    }
+    sub = {f: p for f, _, _, _, p in PAGES}
+    cnt = {f: counts[k] for f, k, *_ in PAGES}
+    nm  = {f: t for f, _, t, _, _ in PAGES}
+    ar  = {f: a for f, _, _, a, _ in PAGES}
+
+    sections = []
+    for gname, slug, files in GROUPS:
+        cards = []
+        for f in files:
+            if f not in nm:
+                continue
+            cards.append(
+                '  <a class="tc g-%s" href="%s" data-n="%s">\n'
+                '    <h3>%s</h3>\n'
+                '    <div class="ar">%s</div>\n'
+                '    <p>%s</p>\n'
+                '    <div class="go">%sটি অংশ <span class="ga">→</span></div>\n'
+                '  </a>' % (slug, f, esc(nm[f] + ' ' + sub[f]), esc(nm[f]),
+                            esc(ar[f]), esc(DESC.get(f) or sub[f]), bn(cnt[f])))
+        if cards:
+            sections.append(
+                '<h3 class="gh g-%s">%s<span>%sটি</span></h3>\n'
+                '<div class="cards">\n%s\n</div>' % (slug, esc(gname), bn(len(cards)),
+                                                      chr(10).join(cards)))
+    cardblock = ('\n<div class="filter">\n'
+                 '  <input id="q" type="search" autocomplete="off" '
+                 'placeholder="সংকলন খুঁজুন — যেমন ঘুম, জাদু, রিযিক">\n'
+                 '  <span class="fx" id="qx" hidden>কিছু মেলেনি</span>\n'
+                 '</div>\n' + '\n\n'.join(sections))
 
     home = [head('রুকইয়াহ — আয়াত ও দোয়া', 'index.html')]
     home.append(f'''
@@ -489,9 +600,7 @@ def build():
 </div>
 
 <h2 class="sh">সংকলনগুলো</h2>
-<div class="cards">
-{chr(10).join(cards)}
-</div>
+{cardblock}
 
 <h2 class="sh mt">পড়ার সময় যা কাজে লাগবে</h2>
 <div class="box">

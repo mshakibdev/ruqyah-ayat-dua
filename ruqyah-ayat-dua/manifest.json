@@ -1,0 +1,96 @@
+{
+  "name": "রুকইয়াহ — আয়াত ও দোয়া",
+  "short_name": "আয়াত ও দোয়া",
+  "description": "পড়ার জন্য সংকলিত ২২১টি আয়াত ও দোয়া, দশটি সংকলনে — আরবি, অর্থ, নিজে রুকইয়াহর নিয়ম ও গোনার ঘরসহ। সম্পূর্ণ অফলাইনে চলে।",
+  "lang": "bn",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "id": "ruqyah-ayat-dua",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f8f9",
+  "theme_color": "#1b3a4b",
+  "categories": [
+    "books",
+    "education",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "আয়াতুত তাইর",
+      "short_name": "তাইর",
+      "url": "./tair.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "রুকইয়াহর দোয়াসমূহ",
+      "short_name": "দোয়াসমূহ",
+      "url": "./dua.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "কবরের জাদুর আয়াত",
+      "short_name": "কবর · আয়াত",
+      "url": "./kobor-ayat.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "কবরের জাদুর দোয়া",
+      "short_name": "কবর · দোয়া",
+      "url": "./kobor-dua.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "কারীনের দোয়া",
+      "short_name": "কারীন",
+      "url": "./qareen.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

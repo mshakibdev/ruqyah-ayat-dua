@@ -1,6 +1,6 @@
 /* রুকইয়াহ — আয়াত ও দোয়া · সার্ভিস ওয়ার্কার
    নথি বদলালে VERSION বাড়িয়ে দিন (v1 → v2), নইলে পুরনো ক্যাশ থেকেই দেখাবে */
-const VERSION = 'ruqyah-ayat-dua-v7';
+const VERSION = 'ruqyah-ayat-dua-v9';
 
 const ASSETS = [
   './',
@@ -15,6 +15,18 @@ const ASSETS = [
   './rizq.html',
   './git-pa.html',
   './sthulota.html',
+  './hereditary.html',
+  './marid.html',
+  './danaoala.html',
+  './mathar-nazar.html',
+  './mathar-waswasa.html',
+  './tafreej.html',
+  './otyachar.html',
+  './chalan.html',
+  './karin-waswasa.html',
+  './sopno.html',
+  './biched.html',
+  './chul.html',
   './style.css',
   './app.js',
   './manifest.json',

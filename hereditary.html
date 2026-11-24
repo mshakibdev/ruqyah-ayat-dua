@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>বংশগত জিন (তাবিআ) — রুকইয়াহ</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1b3a4b">
+<meta name="theme-color" content="#101a20" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="আয়াত ও দোয়া">
+<script>try{var t=localStorage.getItem('rad-theme');if(t)document.documentElement.setAttribute('data-theme',t);
+var f=localStorage.getItem('rad-ar');if(f)document.documentElement.style.setProperty('--arsize',f+'px');}catch(e){}</script>
+</head>
+<body class="g-jinn">
+
+<header class="bar">
+  <a class="brand" href="index.html">রুকইয়াহ<i>আয়াত ও দোয়া</i></a>
+
+  <nav class="dnav" aria-label="সংকলনের তালিকা">
+    <a class="dgh" href="index.html">হোম</a>
+    <div class="dg g-mul">
+      <button class="dgb" aria-expanded="false" aria-controls="dp0">মূল সংকলন<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp0" hidden>
+      <a href="tair.html">আয়াতুত তাইর</a>
+      <a href="dua.html">রুকইয়াহর দোয়াসমূহ</a>
+      <a href="kobor-ayat.html">কবরের জাদুর আয়াত</a>
+      <a href="kobor-dua.html">কবরের জাদুর দোয়া</a>
+      <a href="qareen.html">কারীনের দোয়া</a>
+      <a href="nokkhotro.html">নক্ষত্র ও আসমানের আয়াত</a>
+      </div>
+    </div>
+    <div class="dg g-jinn" data-on="1">
+      <button class="dgb" aria-expanded="false" aria-controls="dp1">জিন ও জাদু<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp1" hidden>
+      <a href="hereditary.html" aria-current="page">বংশগত জিন (তাবিআ)</a>
+      <a href="marid.html">মারিদ জিন</a>
+      <a href="danaoala.html">ডানাওয়ালা জিন</a>
+      <a href="otyachar.html">জিনের অত্যাচার ও দখলদারি</a>
+      <a href="chalan.html">জিন চালান ও মনের কথা প্রকাশ</a>
+      <a href="tafreej.html">ঘর ও শরীরের তাহরীজ</a>
+      <a href="biched.html">বিচ্ছেদের সিহর</a>
+      </div>
+    </div>
+    <div class="dg g-mon">
+      <button class="dgb" aria-expanded="false" aria-controls="dp2">মন, মাথা ও ঘুম<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp2" hidden>
+      <a href="mathar-nazar.html">মাথার বদনজর</a>
+      <a href="mathar-waswasa.html">মাথার ওয়াসওয়াসা</a>
+      <a href="karin-waswasa.html">কারিন ও ওয়াসওয়াসা</a>
+      <a href="sopno.html">স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ</a>
+      </div>
+    </div>
+    <div class="dg g-deho">
+      <button class="dgb" aria-expanded="false" aria-controls="dp3">শরীর, রিযিক ও কাজ<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp3" hidden>
+      <a href="rizq.html">ফাক্কুত তা‌তিল — রিযিকের বাধা</a>
+      <a href="atke.html">আটকে থাকা কাজ ও প্রোডাক্টিভিটি</a>
+      <a href="git-pa.html">পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</a>
+      <a href="sthulota.html">স্থূলতা ও ওজন বৃদ্ধি</a>
+      <a href="chul.html">চুল পড়া ও সৌন্দর্য নষ্ট হওয়া</a>
+      </div>
+    </div>
+  </nav>
+
+  <span class="now">বংশগত জিন (তাবিআ)</span>
+  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="menu">
+    <span class="bars" aria-hidden="true"></span>সূচি
+  </button>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<nav class="menu" id="menu" aria-label="সংকলনের তালিকা" hidden>
+  <div class="mh">
+    <b>সব সংকলন</b>
+    <button class="mx" id="menuclose" aria-label="মেনু বন্ধ করুন">&times;</button>
+  </div>
+  <div class="ml">
+  <a href="index.html">হোম</a>
+  <div class="mg g-mul">মূল সংকলন</div>
+  <a class="g-mul" href="tair.html">আয়াতুত তাইর</a>
+  <a class="g-mul" href="dua.html">রুকইয়াহর দোয়াসমূহ</a>
+  <a class="g-mul" href="kobor-ayat.html">কবরের জাদুর আয়াত</a>
+  <a class="g-mul" href="kobor-dua.html">কবরের জাদুর দোয়া</a>
+  <a class="g-mul" href="qareen.html">কারীনের দোয়া</a>
+  <a class="g-mul" href="nokkhotro.html">নক্ষত্র ও আসমানের আয়াত</a>
+  <div class="mg g-jinn">জিন ও জাদু</div>
+  <a class="g-jinn" href="hereditary.html" aria-current="page">বংশগত জিন (তাবিআ)</a>
+  <a class="g-jinn" href="marid.html">মারিদ জিন</a>
+  <a class="g-jinn" href="danaoala.html">ডানাওয়ালা জিন</a>
+  <a class="g-jinn" href="otyachar.html">জিনের অত্যাচার ও দখলদারি</a>
+  <a class="g-jinn" href="chalan.html">জিন চালান ও মনের কথা প্রকাশ</a>
+  <a class="g-jinn" href="tafreej.html">ঘর ও শরীরের তাহরীজ</a>
+  <a class="g-jinn" href="biched.html">বিচ্ছেদের সিহর</a>
+  <div class="mg g-mon">মন, মাথা ও ঘুম</div>
+  <a class="g-mon" href="mathar-nazar.html">মাথার বদনজর</a>
+  <a class="g-mon" href="mathar-waswasa.html">মাথার ওয়াসওয়াসা</a>
+  <a class="g-mon" href="karin-waswasa.html">কারিন ও ওয়াসওয়াসা</a>
+  <a class="g-mon" href="sopno.html">স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ</a>
+  <div class="mg g-deho">শরীর, রিযিক ও কাজ</div>
+  <a class="g-deho" href="rizq.html">ফাক্কুত তা‌তিল — রিযিকের বাধা</a>
+  <a class="g-deho" href="atke.html">আটকে থাকা কাজ ও প্রোডাক্টিভিটি</a>
+  <a class="g-deho" href="git-pa.html">পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</a>
+  <a class="g-deho" href="sthulota.html">স্থূলতা ও ওজন বৃদ্ধি</a>
+  <a class="g-deho" href="chul.html">চুল পড়া ও সৌন্দর্য নষ্ট হওয়া</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+
+<header>
+  <h1>বংশগত জিন (তাবিআ)</h1>
+  <div class="ar">التَّابِعَة</div>
+  <p>বংশপরম্পরায় চলে আসা তাবিআ জিনের আয়াত ও দোয়া · ২৭টি অংশ</p>
+  <div class="hbar">
+    <span class="hint">সংখ্যার ঘরে চাপ দিলে গোনা বাড়ে · চেপে ধরে রাখলে শূন্য</span>
+    <button class="rst" id="reset">সব শূন্য করুন</button>
+  </div>
+</header>
+
+
+<details class="method" open>
+  <summary><span class="mi">◉</span>নিজে রুকইয়াহ করার নিয়ম<span class="mx">লুকান</span></summary>
+  <div class="mb">
+  <h4>পদ্ধতি — ধাপে ধাপে</h4>
+  <ol class="mo">
+    <li><b>অযু করে কিবলামুখী হয়ে নিরিবিলি বসুন।</b> মোবাইল দূরে রাখুন।</li>
+    <li><b>নিয়ত করুন</b> — আল্লাহর কালাম দিয়ে আল্লাহর কাছে আরোগ্য চাইছি; কালামের নিজের
+        কোনো শক্তি নেই, শক্তি আল্লাহর।</li>
+    <li><b>শুরুর দোয়াগুলো</b> পড়ুন (প্রথম অধ্যায়)।</li>
+    <li><b>আয়াতগুলো ক্রমানুসারে পড়ুন।</b> পড়ার সময় দুই হাতের তালুতে ফুঁ দিয়ে সমস্যার
+        জায়গায় হাত বুলান।</li>
+    <li><b>পাঠসংখ্যা যতবার বলা আছে ততবার</b> — কম-বেশি করার দরকার নেই।</li>
+    <li><b>মাঝে ১৫ মিনিট নিজের ভাষায়</b> মন খুলে দোয়া করুন। কান্না আসলে আটকাবেন না।</li>
+    <li><b>শেষে সমাপ্তির সূরা ও দোয়া</b> পড়ে পানিতে ফুঁ দিন।</li>
+    <li><b>কমপক্ষে ৪০ দিন</b> চালিয়ে যান। মাঝে বাদ পড়লে হতাশ না হয়ে আবার শুরু করুন।</li>
+  </ol>
+  <h4>দৈনিক সময়সূচি</h4>
+  <div class="mrow"><span class="ml">সকাল</span><span class="mv">ফজরের পর — আয়াত পাঠ ১৫ মিনিট</span></div>
+  <div class="mrow"><span class="ml">সন্ধ্যা</span><span class="mv">মাগরিবের পর — আয়াত পাঠ ১৫ মিনিট</span></div>
+  <div class="mrow"><span class="ml">রাত</span><span class="mv">ঘুমানোর আগে — সমাপ্তির সূরা ও দোয়া, পড়া পানি পান</span></div>
+  <div class="mrow"><span class="ml">সাপ্তাহিক</span><span class="mv">সপ্তাহে একদিন রুকইয়াহ গোসল</span></div>
+  <h4>পড়া তেল ম্যাসাজের জায়গা</h4>
+  <p class="mp">বংশগত জিনের ক্ষেত্রে ফোকাস — <b>মাথার তালু, ঘাড়, পিঠ ও যেসব স্থানে ব্যথা বা অস্বস্তি অনুভূত হয়</b>।</p>
+  <h4>সাপ্লিমেন্ট</h4>
+  <ul class="mu">
+    <li><b>পড়া পানি</b> — এক বোতল পানিতে আয়াতগুলো পড়ে ফুঁ দিন। দিনে ৩ বার:
+        সকালে খালি পেটে, দুপুরে, রাতে ঘুমানোর আগে।</li>
+    <li><b>পড়া মধু</b> — খাঁটি মধুতে ফুঁ দিয়ে প্রতিদিন সকালে এক চামচ (সূরা নাহল ৬৯ পড়ে ফুঁ দিলে ভালো)।</li>
+    <li><b>পড়া অলিভ অয়েল</b> — জয়তুন তেলে আয়াত পড়ে ফুঁ দিয়ে আক্রান্ত জায়গায় ম্যাসাজ,
+        রাতে ঘুমানোর আগে সবচেয়ে ভালো।</li>
+    <li><b>কালোজিরা</b> — প্রতিদিন সকালে ৭টি পড়া মধুর সাথে।</li>
+    <li><b>রুকইয়াহ গোসল</b> — বালতি পানিতে আয়াত পড়ে ফুঁ দিন, সাথে সাত পাতা বরই পাতা বাটা।
+        মাথা থেকে ঢেলে গোসল — সপ্তাহে একদিন।</li>
+    <li><b>ঘরে স্প্রে</b> — পড়া পানি স্প্রে বোতলে নিয়ে ঘরের কোণা, দরজা-জানালা ও
+        বিছানার নিচে ছিটিয়ে দিন।</li>
+  </ul>
+  <h4>দৈনিক আমল</h4>
+  <div class="mrow"><span class="ml">ফজরের পর</span><span class="mv">সূরা ইয়াসীন ১ বার</span></div>
+  <div class="mrow"><span class="ml">আসরের পর</span><span class="mv">সূরা ওয়াকিয়াহ ১ বার</span></div>
+  <div class="mrow"><span class="ml">রাতে</span><span class="mv">সূরা ক্বাফ ৩ বার, সূরা মুলক ১ বার</span></div>
+  <div class="mrow"><span class="ml">ঘুমানোর আগে</span><span class="mv">আয়াতুল কুরসী ১, বাকারার শেষ দুই আয়াত, তিন কুল ৩ করে — হাতে ফুঁ দিয়ে সারা শরীরে</span></div>
+  <div class="mrow"><span class="ml">সকাল-সন্ধ্যা</span><span class="mv">হিসনুল মুসলিমের যিকির নিয়মিত</span></div>
+  <div class="mrow"><span class="ml">প্রতিদিন</span><span class="mv">ফরজ নামাজ জামাতে · ইস্তিগফার ১০০ বার · দরূদ ১০০ বার · সাধ্যমতো সাদাকাহ</span></div>
+  <div class="mn2"><b>একটি কথা।</b> পাঠসংখ্যাগুলো সংকলনের নিজস্ব বিন্যাস, কুরআন-হাদীসে নির্দিষ্ট নয় —
+  সংখ্যা মেলাতে না পারলে অসুবিধা নেই, মন দিয়ে পড়াটাই মূল। আর এই সংকলনে
+  <b>উচ্চারণ দেওয়া হয়নি</b>, কারণ মূল নথিতেও ছিল না।</div>
+  </div>
+</details>
+
+<h2 class="ch">এক · শুরু করার দোয়া</h2>
+<article class="it" id="hereditary-0">
+<div class="ih">
+<span class="no">১</span>
+<span class="ti">বিসমিল্লাহিল্লাযী লা ইয়াদুররু</span>
+<button class="cnt" data-id="hereditary-0" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ</div>
+<div class="tr">বিসমিল্লাহিল্লাযী লা ইয়াদুররু মা‘আসমিহি শাইউন ফিল আরদি ওয়ালা ফিস সামা-ই, ওয়া হুওয়াস সামীউল আলীম।</div>
+<div class="mn">আল্লাহর নামে শুরু করছি, যাঁর নামের সাথে আসমান ও যমীনের কোনো কিছুই ক্ষতি করতে পারে না; তিনি সর্বশ্রোতা, সর্বজ্ঞ।</div>
+<div class="ny"><b>নিয়ত ·</b> সকাল-সন্ধ্যা এই দোয়া পাঠকারীকে কোনো কিছু আকস্মিক ক্ষতি করতে পারে না।</div>
+<div class="nt"><b>উৎস ·</b> তিরমিযী ৩৩৮৮</div>
+</article>
+<article class="it" id="hereditary-1">
+<div class="ih">
+<span class="no">২</span>
+<span class="ti">বিসমিল্লাহির রহমানির রহীম</span>
+<button class="cnt" data-id="hereditary-1" data-target="19"><span class="cv">০</span><span class="cs">/</span><span class="ct">১৯ বার</span></button>
+</div>
+<div class="arx">بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ</div>
+<div class="tr">বিসমিল্লাহির রহমানির রহীম।</div>
+<div class="mn">পরম করুণাময় অসীম দয়ালু আল্লাহর নামে।</div>
+<div class="ny"><b>নিয়ত ·</b> রুকইয়াহ শুরুর আগে মনোযোগ ও নিয়ত স্থির করে পড়ুন।</div>
+</article>
+<article class="it" id="hereditary-2">
+<div class="ih">
+<span class="no">৩</span>
+<span class="ti">আউযু বিকালিমাতিল্লাহিত তাম্মাত</span>
+<button class="cnt" data-id="hereditary-2" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</div>
+<div class="tr">আউযু বিকালিমাতিল্লাহিত তাম্মাতি মিন শাররি মা খালাক।</div>
+<div class="mn">আমি আল্লাহর পরিপূর্ণ কালিমাসমূহের আশ্রয় নিচ্ছি তাঁর সৃষ্টির সকল অনিষ্ট থেকে।</div>
+<div class="nt"><b>উৎস ·</b> মুসলিম ২৭০৮</div>
+</article>
+<h2 class="ch">দুই · আয়াতসমূহ</h2>
+<article class="it" id="hereditary-3">
+<div class="ih">
+<span class="no">১</span>
+<span class="ti">সূরা আল-বাকারা : ১০২</span>
+<span class="cnt flat">৩ অথবা ৭ বার</span>
+</div>
+<div class="arx">وَٱتَّبَعُواْ مَا تَتۡلُواْ ٱلشَّيَٰطِينُ عَلَىٰ مُلۡكِ سُلَيۡمَٰنَ وَمَا كَفَرَ سُلَيۡمَٰنُ وَلَٰكِنَّ ٱلشَّيَٰطِينَ كَفَرُواْ يُعَلِّمُونَ ٱلنَّاسَ ٱلسِّحۡرَ وَمَآ أُنزِلَ عَلَى ٱلۡمَلَكَيۡنِ بِبَابِلَ هَٰرُوتَ وَمَٰرُوتَ وَمَا يُعَلِّمَانِ مِنۡ أَحَدٍ حَتَّىٰ يَقُولَآ إِنَّمَا نَحۡنُ فِتۡنَةࣱ فَلَا تَكۡفُرۡ فَيَتَعَلَّمُونَ مِنۡهُمَا مَا يُفَرِّقُونَ بِهِۦ بَيۡنَ ٱلۡمَرۡءِ وَزَوۡجِهِۦ وَمَا هُم بِضَآرِّينَ بِهِۦ مِنۡ أَحَدٍ إِلَّا بِإِذۡنِ ٱللَّهِ وَيَتَعَلَّمُونَ مَا يَضُرُّهُمۡ وَلَا يَنفَعُهُمۡ وَلَقَدۡ عَلِمُواْ لَمَنِ ٱشۡتَرَىٰهُ مَا لَهُۥ فِي ٱلۡأٓخِرَةِ مِنۡ خَلَٰقࣲ وَلَبِئۡسَ مَا شَرَوۡاْ بِهِۦٓ أَنفُسَهُمۡ لَوۡ كَانُواْ يَعۡلَمُونَ</div>
+<div class="mn">তারা ঐ শাস্ত্রের অনুসরণ করল, যা সুলায়মানের রাজত্ব কালে শয়তানরা আবৃত্তি করত। সুলায়মান কুফর করেনি; শয়তানরাই কুফর করেছিল। তারা মানুষকে জাদুবিদ্যা এবং বাবেল শহরে হারুত ও মারুত দুই ফেরেশতার প্রতি যা অবতীর্ণ হয়েছিল, তা শিক্ষা দিত। তারা উভয়ই একথা না বলে কাউকে শিক্ষা দিত না যে, আমরা পরীক্ষার জন্য; কাজেই তুমি কাফের হয়ো না। অতঃপর তারা তাদের কাছ থেকে এমন জাদু শিখত, যদ্দ্বারা স্বামী ও স্ত্রীর মধ্যে বিচ্ছেদ ঘটে। তারা আল্লাহর আদেশ ছাড়া তদ্দ্বারা কারও অনিষ্ট করতে পারত না। যা তাদের ক্ষতি করে এবং উপকার না করে, তারা তাই শিখে। তারা ভালরূপে জানে যে, যে কেউ জাদু অবলম্বন করে, তার জন্য পরকালে কোন অংশ নেই। যার বিনিময়ে তারা আত্নবিক্রয় করেছে, তা খুবই মন্দ যদি তারা জানত।</div>
+<div class="ny"><b>নিয়ত ·</b> তাবীয়া জিনের মাধ্যমে বংশে প্রবাহিত জাদুর প্রভাব ধ্বংস করা</div>
+</article>
+<article class="it" id="hereditary-4">
+<div class="ih">
+<span class="no">২</span>
+<span class="ti">সূরা আস-সাফফাত : ১-১০</span>
+<span class="cnt flat">৩ অথবা ৭ বার</span>
+</div>
+<div class="arx">وَٱلصَّٰٓفَّٰتِ صَفࣰّا فَٱلزَّٰجِرَٰتِ زَجۡرࣰا فَٱلتَّٰلِيَٰتِ ذِكۡرًا إِنَّ إِلَٰهَكُمۡ لَوَٰحِدࣱ رَّبُّ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِ وَمَا بَيۡنَهُمَا وَرَبُّ ٱلۡمَشَٰرِقِ إِنَّا زَيَّنَّا ٱلسَّمَآءَ ٱلدُّنۡيَا بِزِينَةٍ ٱلۡكَوَاكِبِ وَحِفۡظࣰا مِّن كُلِّ شَيۡطَٰنࣲ مَّارِدࣲ لَّا يَسَّمَّعُونَ إِلَى ٱلۡمَلَإِ ٱلۡأَعۡلَىٰ وَيُقۡذَفُونَ مِن كُلِّ جَانِبࣲ دُحُورࣰا وَلَهُمۡ عَذَابࣱ وَاصِبٌ إِلَّا مَنۡ خَطِفَ ٱلۡخَطۡفَةَ فَأَتۡبَعَهُۥ شِهَابࣱ ثَاقِبࣱ</div>
+<div class="mn">শপথ তাদের যারা সারিবদ্ধ হয়ে দাঁড়ানো অতঃপর ধমকিয়ে ভীতি প্রদর্শনকারীদের অতঃপর মুখস্থ আবৃত্তিকারীদের নিশ্চয় তোমাদের মাবুদ এক। তিনি আসমান সমূহ, যমীনও এতদুভয়ের মধ্যবর্তী সবকিছুর পালনকর্তা এবং পালনকর্তা উদয়াচলসমূহের। নিশ্চয় আমি নিকটবর্তী আকাশকে তারকারাজির দ্বারা সুশোভিত করেছি। এবং তাকে সংরক্ষিত করেছি প্রত্যেক অবাধ্য শয়তান থেকে। ওরা উর্ধ্ব জগতের কোন কিছু শ্রবণ করতে পারে না এবং চার দিক থেকে তাদের প্রতি উল্কা নিক্ষেপ করা হয়। ওদেরকে বিতাড়নের উদ্দেশে। ওদের জন্যে রয়েছে বিরামহীন শাস্তি। তবে কেউ ছোঁ মেরে কিছু শুনে ফেললে জ্বলন্ত উল্কাপিন্ড তার পশ্চাদ্ধাবন করে।</div>
+<div class="ny"><b>নিয়ত ·</b> আসমানি প্রহরা নাযিল করে জিনের তৈরি সুরক্ষা-প্রাচীর ভাঙা</div>
+</article>
+<article class="it" id="hereditary-5">
+<div class="ih">
+<span class="no">৩</span>
+<span class="ti">সূরা আত-তারিক : ১-৪</span>
+<span class="cnt flat">৩ অথবা ৭ বার</span>
+</div>
+<div class="arx">وَٱلسَّمَآءِ وَٱلطَّارِقِ وَمَآ أَدۡرَىٰكَ مَا ٱلطَّارِقُ ٱلنَّجۡمُ ٱلثَّاقِبُ إِن كُلُّ نَفۡسࣲ لَّمَّا عَلَيۡهَا حَافِظࣱ</div>
+<div class="mn">শপথ আকাশের এবং রাত্রিতে আগমনকারীর। আপনি জানেন, যে রাত্রিতে আসে সেটা কি সেটা এক উজ্জ্বল নক্ষত্র। প্রত্যেকের উপর একজন তত্ত্বাবধায়ক রয়েছে।</div>
+<div class="ny"><b>নিয়ত ·</b> আসমানি প্র হরা নাযিল করে জিনের তৈরি সু রক্ষা-প্রাচীর ভাঙা</div>
+</article>
+<article class="it" id="hereditary-6">
+<div class="ih">
+<span class="no">৪</span>
+<span class="ti">সূরা আল-বাকারা : ১৬৬</span>
+<button class="cnt" data-id="hereditary-6" data-target="7" data-open="1"><span class="cv">০</span><span class="cs">/</span><span class="ct">অন্তত ৭ বার</span></button>
+</div>
+<div class="arx">إِذۡ تَبَرَّأَ ٱلَّذِينَ ٱتُّبِعُواْ مِنَ ٱلَّذِينَ ٱتَّبَعُواْ وَرَأَوُاْ ٱلۡعَذَابَ وَتَقَطَّعَتۡ بِهِمُ ٱلۡأَسۡبَابُ</div>
+<div class="mn">অনুসৃতরা যখন অনুসরণকারীদের প্রতি অসন্তুষ্ট হয়ে যাবে এবং যখন আযাব প্রত্যক্ষ করবে আর বিচ্ছিন্ন হয়ে যাবে তাদের পারস্পরিক সমস্ত সম্পর্ক।</div>
+<div class="ny"><b>নিয়ত ·</b> তাবীয়া জিনের সাথে গড়ে ওঠা সম্পর্ক ও বাঁধন চিরতরে ছিন্ন করা</div>
+</article>
+<article class="it" id="hereditary-7">
+<div class="ih">
+<span class="no">৫</span>
+<span class="ti">সূরা আল-বাকারা : ১৬৮</span>
+<button class="cnt" data-id="hereditary-7" data-target="7" data-open="1"><span class="cv">০</span><span class="cs">/</span><span class="ct">অন্তত ৭ বার</span></button>
+</div>
+<div class="arx">يَٰٓأَيُّهَا ٱلنَّاسُ كُلُواْ مِمَّا فِي ٱلۡأَرۡضِ حَلَٰلࣰا طَيِّبࣰا وَلَا تَتَّبِعُواْ خُطُوَٰتِ ٱلشَّيۡطَٰنِ إِنَّهُۥ لَكُمۡ عَدُوࣱّ مُّبِينٌ</div>
+<div class="mn">হে মানব মন্ডলী, পৃথিবীর হালাল ও পবিত্র বস্তু-সামগ্রী ভক্ষন কর। আর শয়তানের পদাঙ্ক অনুসরণ করো না। সে নিঃসন্দেহে তোমাদের প্রকাশ্য শত্রু।</div>
+<div class="ny"><b>নিয়ত ·</b> শয় তান ও তার অনুসারী তাবীয়ার পদাঙ্ক অনুসরণ থেকে সুরক্ষা চাওয়া</div>
+</article>
+<article class="it" id="hereditary-8">
+<div class="ih">
+<span class="no">৬</span>
+<span class="ti">সূরা আল-বুরূজ : ২০</span>
+<button class="cnt" data-id="hereditary-8" data-target="7" data-open="1"><span class="cv">০</span><span class="cs">/</span><span class="ct">অন্তত ৭ বার</span></button>
+</div>
+<div class="arx">وَٱللَّهُ مِن وَرَآئِهِم مُّحِيطُۢ</div>
+<div class="mn">আল্লাহ তাদেরকে চতুর্দিক থেকে পরিবেষ্টন করে রেখেছেন।</div>
+<div class="ny"><b>নিয়ত ·</b> আল্লাহর পরিবেষ্টন স্মরণ করিয়ে জিনের নিয় ত্রন্ণ থেকে সুরক্ষা চাওয়া</div>
+</article>
+<article class="it" id="hereditary-9">
+<div class="ih">
+<span class="no">৭</span>
+<span class="ti">সূরা আল-বাকারা : ২৬৩</span>
+<button class="cnt" data-id="hereditary-9" data-target="7" data-open="1"><span class="cv">০</span><span class="cs">/</span><span class="ct">অন্তত ৭ বার</span></button>
+</div>
+<div class="arx">قَوۡلࣱ مَّعۡرُوفࣱ وَمَغۡفِرَةٌ خَيۡرࣱ مِّن صَدَقَةࣲ يَتۡبَعُهَآ أَذࣰى وَٱللَّهُ غَنِيٌّ حَلِيمࣱ</div>
+<div class="mn">নম্র কথা বলে দেয়া এবং ক্ষমা প্রদর্শন করা ঐ দান খয়রাত অপেক্ষা উত্তম, যার পরে কষ্ট দেয়া হয়। আল্লাহ তা’আলা সম্পদশালী, সহিঞ্চু।</div>
+<div class="ny"><b>নিয়ত ·</b> তাবীয়ার কষ্ট দায় ক প্রভাব থেকে ধৈর্যে র মাধ্যমে মুক্তি কামনা</div>
+</article>
+<article class="it" id="hereditary-10">
+<div class="ih">
+<span class="no">৮</span>
+<span class="ti">সূরা আল-ইসরা : ৮২</span>
+<span class="cnt flat">৩ অথবা ৭ বার</span>
+</div>
+<div class="arx">وَنُنَزِّلُ مِنَ ٱلۡقُرۡءَانِ مَا هُوَ شِفَآءࣱ وَرَحۡمَةࣱ لِّلۡمُؤۡمِنِينَ وَلَا يَزِيدُ ٱلظَّٰلِمِينَ إِلَّا خَسَارࣰا</div>
+<div class="mn">আমি কোরআনে এমন বিষয় নাযিল করি যা রোগের সুচিকিৎসা এবং মুমিনের জন্য রহমত। গোনাহগারদের তো এতে শুধু ক্ষতিই বৃদ্ধি পায়।</div>
+<div class="ny"><b>নিয়ত ·</b> কু রআনকে আরোগ্য ও রহমত হিসেবে গ্রহণ করে সুস্থ তা কামনা</div>
+</article>
+<article class="it" id="hereditary-11">
+<div class="ih">
+<span class="no">৯</span>
+<span class="ti">সূরা আত-তাওবা : ১৪</span>
+<span class="cnt flat">৩ অথবা ৭ বার</span>
+</div>
+<div class="arx">قَٰتِلُوهُمۡ يُعَذِّبۡهُمُ ٱللَّهُ بِأَيۡدِيكُمۡ وَيُخۡزِهِمۡ وَيَنصُرۡكُمۡ عَلَيۡهِمۡ وَيَشۡفِ صُدُورَ قَوۡمࣲ مُّؤۡمِنِينَ</div>
+<div class="mn">যুদ্ধ কর ওদের সাথে, আল্লাহ তোমাদের হস্তে তাদের শাস্তি দেবেন। তাদের লাঞ্ছিত করবেন, তাদের বিরুদ্ধে তোমাদের জয়ী করবেন এবং মুসলমানদের অন্তরসমূহ শান্ত করবেন।</div>
+<div class="ny"><b>নিয়ত ·</b> আল্লাহর কাছে সরাসরি সুস্থ তা প্রার্থনা</div>
+</article>
+<article class="it" id="hereditary-12">
+<div class="ih">
+<span class="no">১০</span>
+<span class="ti">সূরা আশ-শু&#x27;আরা : ৮০</span>
+<span class="cnt flat">৩ অথবা ৭ বার</span>
+</div>
+<div class="arx">وَإِذَا مَرِضۡتُ فَهُوَ يَشۡفِينِ</div>
+<div class="mn">যখন আমি রোগাক্রান্ত হই, তখন তিনিই আরোগ্য দান করেন।</div>
+<div class="ny"><b>নিয়ত ·</b> অন্</div>
+</article>
+<article class="it" id="hereditary-13">
+<div class="ih">
+<span class="no">১১</span>
+<span class="ti">সূরা গাফির : ৭১</span>
+<span class="cnt flat">৩ অথবা ৭ বার</span>
+</div>
+<div class="arx">إِذِ ٱلۡأَغۡلَٰلُ فِيٓ أَعۡنَٰقِهِمۡ وَٱلسَّلَٰسِلُ يُسۡحَبُونَ</div>
+<div class="mn">যখন বেড়িও শৃঙ্খল তাদের গলদেশে পড়বে। তাদেরকে টেনে নিয়ে যাওয়া হবে।</div>
+<div class="ny"><b>নিয়ত ·</b> আল্লাহর আয়াত নিয়ে বিতর্ক কারী শয়তানি শক্তির পরিণতি স্মরণ করানো</div>
+</article>
+<article class="it" id="hereditary-14">
+<div class="ih">
+<span class="no">১২</span>
+<span class="ti">সূরা গাফির : ৬৯</span>
+<span class="cnt flat">৩ অথবা ৭ বার</span>
+</div>
+<div class="arx">أَلَمۡ تَرَ إِلَى ٱلَّذِينَ يُجَٰدِلُونَ فِيٓ ءَايَٰتِ ٱللَّهِ أَنَّىٰ يُصۡرَفُونَ</div>
+<div class="mn">আপনি কি তাদেরকে দেখেননি, যারা আল্লাহর আয়াত সম্পর্কে বিতর্ক করে, তারা কোথায় ফিরছে</div>
+<div class="ny"><b>নিয়ত ·</b> জিন/শয় তানকে শিকলবদ্ধ ও পরাভূত কল্</div>
+</article>
+<h2 class="ch">তিন · বিশেষ দোয়া</h2>
+<article class="it" id="hereditary-15">
+<div class="ih">
+<span class="no">১</span>
+<span class="ti">তাবিআ জিন পোড়ানোর দোয়া</span>
+<button class="cnt" data-id="hereditary-15" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">اللَّهُمَّ احْرِقْ كُلَّ تَابِعَةٍ عَلَى جَسَدِي</div>
+<div class="tr">আল্লাহুম্মাহ্‌রিক কুল্লা তাবিআতিন আলা জাসাদী।</div>
+<div class="mn">হে আল্লাহ! আমার শরীরে থাকা সমস্ত তাবীয়া জিন জ্বালিয়ে দিন।</div>
+</article>
+<article class="it" id="hereditary-16">
+<div class="ih">
+<span class="no">২</span>
+<span class="ti">আধিপত্য বাতিলের দোয়া</span>
+<button class="cnt" data-id="hereditary-16" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">بِسْمِ اللَّهِ يُبْطَلُ كُلُّ تَسَلُّطٍ عَلَى جَسَدِي</div>
+<div class="tr">বিসমিল্লাহি ইউবতালু কুল্লু তাসাল্লুতিন আলা জাসাদী।</div>
+<div class="mn">আল্লাহর নামে — আমার শরীরে সমস্ত আধিপত্য বাতিল করা হলো।</div>
+</article>
+<article class="it" id="hereditary-17">
+<div class="ih">
+<span class="no">৩</span>
+<span class="ti">গিঁট খোলার দোয়া</span>
+<button class="cnt" data-id="hereditary-17" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">اللَّهُمَّ بِقُوَّتِكَ وَقُدْرَتِكَ فُكَّ كُلَّ عُقْدَةٍ عُقِدَتْ عَلَى جَسَدِي</div>
+<div class="tr">আল্লাহুম্মা বিকুওয়্যাতিকা ওয়া কুদরাতিকা ফুক্কা কুল্লা উকদাতিন উকিদাত আলা জাসাদী।</div>
+<div class="mn">হে আল্লাহ! আপনার শক্তি ও ক্ষমতা দিয়ে আমার শরীরে বাঁধা প্রতিটি গিঁট খুলে দিন।</div>
+</article>
+<article class="it" id="hereditary-18">
+<div class="ih">
+<span class="no">৪</span>
+<span class="ti">তাবিআর গিঁট ধ্বংসের দোয়া</span>
+<span class="cnt flat">৭ অথবা ২১ বার</span>
+</div>
+<div class="arx">بِسْمِ اللَّهِ وَبِكَلِمَاتِهِ تُدَمَّرُ كُلُّ عُقْدَةٍ تَتْبَعُهَا التَّابِعَةُ. بِسْمِ اللَّهِ وَبِكَلِمَاتِهِ تُفَكُّ كُلُّ عُقْدَةٍ رَبَطَتْهَا التَّابِعَةُ.</div>
+<div class="mn">আল্লাহর নামে এবং তাঁর পরিপূর্ণ বাণীসমূহের উসিলায় প্রতিটি এমন গিঁট ধ্বংস হয়ে যাক, যার পেছনে তাবীয়া (অনুসরণকারী জিন) লেগে আছে। আল্লাহর নামে তাবীয়ার লাগানো সমস্ত জাদুর গিঁট খুলে যাক।</div>
+</article>
+<article class="it" id="hereditary-19">
+<div class="ih">
+<span class="no">৫</span>
+<span class="ti">তাবিআর গিঁট ছিন্ন করার দোয়া</span>
+<span class="cnt flat">৭ অথবা ২১ বার</span>
+</div>
+<div class="arx">بِسْمِ اللَّهِ وَبِكَلِمَاتِهِ تُقَطَّعُ كُلُّ عُقْدَةٍ مَرْبُوطَةٍ بِالتَّابِعَةِ. بِسْمِ اللَّهِ وَبِكَلِمَاتِهِ تَنْفَصِلُ كُلُّ تَابِعَةٍ عَنْ هَذَا الْجَسَدِ.</div>
+<div class="mn">আল্লাহর নামে এবং তাঁর বাণীসমূহের উসিলায় তাবীয়ার সাথে যুক্ত থাকা প্রতিটি গিঁট ছিন্নভিন্ন হয়ে যাক। আল্লাহর নামে এবং তাঁর বাণীসমূহের উসিলায় এই শরীর থেকে সকল তাবীয়া (অনুসরণকারী জিন বা পরী) চিরতরে বিচ্ছিন্ন হয়ে যাক।</div>
+</article>
+<article class="it" id="hereditary-20">
+<div class="ih">
+<span class="no">৬</span>
+<span class="ti">শরীর থেকে তাবিআ বিচ্ছিন্ন করার দোয়া</span>
+<span class="cnt flat">৭ অথবা ২১ বার</span>
+</div>
+<div class="arx">بِسْمِ اللَّهِ أَرْزِقِ الْجَسَدَ مِنْ كُلِّ تَابِعَةٍ آذَتْهُ وَسَحَرَتْهُ وَعَقَدَتْ. تَنْفَصِلُ كُلُّ تَابِعَةٍ عَنِ الْجَسَدِ بِأَمْرِ اللَّهِ.</div>
+<div class="mn">আল্লাহর নামে আমি এই শরীরকে রুকইয়াহ করছি প্রতিটি ওই তাবীয়া থেকে, যে কষ্ট দিয়েছে, জাদু করেছে এবং গিঁট লাগিয়েছে। আল্লাহর আদেশে সকল তাবীয়া শরীর থেকে বিচ্ছিন্ন হয়ে যাক।</div>
+<div class="nt"><b>উৎস ·</b> উৎসে যেভাবে ছাপা হয়েছে অবিকল সেভাবে সংরক্ষিত; ধ্রুপদী রুকইয়াহ বাক্যাংশ ”بِسْمِ اللهِ أَرْقِي“ দ্বারা অনুপ্রাণিত রচিত দোয়া, হাদীসের হুবহু উদ্ধৃতি নয়।</div>
+</article>
+<h2 class="ch">চার · সমাপ্তির সূরা ও দোয়া</h2>
+<article class="it" id="hereditary-21">
+<div class="ih">
+<span class="no">১</span>
+<span class="ti">সূরা আল-ইখলাস : ১-৪</span>
+<button class="cnt" data-id="hereditary-21" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">قُلۡ هُوَ ٱللَّهُ أَحَدٌ ٱللَّهُ ٱلصَّمَدُ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ</div>
+<div class="mn">বলুন, তিনি আল্লাহ, এক আল্লাহ অমুখাপেক্ষী তিনি কাউকে জন্ম দেননি এবং কেউ তাকে জন্ম দেয়নি এবং তার সমতুল্য কেউ নেই।</div>
+<div class="ny"><b>নিয়ত ·</b> তাওহীদের ঘোষণা দিয়ে হৃদয় দৃঢ় করা</div>
+</article>
+<article class="it" id="hereditary-22">
+<div class="ih">
+<span class="no">২</span>
+<span class="ti">সূরা আল-ফালাক : ১-৫</span>
+<button class="cnt" data-id="hereditary-22" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ مِن شَرِّ مَا خَلَقَ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ</div>
+<div class="mn">বলুন, আমি আশ্রয় গ্রহণ করছি প্রভাতের পালনকর্তার তিনি যা সৃষ্টি করেছেন, তার অনিষ্ট থেকে অন্ধকার রাত্রির অনিষ্ট থেকে, যখন তা সমাগত হয় গ্রন্থিতে ফুঁৎকার দিয়ে জাদুকারিনীদের অনিষ্ট থেকে এবং হিংসুকের অনিষ্ট থেকে যখন সে হিংসা করে।</div>
+<div class="ny"><b>নিয়ত ·</b> জাদু, হাসাদ ও রাতের অনিষ্ট থেকে আশ্রয়</div>
+</article>
+<article class="it" id="hereditary-23">
+<div class="ih">
+<span class="no">৩</span>
+<span class="ti">সূরা আন-নাস : ১-৬</span>
+<button class="cnt" data-id="hereditary-23" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ مَلِكِ ٱلنَّاسِ إِلَٰهِ ٱلنَّاسِ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ</div>
+<div class="mn">বলুন, আমি আশ্রয় গ্রহণ করিতেছি মানুষের পালনকর্তার মানুষের অধিপতির মানুষের মা’বুদের তার অনিষ্ট থেকে, যে কুমন্ত্রণা দেয় ও আত্নগোপন করে যে কুমন্ত্রণা দেয় মানুষের অন্তরে জ্বিনের মধ্য থেকে অথবা মানুষের মধ্য থেকে।</div>
+<div class="ny"><b>নিয়ত ·</b> মানুষ ও জিনের ওয়াসওয়াসা থেকে আশ্রয়</div>
+</article>
+<article class="it" id="hereditary-24">
+<div class="ih">
+<span class="no">৪</span>
+<span class="ti">উঈযুকা বিকালিমাতিল্লাহিত তাম্মাহ</span>
+<button class="cnt" data-id="hereditary-24" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">أُعِيذُكَ بِكَلِمَاتِ اللَّهِ التَّامَّةِ مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ وَمِنْ كُلِّ عَيْنٍ لَامَّةٍ</div>
+<div class="tr">উঈযুকা বিকালিমাতিল্লাহিত তাম্মাতি মিন কুল্লি শাইতানিন ওয়া হাম্মাহ, ওয়া মিন কুল্লি আইনিন লাম্মাহ।</div>
+<div class="mn">আমি তোমাকে আল্লাহর পরিপূর্ণ কালিমাসমূহের আশ্রয়ে সোপর্দ করছি — প্রত্যেক শয়তান, বিষাক্ত প্রাণী এবং প্রত্যেক ক্ষতিকর বদনজর থেকে।</div>
+<div class="ny"><b>নিয়ত ·</b> নবীজি ﷺ হাসান ও হুসাইন রাযিয়াল্লাহু আনহুমাকে এই দোয়া পড়ে ঝাড়তেন।</div>
+<div class="nt"><b>উৎস ·</b> বুখারী ৩৩৭১</div>
+</article>
+<article class="it" id="hereditary-25">
+<div class="ih">
+<span class="no">৫</span>
+<span class="ti">বিসমিল্লাহি আরকীক</span>
+<button class="cnt" data-id="hereditary-25" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">بِسْمِ اللَّهِ أَرْقِيكَ مِنْ كُلِّ شَيْءٍ يُؤْذِيكَ مِنْ شَرِّ كُلِّ نَفْسٍ أَوْ عَيْنٍ حَاسِدٍ اللَّهُ يَشْفِيكَ بِسْمِ اللَّهِ أَرْقِيكَ</div>
+<div class="tr">বিসমিল্লাহি আরকীকা মিন কুল্লি শাইয়িন ইউ’যীক, মিন শাররি কুল্লি নাফসিন আও আইনিন হাসিদ, আল্লাহু ইয়াশফীক, বিসমিল্লাহি আরকীক।</div>
+<div class="mn">আল্লাহর নামে আমি তোমাকে ঝাড়ছি — এমন প্রতিটি জিনিস থেকে যা তোমাকে কষ্ট দেয়, প্রত্যেক প্রাণ ও হিংসুকের চোখের অনিষ্ট থেকে। আল্লাহ তোমাকে আরোগ্য দান করুন। আল্লাহর নামে আমি তোমাকে ঝাড়ছি।</div>
+<div class="ny"><b>নিয়ত ·</b> জিবরীল আলাইহিস সালাম নবীজি ﷺ-কে এভাবে রুকইয়াহ করেছিলেন।</div>
+<div class="nt"><b>উৎস ·</b> মুসলিম ২১৮৬</div>
+</article>
+<article class="it" id="hereditary-26">
+<div class="ih">
+<span class="no">৬</span>
+<span class="ti">আল্লাহুম্মা রাব্বান নাস</span>
+<button class="cnt" data-id="hereditary-26" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">اللَّهُمَّ رَبَّ النَّاسِ أَذْهِبِ الْبَأْسَ اشْفِ أَنْتَ الشَّافِي لَا شِفَاءَ إِلَّا شِفَاؤُكَ شِفَاءً لَا يُغَادِرُ سَقَمًا</div>
+<div class="tr">আল্লাহুম্মা রাব্বান নাসি, আযহিবিল বা’স, ইশফি আনতাশ শাফী, লা শিফাআ ইল্লা শিফাউক, শিফাআন লা ইউগাদিরু সাকামা।</div>
+<div class="mn">হে আল্লাহ, মানুষের প্রতিপালক! কষ্ট দূর করে দিন, আরোগ্য দান করুন। আপনিই আরোগ্যদাতা, আপনার আরোগ্য ছাড়া কোনো আরোগ্য নেই — এমন আরোগ্য যা কোনো রোগ অবশিষ্ট রাখে না।</div>
+<div class="ny"><b>নিয়ত ·</b> শেষে পানিতে ফুঁ দিয়ে পান করুন।</div>
+<div class="nt"><b>উৎস ·</b> বুখারী ৫৭৪৩</div>
+</article>
+
+
+<footer>
+  <b>রুকইয়াহ — আয়াত ও দোয়া</b><br>
+  সংকলন ও সম্পাদনা — <b>ইবনে নাঈম</b> · Ibn Naim
+</footer>
+
+</div>
+
+<div class="tools">
+  <button class="tool" id="fminus" aria-label="আরবি ছোট">A−</button>
+  <button class="tool" id="fplus" aria-label="আরবি বড়">A+</button>
+  <button class="tool" id="wake" aria-label="স্ক্রিন জাগিয়ে রাখুন">☀</button>
+  <button class="tool" id="tb" aria-label="থিম">◐</button>
+</div>
+<button class="installbtn" id="install" hidden>⤓ ইনস্টল করুন</button>
+<script src="app.js" defer></script>
+</body>
+</html>

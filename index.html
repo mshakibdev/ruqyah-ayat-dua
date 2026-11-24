@@ -16,27 +16,105 @@
 <script>try{var t=localStorage.getItem('rad-theme');if(t)document.documentElement.setAttribute('data-theme',t);
 var f=localStorage.getItem('rad-ar');if(f)document.documentElement.style.setProperty('--arsize',f+'px');}catch(e){}</script>
 </head>
-<body>
-<div class="wrap">
+<body class="g-mul">
 
-<div class="topbar">
-    <a href="index.html" aria-current="page">হোম</a>
-    <a href="tair.html">আয়াতুত তাইর</a>
-    <a href="dua.html">রুকইয়াহর দোয়াসমূহ</a>
-    <a href="kobor-ayat.html">কবরের জাদুর আয়াত</a>
-    <a href="kobor-dua.html">কবরের জাদুর দোয়া</a>
-    <a href="qareen.html">কারীনের দোয়া</a>
-    <a href="nokkhotro.html">নক্ষত্র ও আসমানের আয়াত</a>
-    <a href="atke.html">আটকে থাকা কাজ ও প্রোডাক্টিভিটি</a>
-    <a href="rizq.html">ফাক্কুত তা‌তিল — রিযিকের বাধা</a>
-    <a href="git-pa.html">পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</a>
-    <a href="sthulota.html">স্থূলতা ও ওজন বৃদ্ধি</a>
-</div>
+<header class="bar">
+  <a class="brand" href="index.html" aria-current="page">রুকইয়াহ<i>আয়াত ও দোয়া</i></a>
+
+  <nav class="dnav" aria-label="সংকলনের তালিকা">
+    <a class="dgh" href="index.html" aria-current="page">হোম</a>
+    <div class="dg g-mul">
+      <button class="dgb" aria-expanded="false" aria-controls="dp0">মূল সংকলন<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp0" hidden>
+      <a href="tair.html">আয়াতুত তাইর</a>
+      <a href="dua.html">রুকইয়াহর দোয়াসমূহ</a>
+      <a href="kobor-ayat.html">কবরের জাদুর আয়াত</a>
+      <a href="kobor-dua.html">কবরের জাদুর দোয়া</a>
+      <a href="qareen.html">কারীনের দোয়া</a>
+      <a href="nokkhotro.html">নক্ষত্র ও আসমানের আয়াত</a>
+      </div>
+    </div>
+    <div class="dg g-jinn">
+      <button class="dgb" aria-expanded="false" aria-controls="dp1">জিন ও জাদু<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp1" hidden>
+      <a href="hereditary.html">বংশগত জিন (তাবিআ)</a>
+      <a href="marid.html">মারিদ জিন</a>
+      <a href="danaoala.html">ডানাওয়ালা জিন</a>
+      <a href="otyachar.html">জিনের অত্যাচার ও দখলদারি</a>
+      <a href="chalan.html">জিন চালান ও মনের কথা প্রকাশ</a>
+      <a href="tafreej.html">ঘর ও শরীরের তাহরীজ</a>
+      <a href="biched.html">বিচ্ছেদের সিহর</a>
+      </div>
+    </div>
+    <div class="dg g-mon">
+      <button class="dgb" aria-expanded="false" aria-controls="dp2">মন, মাথা ও ঘুম<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp2" hidden>
+      <a href="mathar-nazar.html">মাথার বদনজর</a>
+      <a href="mathar-waswasa.html">মাথার ওয়াসওয়াসা</a>
+      <a href="karin-waswasa.html">কারিন ও ওয়াসওয়াসা</a>
+      <a href="sopno.html">স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ</a>
+      </div>
+    </div>
+    <div class="dg g-deho">
+      <button class="dgb" aria-expanded="false" aria-controls="dp3">শরীর, রিযিক ও কাজ<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp3" hidden>
+      <a href="rizq.html">ফাক্কুত তা‌তিল — রিযিকের বাধা</a>
+      <a href="atke.html">আটকে থাকা কাজ ও প্রোডাক্টিভিটি</a>
+      <a href="git-pa.html">পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</a>
+      <a href="sthulota.html">স্থূলতা ও ওজন বৃদ্ধি</a>
+      <a href="chul.html">চুল পড়া ও সৌন্দর্য নষ্ট হওয়া</a>
+      </div>
+    </div>
+  </nav>
+
+  <span class="now">হোম</span>
+  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="menu">
+    <span class="bars" aria-hidden="true"></span>সূচি
+  </button>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<nav class="menu" id="menu" aria-label="সংকলনের তালিকা" hidden>
+  <div class="mh">
+    <b>সব সংকলন</b>
+    <button class="mx" id="menuclose" aria-label="মেনু বন্ধ করুন">&times;</button>
+  </div>
+  <div class="ml">
+  <a href="index.html" aria-current="page">হোম</a>
+  <div class="mg g-mul">মূল সংকলন</div>
+  <a class="g-mul" href="tair.html">আয়াতুত তাইর</a>
+  <a class="g-mul" href="dua.html">রুকইয়াহর দোয়াসমূহ</a>
+  <a class="g-mul" href="kobor-ayat.html">কবরের জাদুর আয়াত</a>
+  <a class="g-mul" href="kobor-dua.html">কবরের জাদুর দোয়া</a>
+  <a class="g-mul" href="qareen.html">কারীনের দোয়া</a>
+  <a class="g-mul" href="nokkhotro.html">নক্ষত্র ও আসমানের আয়াত</a>
+  <div class="mg g-jinn">জিন ও জাদু</div>
+  <a class="g-jinn" href="hereditary.html">বংশগত জিন (তাবিআ)</a>
+  <a class="g-jinn" href="marid.html">মারিদ জিন</a>
+  <a class="g-jinn" href="danaoala.html">ডানাওয়ালা জিন</a>
+  <a class="g-jinn" href="otyachar.html">জিনের অত্যাচার ও দখলদারি</a>
+  <a class="g-jinn" href="chalan.html">জিন চালান ও মনের কথা প্রকাশ</a>
+  <a class="g-jinn" href="tafreej.html">ঘর ও শরীরের তাহরীজ</a>
+  <a class="g-jinn" href="biched.html">বিচ্ছেদের সিহর</a>
+  <div class="mg g-mon">মন, মাথা ও ঘুম</div>
+  <a class="g-mon" href="mathar-nazar.html">মাথার বদনজর</a>
+  <a class="g-mon" href="mathar-waswasa.html">মাথার ওয়াসওয়াসা</a>
+  <a class="g-mon" href="karin-waswasa.html">কারিন ও ওয়াসওয়াসা</a>
+  <a class="g-mon" href="sopno.html">স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ</a>
+  <div class="mg g-deho">শরীর, রিযিক ও কাজ</div>
+  <a class="g-deho" href="rizq.html">ফাক্কুত তা‌তিল — রিযিকের বাধা</a>
+  <a class="g-deho" href="atke.html">আটকে থাকা কাজ ও প্রোডাক্টিভিটি</a>
+  <a class="g-deho" href="git-pa.html">পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</a>
+  <a class="g-deho" href="sthulota.html">স্থূলতা ও ওজন বৃদ্ধি</a>
+  <a class="g-deho" href="chul.html">চুল পড়া ও সৌন্দর্য নষ্ট হওয়া</a>
+  </div>
+</nav>
+
+<div class="wrap">
 
 
 <header>
   <h1>রুকইয়াহ — আয়াত ও দোয়া</h1>
-  <p>পড়ার জন্য সংকলিত আয়াত ও দোয়া — আরবি, উচ্চারণ ও অর্থসহ। মোট <b>২২১টি অংশ</b>, ১০টি সংকলনে।</p>
+  <p>পড়ার জন্য সংকলিত আয়াত ও দোয়া — আরবি, উচ্চারণ ও অর্থসহ। মোট <b>৫৬৫টি অংশ</b>, ২২টি সংকলনে।</p>
 </header>
 
 <div class="iostip" id="iostip" hidden>
@@ -45,66 +123,156 @@ var f=localStorage.getItem('rad-ar');if(f)document.documentElement.style.setProp
 </div>
 
 <h2 class="sh">সংকলনগুলো</h2>
+
+<div class="filter">
+  <input id="q" type="search" autocomplete="off" placeholder="সংকলন খুঁজুন — যেমন ঘুম, জাদু, রিযিক">
+  <span class="fx" id="qx" hidden>কিছু মেলেনি</span>
+</div>
+<h3 class="gh g-mul">মূল সংকলন<span>৬টি</span></h3>
 <div class="cards">
-  <a class="tc" href="tair.html" style="--tc:#1b3a4b">
+  <a class="tc g-mul" href="tair.html" data-n="আয়াতুত তাইর উড়ন্ত জ্বীন সংক্রান্ত আয়াত ও সম্বোধন">
     <h3>আয়াতুত তাইর</h3>
     <div class="ar">آيَاتُ الطَّيْرِ</div>
-    <p>উড়ন্ত জ্বীন সংক্রান্ত ১৩টি আয়াত ও সম্বোধন, তিন অধ্যায়ে। প্রতিটির নির্দিষ্ট অংশ আলাদা করে পড়ার নির্দেশ আছে।</p>
-    <div class="go">১৩টি অংশ · খুলুন →</div>
+    <p>উড়ন্ত জ্বীন সংক্রান্ত আয়াত ও সম্বোধন, তিন অধ্যায়ে। প্রতিটির নির্দিষ্ট অংশ আলাদা করে পড়ার নির্দেশ আছে।</p>
+    <div class="go">১৩টি অংশ <span class="ga">→</span></div>
   </a>
-  <a class="tc" href="dua.html" style="--tc:#5c3b6e">
+  <a class="tc g-mul" href="dua.html" data-n="রুকইয়াহর দোয়াসমূহ উড়ন্ত জ্বীন, জাদুকর, জাদুর গিঁট ও শয়তানের ঢাল">
     <h3>রুকইয়াহর দোয়াসমূহ</h3>
     <div class="ar">أَدْعِيَةُ الرُّقْيَةِ</div>
-    <p>উড়ন্ত জ্বীন, জাদুকর, জাদুর গিঁট ও শয়তানের ঢাল ভাঙার ১৫টি দোয়া, চার অধ্যায়ে।</p>
-    <div class="go">১৫টি অংশ · খুলুন →</div>
+    <p>উড়ন্ত জ্বীন, জাদুকর, জাদুর গিঁট ও শয়তানের ঢাল ভাঙার দোয়া, চার অধ্যায়ে।</p>
+    <div class="go">১৫টি অংশ <span class="ga">→</span></div>
   </a>
-  <a class="tc" href="kobor-ayat.html" style="--tc:#6b4522">
+  <a class="tc g-mul" href="kobor-ayat.html" data-n="কবরের জাদুর আয়াত পুঁতে রাখা জাদু ভাঙার আয়াত ও দোয়া">
     <h3>কবরের জাদুর আয়াত</h3>
     <div class="ar">آيَاتُ السِّحْرِ الْمَدْفُونِ</div>
-    <p>পুঁতে রাখা জাদু ভাঙার ১৪টি আয়াত ও দোয়া, পাঠসংখ্যা ও নিয়তসহ।</p>
-    <div class="go">১৪টি অংশ · খুলুন →</div>
+    <p>পুঁতে রাখা জাদু ভাঙার আয়াত ও দোয়া — পাঠসংখ্যা ও নিয়তসহ।</p>
+    <div class="go">১৪টি অংশ <span class="ga">→</span></div>
   </a>
-  <a class="tc" href="kobor-dua.html" style="--tc:#2f5d44">
+  <a class="tc g-mul" href="kobor-dua.html" data-n="কবরের জাদুর দোয়া পূর্ণ সেশনের দোয়া — শুরু থেকে সমাপ্তি">
     <h3>কবরের জাদুর দোয়া</h3>
     <div class="ar">أَدْعِيَةُ السِّحْرِ الْمَدْفُونِ</div>
-    <p>পূর্ণ সেশনের ১৪টি দোয়া — শুরু, বিশেষ দোয়া, জিন ধ্বংস ও সমাপ্তি।</p>
-    <div class="go">১৪টি অংশ · খুলুন →</div>
+    <p>পূর্ণ সেশনের দোয়া — শুরু, বিশেষ দোয়া, জিন ধ্বংস ও সমাপ্তি।</p>
+    <div class="go">১৪টি অংশ <span class="ga">→</span></div>
   </a>
-  <a class="tc" href="qareen.html" style="--tc:#7a3b3b">
+  <a class="tc g-mul" href="qareen.html" data-n="কারীনের দোয়া সাতটি কর্মসূচি থেকে বেছে নেওয়া পাঠযোগ্য দোয়া">
     <h3>কারীনের দোয়া</h3>
     <div class="ar">أَدْعِيَةُ الْقَرِين</div>
-    <p>সাতটি কর্মসূচি থেকে বেছে নেওয়া ১১টি পাঠযোগ্য দোয়া ও যিকির, উৎসের অক্ষরসহ।</p>
-    <div class="go">১১টি অংশ · খুলুন →</div>
+    <p>সাতটি কর্মসূচি থেকে বেছে নেওয়া পাঠযোগ্য দোয়া ও জিকির, উৎসের অক্ষরসহ।</p>
+    <div class="go">১১টি অংশ <span class="ga">→</span></div>
   </a>
-  <a class="tc" href="nokkhotro.html" style="--tc:#2b4a6f">
+  <a class="tc g-mul" href="nokkhotro.html" data-n="নক্ষত্র ও আসমানের আয়াত তারকা, চাঁদ ও আকাশ সংক্রান্ত আয়াত ও দোয়া">
     <h3>নক্ষত্র ও আসমানের আয়াত</h3>
     <div class="ar">آيَاتُ النُّجُومِ وَالسَّمَاءِ</div>
-    <p>তারকা, চাঁদ ও আকাশ সংক্রান্ত ১৩টি আয়াত, শুরুর ও সমাপ্তির দোয়াসহ পূর্ণ প্রোটোকল।</p>
-    <div class="go">২৫টি অংশ · খুলুন →</div>
+    <p>তারকা, চাঁদ ও আকাশ সংক্রান্ত আয়াত ও দোয়া</p>
+    <div class="go">২৫টি অংশ <span class="ga">→</span></div>
   </a>
-  <a class="tc" href="atke.html" style="--tc:#6b4a1f">
-    <h3>আটকে থাকা কাজ ও প্রোডাক্টিভিটি</h3>
-    <div class="ar">عَوَائِقُ الْعَمَلِ</div>
-    <p>কাজে বাধা, গড়িমসি ও অলসতা — ১৮টি আয়াত ও ৫টি বিশেষ দোয়াসহ পূর্ণ প্রোটোকল।</p>
-    <div class="go">৩২টি অংশ · খুলুন →</div>
+</div>
+
+<h3 class="gh g-jinn">জিন ও জাদু<span>৭টি</span></h3>
+<div class="cards">
+  <a class="tc g-jinn" href="hereditary.html" data-n="বংশগত জিন (তাবিআ) বংশপরম্পরায় চলে আসা তাবিআ জিনের আয়াত ও দোয়া">
+    <h3>বংশগত জিন (তাবিআ)</h3>
+    <div class="ar">التَّابِعَة</div>
+    <p>বংশপরম্পরায় চলে আসা তাবিআ জিনের আয়াত ও দোয়া</p>
+    <div class="go">২৭টি অংশ <span class="ga">→</span></div>
   </a>
-  <a class="tc" href="rizq.html" style="--tc:#1f5f4a">
+  <a class="tc g-jinn" href="marid.html" data-n="মারিদ জিন উদ্ধত ও শক্তিশালী মারিদ জিনের আয়াত ও দোয়া">
+    <h3>মারিদ জিন</h3>
+    <div class="ar">الْجِنُّ الْمَارِد</div>
+    <p>উদ্ধত ও শক্তিশালী মারিদ জিনের আয়াত ও দোয়া</p>
+    <div class="go">২৪টি অংশ <span class="ga">→</span></div>
+  </a>
+  <a class="tc g-jinn" href="danaoala.html" data-n="ডানাওয়ালা জিন ঘরে ও ঘুমে কষ্ট দেওয়া ডানাওয়ালা জিনের আয়াত ও দোয়া">
+    <h3>ডানাওয়ালা জিন</h3>
+    <div class="ar">الْجِنُّ ذُو الْجَنَاحَيْنِ</div>
+    <p>ঘরে ও ঘুমে কষ্ট দেওয়া ডানাওয়ালা জিনের আয়াত ও দোয়া</p>
+    <div class="go">২২টি অংশ <span class="ga">→</span></div>
+  </a>
+  <a class="tc g-jinn" href="otyachar.html" data-n="জিনের অত্যাচার ও দখলদারি শরীর, মন ও ঘরে জিনের অন্যায় প্রভাব থেকে মুক্তির আয়াত ও আমল">
+    <h3>জিনের অত্যাচার ও দখলদারি</h3>
+    <div class="ar">ظُلْمُ الْجِنِّ وَتَسَلُّطُهُ</div>
+    <p>শরীর, মন ও ঘরে জিনের অন্যায় প্রভাব থেকে মুক্তির আয়াত ও আমল</p>
+    <div class="go">২৩টি অংশ <span class="ga">→</span></div>
+  </a>
+  <a class="tc g-jinn" href="chalan.html" data-n="জিন চালান ও মনের কথা প্রকাশ জিনের মাধ্যমে গোপন তথ্য জানানো ও অনুসরণ বন্ধ করার রুকইয়াহ">
+    <h3>জিন চালান ও মনের কথা প্রকাশ</h3>
+    <div class="ar">إِرْسَالُ الْجِنِّ</div>
+    <p>জিনের মাধ্যমে গোপন তথ্য জানানো ও অনুসরণ বন্ধ করার রুকইয়াহ</p>
+    <div class="go">২৯টি অংশ <span class="ga">→</span></div>
+  </a>
+  <a class="tc g-jinn" href="tafreej.html" data-n="ঘর ও শরীরের তাহরীজ ঘরে ও শরীরে আশ্রয় নেওয়া জিন ও জাদু বের করার রুকইয়াহ">
+    <h3>ঘর ও শরীরের তাহরীজ</h3>
+    <div class="ar">التَّحْرِيج</div>
+    <p>ঘরে ও শরীরে আশ্রয় নেওয়া জিন ও জাদু বের করার রুকইয়াহ</p>
+    <div class="go">৪১টি অংশ <span class="ga">→</span></div>
+  </a>
+  <a class="tc g-jinn" href="biched.html" data-n="বিচ্ছেদের সিহর স্বামী-স্ত্রীর মাঝে বিচ্ছেদ ও বিদ্বেষ সৃষ্টিকারী জাদু ধ্বংসের রুকইয়াহ">
+    <h3>বিচ্ছেদের সিহর</h3>
+    <div class="ar">سِحْرُ التَّفْرِيق</div>
+    <p>স্বামী-স্ত্রীর মাঝে বিচ্ছেদ ও বিদ্বেষ সৃষ্টিকারী জাদু ধ্বংসের রুকইয়াহ</p>
+    <div class="go">৩৪টি অংশ <span class="ga">→</span></div>
+  </a>
+</div>
+
+<h3 class="gh g-mon">মন, মাথা ও ঘুম<span>৪টি</span></h3>
+<div class="cards">
+  <a class="tc g-mon" href="mathar-nazar.html" data-n="মাথার বদনজর মাথায় লাগা বদনজরের আয়াত ও দোয়া">
+    <h3>মাথার বদনজর</h3>
+    <div class="ar">عَيْنُ الرَّأْسِ</div>
+    <p>মাথায় লাগা বদনজরের আয়াত ও দোয়া</p>
+    <div class="go">৩১টি অংশ <span class="ga">→</span></div>
+  </a>
+  <a class="tc g-mon" href="mathar-waswasa.html" data-n="মাথার ওয়াসওয়াসা মাথা ও মস্তিষ্কের ওয়াসওয়াসার আয়াত ও দোয়া">
+    <h3>মাথার ওয়াসওয়াসা</h3>
+    <div class="ar">وَسْوَاسُ الرَّأْسِ</div>
+    <p>মাথা ও মস্তিষ্কের ওয়াসওয়াসার আয়াত ও দোয়া</p>
+    <div class="go">২৪টি অংশ <span class="ga">→</span></div>
+  </a>
+  <a class="tc g-mon" href="karin-waswasa.html" data-n="কারিন ও ওয়াসওয়াসা সঙ্গী-শয়তানের কুমন্ত্রণা, সন্দেহ ও অবসেসিভ চিন্তার রুকইয়াহ">
+    <h3>কারিন ও ওয়াসওয়াসা</h3>
+    <div class="ar">الْقَرِينُ وَالْوَسْوَسَة</div>
+    <p>সঙ্গী-শয়তানের কুমন্ত্রণা, সন্দেহ ও অবসেসিভ চিন্তার রুকইয়াহ</p>
+    <div class="go">২৮টি অংশ <span class="ga">→</span></div>
+  </a>
+  <a class="tc g-mon" href="sopno.html" data-n="স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ দুঃস্বপ্ন প্রতিরোধ, প্রশান্ত ঘুম ও সত্য স্বপ্নের আয়াত">
+    <h3>স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ</h3>
+    <div class="ar">الرُّؤْيَا وَالْحُلْم</div>
+    <p>দুঃস্বপ্ন প্রতিরোধ, প্রশান্ত ঘুম ও সত্য স্বপ্নের আয়াত</p>
+    <div class="go">২৯টি অংশ <span class="ga">→</span></div>
+  </a>
+</div>
+
+<h3 class="gh g-deho">শরীর, রিযিক ও কাজ<span>৫টি</span></h3>
+<div class="cards">
+  <a class="tc g-deho" href="rizq.html" data-n="ফাক্কুত তা‌তিল — রিযিকের বাধা লুক্কায়িত বাধা দূরীকরণ ও রিযিকের ব্লকেজ খোলা">
     <h3>ফাক্কুত তা‌তিল — রিযিকের বাধা</h3>
     <div class="ar">فَكُّ التَّعْطِيلِ</div>
-    <p>লুক্কায়িত বাধা ও রিযিকের ব্লকেজ — ১০টি আয়াত ও ১১টি বিশেষ দোয়া।</p>
-    <div class="go">৩০টি অংশ · খুলুন →</div>
+    <p>লুক্কায়িত বাধা দূরীকরণ ও রিযিকের ব্লকেজ খোলা</p>
+    <div class="go">৩০টি অংশ <span class="ga">→</span></div>
   </a>
-  <a class="tc" href="git-pa.html" style="--tc:#4a3a6b">
+  <a class="tc g-deho" href="atke.html" data-n="আটকে থাকা কাজ ও প্রোডাক্টিভিটি কাজে বাধা, গড়িমসি ও অলসতা কাটানোর আয়াত ও দোয়া">
+    <h3>আটকে থাকা কাজ ও প্রোডাক্টিভিটি</h3>
+    <div class="ar">عَوَائِقُ الْعَمَلِ</div>
+    <p>কাজে বাধা, গড়িমসি ও অলসতা কাটানোর আয়াত ও দোয়া</p>
+    <div class="go">৩২টি অংশ <span class="ga">→</span></div>
+  </a>
+  <a class="tc g-deho" href="git-pa.html" data-n="পা ও হাঁটুর গিঁট এবং ছিটানো জাদু চলাফেরায় বাধা ও পথে ছিটিয়ে রাখা সিহরের আয়াত">
     <h3>পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</h3>
     <div class="ar">عُقَدُ الْقَدَمَيْنِ</div>
-    <p>চলাফেরায় বাধা ও পথে ছিটানো সিহর — ২৫টি আয়াত, দুই অংশে।</p>
-    <div class="go">৩৭টি অংশ · খুলুন →</div>
+    <p>চলাফেরায় বাধা ও পথে ছিটিয়ে রাখা সিহরের আয়াত</p>
+    <div class="go">৩৭টি অংশ <span class="ga">→</span></div>
   </a>
-  <a class="tc" href="sthulota.html" style="--tc:#7a5a2b">
+  <a class="tc g-deho" href="sthulota.html" data-n="স্থূলতা ও ওজন বৃদ্ধি সিহর, নজর, হাসাদ ও গিঁটের সন্দেহে স্থূলতার রুকইয়াহ">
     <h3>স্থূলতা ও ওজন বৃদ্ধি</h3>
     <div class="ar">السُّمْنَةُ</div>
-    <p>সিহর, নজর ও গিঁটের সন্দেহে স্থূলতা — ৬টি আয়াত ও ১৫টি দোয়া।</p>
-    <div class="go">৩০টি অংশ · খুলুন →</div>
+    <p>সিহর, নজর, হাসাদ ও গিঁটের সন্দেহে স্থূলতার রুকইয়াহ</p>
+    <div class="go">৩০টি অংশ <span class="ga">→</span></div>
+  </a>
+  <a class="tc g-deho" href="chul.html" data-n="চুল পড়া ও সৌন্দর্য নষ্ট হওয়া অস্বাভাবিক চুল পড়া ও চেহারার উজ্জ্বলতা হারানোর রুকইয়াহ">
+    <h3>চুল পড়া ও সৌন্দর্য নষ্ট হওয়া</h3>
+    <div class="ar">تَسَاقُطُ الشَّعْر</div>
+    <p>অস্বাভাবিক চুল পড়া ও চেহারার উজ্জ্বলতা হারানোর রুকইয়াহ</p>
+    <div class="go">৩২টি অংশ <span class="ga">→</span></div>
   </a>
 </div>
 

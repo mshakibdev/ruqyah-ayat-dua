@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>মারিদ জিন — রুকইয়াহ</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1b3a4b">
+<meta name="theme-color" content="#101a20" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="আয়াত ও দোয়া">
+<script>try{var t=localStorage.getItem('rad-theme');if(t)document.documentElement.setAttribute('data-theme',t);
+var f=localStorage.getItem('rad-ar');if(f)document.documentElement.style.setProperty('--arsize',f+'px');}catch(e){}</script>
+</head>
+<body class="g-jinn">
+
+<header class="bar">
+  <a class="brand" href="index.html">রুকইয়াহ<i>আয়াত ও দোয়া</i></a>
+
+  <nav class="dnav" aria-label="সংকলনের তালিকা">
+    <a class="dgh" href="index.html">হোম</a>
+    <div class="dg g-mul">
+      <button class="dgb" aria-expanded="false" aria-controls="dp0">মূল সংকলন<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp0" hidden>
+      <a href="tair.html">আয়াতুত তাইর</a>
+      <a href="dua.html">রুকইয়াহর দোয়াসমূহ</a>
+      <a href="kobor-ayat.html">কবরের জাদুর আয়াত</a>
+      <a href="kobor-dua.html">কবরের জাদুর দোয়া</a>
+      <a href="qareen.html">কারীনের দোয়া</a>
+      <a href="nokkhotro.html">নক্ষত্র ও আসমানের আয়াত</a>
+      </div>
+    </div>
+    <div class="dg g-jinn" data-on="1">
+      <button class="dgb" aria-expanded="false" aria-controls="dp1">জিন ও জাদু<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp1" hidden>
+      <a href="hereditary.html">বংশগত জিন (তাবিআ)</a>
+      <a href="marid.html" aria-current="page">মারিদ জিন</a>
+      <a href="danaoala.html">ডানাওয়ালা জিন</a>
+      <a href="otyachar.html">জিনের অত্যাচার ও দখলদারি</a>
+      <a href="chalan.html">জিন চালান ও মনের কথা প্রকাশ</a>
+      <a href="tafreej.html">ঘর ও শরীরের তাহরীজ</a>
+      <a href="biched.html">বিচ্ছেদের সিহর</a>
+      </div>
+    </div>
+    <div class="dg g-mon">
+      <button class="dgb" aria-expanded="false" aria-controls="dp2">মন, মাথা ও ঘুম<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp2" hidden>
+      <a href="mathar-nazar.html">মাথার বদনজর</a>
+      <a href="mathar-waswasa.html">মাথার ওয়াসওয়াসা</a>
+      <a href="karin-waswasa.html">কারিন ও ওয়াসওয়াসা</a>
+      <a href="sopno.html">স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ</a>
+      </div>
+    </div>
+    <div class="dg g-deho">
+      <button class="dgb" aria-expanded="false" aria-controls="dp3">শরীর, রিযিক ও কাজ<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp3" hidden>
+      <a href="rizq.html">ফাক্কুত তা‌তিল — রিযিকের বাধা</a>
+      <a href="atke.html">আটকে থাকা কাজ ও প্রোডাক্টিভিটি</a>
+      <a href="git-pa.html">পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</a>
+      <a href="sthulota.html">স্থূলতা ও ওজন বৃদ্ধি</a>
+      <a href="chul.html">চুল পড়া ও সৌন্দর্য নষ্ট হওয়া</a>
+      </div>
+    </div>
+  </nav>
+
+  <span class="now">মারিদ জিন</span>
+  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="menu">
+    <span class="bars" aria-hidden="true"></span>সূচি
+  </button>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<nav class="menu" id="menu" aria-label="সংকলনের তালিকা" hidden>
+  <div class="mh">
+    <b>সব সংকলন</b>
+    <button class="mx" id="menuclose" aria-label="মেনু বন্ধ করুন">&times;</button>
+  </div>
+  <div class="ml">
+  <a href="index.html">হোম</a>
+  <div class="mg g-mul">মূল সংকলন</div>
+  <a class="g-mul" href="tair.html">আয়াতুত তাইর</a>
+  <a class="g-mul" href="dua.html">রুকইয়াহর দোয়াসমূহ</a>
+  <a class="g-mul" href="kobor-ayat.html">কবরের জাদুর আয়াত</a>
+  <a class="g-mul" href="kobor-dua.html">কবরের জাদুর দোয়া</a>
+  <a class="g-mul" href="qareen.html">কারীনের দোয়া</a>
+  <a class="g-mul" href="nokkhotro.html">নক্ষত্র ও আসমানের আয়াত</a>
+  <div class="mg g-jinn">জিন ও জাদু</div>
+  <a class="g-jinn" href="hereditary.html">বংশগত জিন (তাবিআ)</a>
+  <a class="g-jinn" href="marid.html" aria-current="page">মারিদ জিন</a>
+  <a class="g-jinn" href="danaoala.html">ডানাওয়ালা জিন</a>
+  <a class="g-jinn" href="otyachar.html">জিনের অত্যাচার ও দখলদারি</a>
+  <a class="g-jinn" href="chalan.html">জিন চালান ও মনের কথা প্রকাশ</a>
+  <a class="g-jinn" href="tafreej.html">ঘর ও শরীরের তাহরীজ</a>
+  <a class="g-jinn" href="biched.html">বিচ্ছেদের সিহর</a>
+  <div class="mg g-mon">মন, মাথা ও ঘুম</div>
+  <a class="g-mon" href="mathar-nazar.html">মাথার বদনজর</a>
+  <a class="g-mon" href="mathar-waswasa.html">মাথার ওয়াসওয়াসা</a>
+  <a class="g-mon" href="karin-waswasa.html">কারিন ও ওয়াসওয়াসা</a>
+  <a class="g-mon" href="sopno.html">স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ</a>
+  <div class="mg g-deho">শরীর, রিযিক ও কাজ</div>
+  <a class="g-deho" href="rizq.html">ফাক্কুত তা‌তিল — রিযিকের বাধা</a>
+  <a class="g-deho" href="atke.html">আটকে থাকা কাজ ও প্রোডাক্টিভিটি</a>
+  <a class="g-deho" href="git-pa.html">পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</a>
+  <a class="g-deho" href="sthulota.html">স্থূলতা ও ওজন বৃদ্ধি</a>
+  <a class="g-deho" href="chul.html">চুল পড়া ও সৌন্দর্য নষ্ট হওয়া</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+
+<header>
+  <h1>মারিদ জিন</h1>
+  <div class="ar">الْجِنُّ الْمَارِد</div>
+  <p>উদ্ধত ও শক্তিশালী মারিদ জিনের আয়াত ও দোয়া · ২৪টি অংশ</p>
+  <div class="hbar">
+    <span class="hint">সংখ্যার ঘরে চাপ দিলে গোনা বাড়ে · চেপে ধরে রাখলে শূন্য</span>
+    <button class="rst" id="reset">সব শূন্য করুন</button>
+  </div>
+</header>
+
+
+<details class="method" open>
+  <summary><span class="mi">◉</span>নিজে রুকইয়াহ করার নিয়ম<span class="mx">লুকান</span></summary>
+  <div class="mb">
+  <h4>পদ্ধতি — ধাপে ধাপে</h4>
+  <ol class="mo">
+    <li><b>অযু করে কিবলামুখী হয়ে নিরিবিলি বসুন।</b> মোবাইল দূরে রাখুন।</li>
+    <li><b>নিয়ত করুন</b> — আল্লাহর কালাম দিয়ে আল্লাহর কাছে আরোগ্য চাইছি; কালামের নিজের
+        কোনো শক্তি নেই, শক্তি আল্লাহর।</li>
+    <li><b>শুরুর দোয়াগুলো</b> পড়ুন (প্রথম অধ্যায়)।</li>
+    <li><b>আয়াতগুলো ক্রমানুসারে পড়ুন।</b> পড়ার সময় দুই হাতের তালুতে ফুঁ দিয়ে সমস্যার
+        জায়গায় হাত বুলান।</li>
+    <li><b>পাঠসংখ্যা যতবার বলা আছে ততবার</b> — কম-বেশি করার দরকার নেই।</li>
+    <li><b>মাঝে ১৫ মিনিট নিজের ভাষায়</b> মন খুলে দোয়া করুন। কান্না আসলে আটকাবেন না।</li>
+    <li><b>শেষে সমাপ্তির সূরা ও দোয়া</b> পড়ে পানিতে ফুঁ দিন।</li>
+    <li><b>কমপক্ষে ৪০ দিন</b> চালিয়ে যান। মাঝে বাদ পড়লে হতাশ না হয়ে আবার শুরু করুন।</li>
+  </ol>
+  <h4>দৈনিক সময়সূচি</h4>
+  <div class="mrow"><span class="ml">সকাল</span><span class="mv">ফজরের পর — আয়াত পাঠ ১৫ মিনিট</span></div>
+  <div class="mrow"><span class="ml">সন্ধ্যা</span><span class="mv">মাগরিবের পর — আয়াত পাঠ ১৫ মিনিট</span></div>
+  <div class="mrow"><span class="ml">রাত</span><span class="mv">ঘুমানোর আগে — সমাপ্তির সূরা ও দোয়া, পড়া পানি পান</span></div>
+  <div class="mrow"><span class="ml">সাপ্তাহিক</span><span class="mv">সপ্তাহে একদিন রুকইয়াহ গোসল</span></div>
+  <h4>পড়া তেল ম্যাসাজের জায়গা</h4>
+  <p class="mp">মারিদ জিনের ক্ষেত্রে ফোকাস — <b>মাথার তালু, কপাল, ঘাড়, মেরুদণ্ড ও বুক</b>।</p>
+  <h4>সাপ্লিমেন্ট</h4>
+  <ul class="mu">
+    <li><b>পড়া পানি</b> — এক বোতল পানিতে আয়াতগুলো পড়ে ফুঁ দিন। দিনে ৩ বার:
+        সকালে খালি পেটে, দুপুরে, রাতে ঘুমানোর আগে।</li>
+    <li><b>পড়া মধু</b> — খাঁটি মধুতে ফুঁ দিয়ে প্রতিদিন সকালে এক চামচ (সূরা নাহল ৬৯ পড়ে ফুঁ দিলে ভালো)।</li>
+    <li><b>পড়া অলিভ অয়েল</b> — জয়তুন তেলে আয়াত পড়ে ফুঁ দিয়ে আক্রান্ত জায়গায় ম্যাসাজ,
+        রাতে ঘুমানোর আগে সবচেয়ে ভালো।</li>
+    <li><b>কালোজিরা</b> — প্রতিদিন সকালে ৭টি পড়া মধুর সাথে।</li>
+    <li><b>রুকইয়াহ গোসল</b> — বালতি পানিতে আয়াত পড়ে ফুঁ দিন, সাথে সাত পাতা বরই পাতা বাটা।
+        মাথা থেকে ঢেলে গোসল — সপ্তাহে একদিন।</li>
+    <li><b>ঘরে স্প্রে</b> — পড়া পানি স্প্রে বোতলে নিয়ে ঘরের কোণা, দরজা-জানালা ও
+        বিছানার নিচে ছিটিয়ে দিন।</li>
+  </ul>
+  <h4>দৈনিক আমল</h4>
+  <div class="mrow"><span class="ml">ফজরের পর</span><span class="mv">সূরা ইয়াসীন ১ বার</span></div>
+  <div class="mrow"><span class="ml">আসরের পর</span><span class="mv">সূরা ওয়াকিয়াহ ১ বার</span></div>
+  <div class="mrow"><span class="ml">রাতে</span><span class="mv">সূরা ক্বাফ ৩ বার, সূরা মুলক ১ বার</span></div>
+  <div class="mrow"><span class="ml">ঘুমানোর আগে</span><span class="mv">আয়াতুল কুরসী ১, বাকারার শেষ দুই আয়াত, তিন কুল ৩ করে — হাতে ফুঁ দিয়ে সারা শরীরে</span></div>
+  <div class="mrow"><span class="ml">সকাল-সন্ধ্যা</span><span class="mv">হিসনুল মুসলিমের যিকির নিয়মিত</span></div>
+  <div class="mrow"><span class="ml">প্রতিদিন</span><span class="mv">ফরজ নামাজ জামাতে · ইস্তিগফার ১০০ বার · দরূদ ১০০ বার · সাধ্যমতো সাদাকাহ</span></div>
+  <div class="mn2"><b>একটি কথা।</b> পাঠসংখ্যাগুলো সংকলনের নিজস্ব বিন্যাস, কুরআন-হাদীসে নির্দিষ্ট নয় —
+  সংখ্যা মেলাতে না পারলে অসুবিধা নেই, মন দিয়ে পড়াটাই মূল। আর এই সংকলনে
+  <b>উচ্চারণ দেওয়া হয়নি</b>, কারণ মূল নথিতেও ছিল না।</div>
+  </div>
+</details>
+
+<h2 class="ch">এক · শুরু করার দোয়া</h2>
+<article class="it" id="marid-0">
+<div class="ih">
+<span class="no">১</span>
+<span class="ti">বিসমিল্লাহিল্লাযী লা ইয়াদুররু</span>
+<button class="cnt" data-id="marid-0" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ</div>
+<div class="tr">বিসমিল্লাহিল্লাযী লা ইয়াদুররু মা‘আসমিহি শাইউন ফিল আরদি ওয়ালা ফিস সামা-ই, ওয়া হুওয়াস সামীউল আলীম।</div>
+<div class="mn">আল্লাহর নামে শুরু করছি, যাঁর নামের সাথে আসমান ও যমীনের কোনো কিছুই ক্ষতি করতে পারে না; তিনি সর্বশ্রোতা, সর্বজ্ঞ।</div>
+<div class="ny"><b>নিয়ত ·</b> সকাল-সন্ধ্যা এই দোয়া পাঠকারীকে কোনো কিছু আকস্মিক ক্ষতি করতে পারে না।</div>
+<div class="nt"><b>উৎস ·</b> তিরমিযী ৩৩৮৮</div>
+</article>
+<article class="it" id="marid-1">
+<div class="ih">
+<span class="no">২</span>
+<span class="ti">বিসমিল্লাহির রহমানির রহীম</span>
+<button class="cnt" data-id="marid-1" data-target="19"><span class="cv">০</span><span class="cs">/</span><span class="ct">১৯ বার</span></button>
+</div>
+<div class="arx">بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ</div>
+<div class="tr">বিসমিল্লাহির রহমানির রহীম।</div>
+<div class="mn">পরম করুণাময় অসীম দয়ালু আল্লাহর নামে।</div>
+<div class="ny"><b>নিয়ত ·</b> রুকইয়াহ শুরুর আগে মনোযোগ ও নিয়ত স্থির করে পড়ুন।</div>
+</article>
+<article class="it" id="marid-2">
+<div class="ih">
+<span class="no">৩</span>
+<span class="ti">আউযু বিকালিমাতিল্লাহিত তাম্মাত</span>
+<button class="cnt" data-id="marid-2" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</div>
+<div class="tr">আউযু বিকালিমাতিল্লাহিত তাম্মাতি মিন শাররি মা খালাক।</div>
+<div class="mn">আমি আল্লাহর পরিপূর্ণ কালিমাসমূহের আশ্রয় নিচ্ছি তাঁর সৃষ্টির সকল অনিষ্ট থেকে।</div>
+<div class="nt"><b>উৎস ·</b> মুসলিম ২৭০৮</div>
+</article>
+<h2 class="ch">দুই · আয়াতসমূহ</h2>
+<article class="it" id="marid-3">
+<div class="ih">
+<span class="no">১</span>
+<span class="ti">সূরা আস-সাফফাত : ৭</span>
+<button class="cnt" data-id="marid-3" data-target="11"><span class="cv">০</span><span class="cs">/</span><span class="ct">১১ বার</span></button>
+</div>
+<div class="arx">وَحِفۡظࣰا مِّن كُلِّ شَيۡطَٰنࣲ مَّارِدࣲ</div>
+<div class="mn">এবং তাকে সংরক্ষিত করেছি প্রত্যেক অবাধ্য শয়তান থেকে।</div>
+<div class="ny"><b>নিয়ত ·</b> আল্লাহর কাছে প্রত্যেক মারিদ শয় তান থেকে সুরক্ষা চাওয়া</div>
+</article>
+<article class="it" id="marid-4">
+<div class="ih">
+<span class="no">২</span>
+<span class="ti">সূরা আন-নিসা : ১১৭</span>
+<button class="cnt" data-id="marid-4" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">إِن يَدۡعُونَ مِن دُونِهِۦٓ إِلَّآ إِنَٰثࣰا وَإِن يَدۡعُونَ إِلَّا شَيۡطَٰنࣰا مَّرِيدࣰا</div>
+<div class="mn">তারা আল্লাহকে পরিত্যাগ করে শুধু নারীর আরাধনা করে এবং শুধু অবাধ্য শয়তানের পূজা করে।</div>
+<div class="ny"><b>নিয়ত ·</b> মারিদ শয় তানের অসার উপাসনার প্রকৃত রূপ স্মরণ করা</div>
+</article>
+<article class="it" id="marid-5">
+<div class="ih">
+<span class="no">৩</span>
+<span class="ti">সূরা আল-হাজ্জ : ৩</span>
+<button class="cnt" data-id="marid-5" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">وَمِنَ ٱلنَّاسِ مَن يُجَٰدِلُ فِي ٱللَّهِ بِغَيۡرِ عِلۡمࣲ وَيَتَّبِعُ كُلَّ شَيۡطَٰنࣲ مَّرِيدࣲ</div>
+<div class="mn">কতক মানুষ অজ্ঞানতাবশতঃ আল্লাহ সম্পꦣ2503;ক বিতর্ক করে এবং প্রত্যেক অবাধ্য শয়তানের অনুসরণ করে।</div>
+<div class="ny"><b>নিয়ত ·</b> অজ্ঞানতাবশত মারিদ শয় তানের অনুসরণ থেকে হৃ দয় কে মুক্ত করা</div>
+</article>
+<article class="it" id="marid-6">
+<div class="ih">
+<span class="no">৪</span>
+<span class="ti">সূরা আল-ইসরা : ৬৪</span>
+<button class="cnt" data-id="marid-6" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">وَٱسۡتَفۡزِزۡ مَنِ ٱسۡتَطَعۡتَ مِنۡهُم بِصَوۡتِكَ وَأَجۡلِبۡ عَلَيۡهِم بِخَيۡلِكَ وَرَجِلِكَ وَشَارِكۡهُمۡ فِي ٱلۡأَمۡوَٰلِ وَٱلۡأَوۡلَٰدِ وَعِدۡهُمۡ وَمَا يَعِدُهُمُ ٱلشَّيۡطَٰنُ إِلَّا غُرُورًا</div>
+<div class="mn">তুই সত্যচ্যুত করে তাদের মধ্য থেকে যাকে পারিস স্বীয় আওয়ায দ্বারা, স্বীয় অশ্বারোহী ও পদাতিক বাহিনী নিয়ে তাদেরকে আক্রমণ কর, তাদের অর্থ-সম্পদ ও সন্তান-সন্ততিতে শরীক হয়ে যা এবং তাদেরকে প্রতিশ্রুতি দে। ছলনা ছাড়া শয়তান তাদেরকে কোন প্রতিশ্রুতি দেয় না।</div>
+<div class="ny"><b>নিয়ত ·</b> মারিদের প্র রোচনা ও প্রতিশ্রুতি প্রতারণা ছাড়া কিছু নয়</div>
+</article>
+<article class="it" id="marid-7">
+<div class="ih">
+<span class="no">৫</span>
+<span class="ti">সূরা সাবা : ২০</span>
+<button class="cnt" data-id="marid-7" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">وَلَقَدۡ صَدَّقَ عَلَيۡهِمۡ إِبۡلِيسُ ظَنَّهُۥ فَٱتَّبَعُوهُ إِلَّا فَرِيقࣰا مِّنَ ٱلۡمُؤۡمِنِينَ</div>
+<div class="mn">আর তাদের উপর ইবলীস তার অনুমান সত্য হিসেবে প্রতিষ্ঠিত করল। ফলে তাদের মধ্যে মুমিনদের একটি দল ব্যতীত সকলেই তার পথ অনুসরণ করল।</div>
+<div class="ny"><b>নিয়ত ·</b> ইবলিসের অনুমান শুধু পরীক্ষা ছিল, প্রকৃত মুমিনরা তার পথে যায় নি</div>
+</article>
+<article class="it" id="marid-8">
+<div class="ih">
+<span class="no">৬</span>
+<span class="ti">সূরা আল-হিজর : ১৭</span>
+<button class="cnt" data-id="marid-8" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">وَحَفِظۡنَٰهَا مِن كُلِّ شَيۡطَٰنࣲ رَّجِيمٍ</div>
+<div class="mn">আমি আকাশকে প্রত্যেক বিতাড়িত শয়তান থেকে নিরাপদ করে দিয়েছি।</div>
+<div class="ny"><b>নিয়ত ·</b> আল্লাহর অনুমতি ছাড়া মারিদ কোনো প্রকৃত ক্ষতি করতে পারে না — তাওয়াক্কু ল রাখা</div>
+</article>
+<article class="it" id="marid-9">
+<div class="ih">
+<span class="no">৭</span>
+<span class="ti">সূরা আল-মুজাদালা : ১০</span>
+<button class="cnt" data-id="marid-9" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">إِنَّمَا ٱلنَّجۡوَىٰ مِنَ ٱلشَّيۡطَٰنِ لِيَحۡزُنَ ٱلَّذِينَ ءَامَنُواْ وَلَيۡسَ بِضَآرِّهِمۡ شَيۡـًٔا إِلَّا بِإِذۡنِ ٱللَّهِ وَعَلَى ٱللَّهِ فَلۡيَتَوَكَّلِ ٱلۡمُؤۡمِنُونَ</div>
+<div class="mn">এই কানাঘুষা তো শয়তানের কাজ; মুমিনদেরকে দুঃখ দেয়ার দেয়ার জন্যে। তবে আল্লাহর অনুমতি ব্যতীত সে তাদের কোন ক্ষতি করতে পারবে না। মুমিনদের উচিত আল্লাহর উপর ভরসা করা।</div>
+<div class="ny"><b>নিয়ত ·</b> আল্লাহ প্রত্যেক বিতাড়ি ত মারিদ শয় তান থেকে সুরক্ষার ব্যবস্থা করেন</div>
+</article>
+<article class="it" id="marid-10">
+<div class="ih">
+<span class="no">৮</span>
+<span class="ti">সূরা ফুসসিলাত : ৩৬</span>
+<button class="cnt" data-id="marid-10" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">وَإِمَّا يَنزَغَنَّكَ مِنَ ٱلشَّيۡطَٰنِ نَزۡغࣱ فَٱسۡتَعِذۡ بِٱللَّهِ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلۡعَلِيمُ</div>
+<div class="mn">যদি শয়তানের পক্ষ থেকে আপনি কিছু কুমন্ত্রণা অনুভব করেন, তবে আল্লাহর শরণাপন্ন হোন। নিশ্চয় তিনি সর্বশ্রোতা, সর্বজ্ঞ।</div>
+<div class="ny"><b>নিয়ত ·</b> সামান্যতম কু মন্</div>
+</article>
+<article class="it" id="marid-11">
+<div class="ih">
+<span class="no">৯</span>
+<span class="ti">সূরা ফাতির : ৬</span>
+<button class="cnt" data-id="marid-11" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">إِنَّ ٱلشَّيۡطَٰنَ لَكُمۡ عَدُوࣱّ فَٱتَّخِذُوهُ عَدُوًّا إِنَّمَا يَدۡعُواْ حِزۡبَهُۥ لِيَكُونُواْ مِنۡ أَصۡحَٰبِ ٱلسَّعِيرِ</div>
+<div class="mn">শয়তান তোমাদের শত্রু; অতএব তাকে শত্রু রূপেই গ্রহণ কর। সে তার দলবলকে আহবান করে যেন তারা জাহান্নামী হয়।</div>
+<div class="ny"><b>নিয়ত ·</b> কু রআন পড়ার আগে আউযু বিল্লাহ পড়ে শুরু করা</div>
+</article>
+<article class="it" id="marid-12">
+<div class="ih">
+<span class="no">১০</span>
+<span class="ti">সূরা আন-নাহল : ৯৮</span>
+<button class="cnt" data-id="marid-12" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">فَإِذَا قَرَأۡتَ ٱلۡقُرۡءَانَ فَٱسۡتَعِذۡ بِٱللَّهِ مِنَ ٱلشَّيۡطَٰنِ ٱلرَّجِيمِ</div>
+<div class="mn">অতএব, যখন আপনি কোরআন পাঠ করেন তখন বিতাড়িত শয়তান থেকে আল্লাহর আশ্রয় গ্রহণ করুন।</div>
+<div class="ny"><b>নিয়ত ·</b> শয় তান/মারিদকে সবসময় শত্রু জ্ঞান করে সতর্ক থাকা</div>
+</article>
+<h2 class="ch">তিন · বিশেষ দোয়া</h2>
+<article class="it" id="marid-13">
+<div class="ih">
+<span class="no">১</span>
+<span class="ti">মারিদ জিন পোড়ানোর দোয়া</span>
+<button class="cnt" data-id="marid-13" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">اللَّهُمَّ احْرِقْ كُلَّ جِنٍّ مَارِدٍ عَلَى جَسَدِي وَبَيْتِي</div>
+<div class="tr">আল্লাহুম্মাহ্‌রিক কুল্লা জিন্নিন মারিদিন আলা জাসাদী ওয়া বাইতী।</div>
+<div class="mn">হে আল্লাহ! আমার শরীরে ও ঘরে থাকা সমস্ত মারিদ জিন জ্বালিয়ে দিন।</div>
+</article>
+<article class="it" id="marid-14">
+<div class="ih">
+<span class="no">২</span>
+<span class="ti">আধিপত্য বাতিলের দোয়া</span>
+<button class="cnt" data-id="marid-14" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">بِسْمِ اللَّهِ يُبْطَلُ كُلُّ تَسَلُّطٍ عَلَى جَسَدِي وَبَيْتِي</div>
+<div class="tr">বিসমিল্লাহি ইউবতালু কুল্লু তাসাল্লুতিন আলা জাসাদী ওয়া বাইতী।</div>
+<div class="mn">আল্লাহর নামে — আমার শরীরে ও ঘরে সমস্ত আধিপত্য বাতিল করা হলো।</div>
+</article>
+<article class="it" id="marid-15">
+<div class="ih">
+<span class="no">৩</span>
+<span class="ti">গিঁট খোলার দোয়া</span>
+<button class="cnt" data-id="marid-15" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">اللَّهُمَّ بِقُوَّتِكَ وَقُدْرَتِكَ فُكَّ كُلَّ عُقْدَةٍ عُقِدَتْ عَلَى جَسَدِي وَبَيْتِي</div>
+<div class="tr">আল্লাহুম্মা বিকুওয়্যাতিকা ওয়া কুদরাতিকা ফুক্কা কুল্লা উকদাতিন উকিদাত আলা জাসাদী ওয়া বাইতী।</div>
+<div class="mn">হে আল্লাহ! আপনার শক্তি ও ক্ষমতা দিয়ে আমার শরীরে ও ঘরে বাঁধা প্রতিটি গিঁট খুলে দিন।</div>
+</article>
+<article class="it" id="marid-16">
+<div class="ih">
+<span class="no">৪</span>
+<span class="ti">মারিদের দম্ভ ভাঙার দোয়া</span>
+<button class="cnt" data-id="marid-16" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">اللَّهُمَّ إِنَّ كُلَّ مَارِدٍ عَاتٍ عَبْدٌ مِنْ عِبَادِكَ، لَا حَوْلَ لَهُ وَلَا قُوَّةَ إِلَّا بِإِذْنِكَ، فَاكْسِرْ شَوْكَتَهُ وَأَذِلَّ كِبْرِيَاءَهُ عَنِّي</div>
+<div class="mn">হে আল্লাহ, প্রত্যেক উদ্ধত মারিদই আপনার সৃষ্টির একজন গোলাম মাত্র, আপনার অনুমতি ছাড়া তার কোনো শক্তি-সামর্থ্য নেই। আপনি তার দম্ভ ভেঙে দিন এবং আমার থেকে তার অহংকার দূর করে দিন।</div>
+</article>
+<article class="it" id="marid-17">
+<div class="ih">
+<span class="no">৫</span>
+<span class="ti">অবাধ্য মারিদকে হেয় করার দোয়া</span>
+<button class="cnt" data-id="marid-17" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">اللَّهُمَّ يَا قَوِيُّ يَا عَزِيزُ أَذِلَّ كُلَّ مَارِدٍ عَنِيدٍ وَاكْفِنِي شَرَّهُ بِمَا شِئْتَ</div>
+<div class="tr">আল্লাহুম্মা ইয়া কাবিয়্যু ইয়া আযীযু আযিল্লা কুল্লা মারিদিন আনীদিন ওয়াকফিনী শাররাহু বিমা শি’তা।</div>
+<div class="mn">হে আল্লাহ, হে পরাক্রমশালী, হে পরাক্রান্ত! প্রত্যেক অবাধ্য মারিদকে হেয় করে দিন এবং আপনার ইচ্ছামতো তার অনিষ্ট থেকে আমাকে যথেষ্ট রক্ষা করুন।</div>
+</article>
+<h2 class="ch">চার · সমাপ্তির সূরা ও দোয়া</h2>
+<article class="it" id="marid-18">
+<div class="ih">
+<span class="no">১</span>
+<span class="ti">সূরা আল-ইখলাস : ১-৪</span>
+<button class="cnt" data-id="marid-18" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">قُلۡ هُوَ ٱللَّهُ أَحَدٌ ٱللَّهُ ٱلصَّمَدُ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ</div>
+<div class="mn">বলুন, তিনি আল্লাহ, এক আল্লাহ অমুখাপেক্ষী তিনি কাউকে জন্ম দেননি এবং কেউ তাকে জন্ম দেয়নি এবং তার সমতুল্য কেউ নেই।</div>
+<div class="ny"><b>নিয়ত ·</b> তাওহীদের ঘোষণা দিয়ে হৃদয় দৃঢ় করা</div>
+</article>
+<article class="it" id="marid-19">
+<div class="ih">
+<span class="no">২</span>
+<span class="ti">সূরা আল-ফালাক : ১-৫</span>
+<button class="cnt" data-id="marid-19" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ مِن شَرِّ مَا خَلَقَ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ</div>
+<div class="mn">বলুন, আমি আশ্রয় গ্রহণ করছি প্রভাতের পালনকর্তার তিনি যা সৃষ্টি করেছেন, তার অনিষ্ট থেকে অন্ধকার রাত্রির অনিষ্ট থেকে, যখন তা সমাগত হয় গ্রন্থিতে ফুঁৎকার দিয়ে জাদুকারিনীদের অনিষ্ট থেকে এবং হিংসুকের অনিষ্ট থেকে যখন সে হিংসা করে।</div>
+<div class="ny"><b>নিয়ত ·</b> জাদু, হাসাদ ও রাতের অনিষ্ট থেকে আশ্রয়</div>
+</article>
+<article class="it" id="marid-20">
+<div class="ih">
+<span class="no">৩</span>
+<span class="ti">সূরা আন-নাস : ১-৬</span>
+<button class="cnt" data-id="marid-20" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ مَلِكِ ٱلنَّاسِ إِلَٰهِ ٱلنَّاسِ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ</div>
+<div class="mn">বলুন, আমি আশ্রয় গ্রহণ করিতেছি মানুষের পালনকর্তার মানুষের অধিপতির মানুষের মা’বুদের তার অনিষ্ট থেকে, যে কুমন্ত্রণা দেয় ও আত্নগোপন করে যে কুমন্ত্রণা দেয় মানুষের অন্তরে জ্বিনের মধ্য থেকে অথবা মানুষের মধ্য থেকে।</div>
+<div class="ny"><b>নিয়ত ·</b> মানুষ ও জিনের ওয়াসওয়াসা থেকে আশ্রয়</div>
+</article>
+<article class="it" id="marid-21">
+<div class="ih">
+<span class="no">৪</span>
+<span class="ti">উঈযুকা বিকালিমাতিল্লাহিত তাম্মাহ</span>
+<button class="cnt" data-id="marid-21" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">أُعِيذُكَ بِكَلِمَاتِ اللَّهِ التَّامَّةِ مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ وَمِنْ كُلِّ عَيْنٍ لَامَّةٍ</div>
+<div class="tr">উঈযুকা বিকালিমাতিল্লাহিত তাম্মাতি মিন কুল্লি শাইতানিন ওয়া হাম্মাহ, ওয়া মিন কুল্লি আইনিন লাম্মাহ।</div>
+<div class="mn">আমি তোমাকে আল্লাহর পরিপূর্ণ কালিমাসমূহের আশ্রয়ে সোপর্দ করছি — প্রত্যেক শয়তান, বিষাক্ত প্রাণী এবং প্রত্যেক ক্ষতিকর বদনজর থেকে।</div>
+<div class="ny"><b>নিয়ত ·</b> নবীজি ﷺ হাসান ও হুসাইন রাযিয়াল্লাহু আনহুমাকে এই দোয়া পড়ে ঝাড়তেন।</div>
+<div class="nt"><b>উৎস ·</b> বুখারী ৩৩৭১</div>
+</article>
+<article class="it" id="marid-22">
+<div class="ih">
+<span class="no">৫</span>
+<span class="ti">বিসমিল্লাহি আরকীক</span>
+<button class="cnt" data-id="marid-22" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">بِسْمِ اللَّهِ أَرْقِيكَ مِنْ كُلِّ شَيْءٍ يُؤْذِيكَ مِنْ شَرِّ كُلِّ نَفْسٍ أَوْ عَيْنٍ حَاسِدٍ اللَّهُ يَشْفِيكَ بِسْمِ اللَّهِ أَرْقِيكَ</div>
+<div class="tr">বিসমিল্লাহি আরকীকা মিন কুল্লি শাইয়িন ইউ’যীক, মিন শাররি কুল্লি নাফসিন আও আইনিন হাসিদ, আল্লাহু ইয়াশফীক, বিসমিল্লাহি আরকীক।</div>
+<div class="mn">আল্লাহর নামে আমি তোমাকে ঝাড়ছি — এমন প্রতিটি জিনিস থেকে যা তোমাকে কষ্ট দেয়, প্রত্যেক প্রাণ ও হিংসুকের চোখের অনিষ্ট থেকে। আল্লাহ তোমাকে আরোগ্য দান করুন। আল্লাহর নামে আমি তোমাকে ঝাড়ছি।</div>
+<div class="ny"><b>নিয়ত ·</b> জিবরীল আলাইহিস সালাম নবীজি ﷺ-কে এভাবে রুকইয়াহ করেছিলেন।</div>
+<div class="nt"><b>উৎস ·</b> মুসলিম ২১৮৬</div>
+</article>
+<article class="it" id="marid-23">
+<div class="ih">
+<span class="no">৬</span>
+<span class="ti">আল্লাহুম্মা রাব্বান নাস</span>
+<button class="cnt" data-id="marid-23" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">اللَّهُمَّ رَبَّ النَّاسِ أَذْهِبِ الْبَأْسَ اشْفِ أَنْتَ الشَّافِي لَا شِفَاءَ إِلَّا شِفَاؤُكَ شِفَاءً لَا يُغَادِرُ سَقَمًا</div>
+<div class="tr">আল্লাহুম্মা রাব্বান নাসি, আযহিবিল বা’স, ইশফি আনতাশ শাফী, লা শিফাআ ইল্লা শিফাউক, শিফাআন লা ইউগাদিরু সাকামা।</div>
+<div class="mn">হে আল্লাহ, মানুষের প্রতিপালক! কষ্ট দূর করে দিন, আরোগ্য দান করুন। আপনিই আরোগ্যদাতা, আপনার আরোগ্য ছাড়া কোনো আরোগ্য নেই — এমন আরোগ্য যা কোনো রোগ অবশিষ্ট রাখে না।</div>
+<div class="ny"><b>নিয়ত ·</b> শেষে পানিতে ফুঁ দিয়ে পান করুন।</div>
+<div class="nt"><b>উৎস ·</b> বুখারী ৫৭৪৩</div>
+</article>
+
+
+<footer>
+  <b>রুকইয়াহ — আয়াত ও দোয়া</b><br>
+  সংকলন ও সম্পাদনা — <b>ইবনে নাঈম</b> · Ibn Naim
+</footer>
+
+</div>
+
+<div class="tools">
+  <button class="tool" id="fminus" aria-label="আরবি ছোট">A−</button>
+  <button class="tool" id="fplus" aria-label="আরবি বড়">A+</button>
+  <button class="tool" id="wake" aria-label="স্ক্রিন জাগিয়ে রাখুন">☀</button>
+  <button class="tool" id="tb" aria-label="থিম">◐</button>
+</div>
+<button class="installbtn" id="install" hidden>⤓ ইনস্টল করুন</button>
+<script src="app.js" defer></script>
+</body>
+</html>

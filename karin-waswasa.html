@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>কারিন ও ওয়াসওয়াসা — রুকইয়াহ</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1b3a4b">
+<meta name="theme-color" content="#101a20" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="আয়াত ও দোয়া">
+<script>try{var t=localStorage.getItem('rad-theme');if(t)document.documentElement.setAttribute('data-theme',t);
+var f=localStorage.getItem('rad-ar');if(f)document.documentElement.style.setProperty('--arsize',f+'px');}catch(e){}</script>
+</head>
+<body class="g-mon">
+
+<header class="bar">
+  <a class="brand" href="index.html">রুকইয়াহ<i>আয়াত ও দোয়া</i></a>
+
+  <nav class="dnav" aria-label="সংকলনের তালিকা">
+    <a class="dgh" href="index.html">হোম</a>
+    <div class="dg g-mul">
+      <button class="dgb" aria-expanded="false" aria-controls="dp0">মূল সংকলন<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp0" hidden>
+      <a href="tair.html">আয়াতুত তাইর</a>
+      <a href="dua.html">রুকইয়াহর দোয়াসমূহ</a>
+      <a href="kobor-ayat.html">কবরের জাদুর আয়াত</a>
+      <a href="kobor-dua.html">কবরের জাদুর দোয়া</a>
+      <a href="qareen.html">কারীনের দোয়া</a>
+      <a href="nokkhotro.html">নক্ষত্র ও আসমানের আয়াত</a>
+      </div>
+    </div>
+    <div class="dg g-jinn">
+      <button class="dgb" aria-expanded="false" aria-controls="dp1">জিন ও জাদু<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp1" hidden>
+      <a href="hereditary.html">বংশগত জিন (তাবিআ)</a>
+      <a href="marid.html">মারিদ জিন</a>
+      <a href="danaoala.html">ডানাওয়ালা জিন</a>
+      <a href="otyachar.html">জিনের অত্যাচার ও দখলদারি</a>
+      <a href="chalan.html">জিন চালান ও মনের কথা প্রকাশ</a>
+      <a href="tafreej.html">ঘর ও শরীরের তাহরীজ</a>
+      <a href="biched.html">বিচ্ছেদের সিহর</a>
+      </div>
+    </div>
+    <div class="dg g-mon" data-on="1">
+      <button class="dgb" aria-expanded="false" aria-controls="dp2">মন, মাথা ও ঘুম<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp2" hidden>
+      <a href="mathar-nazar.html">মাথার বদনজর</a>
+      <a href="mathar-waswasa.html">মাথার ওয়াসওয়াসা</a>
+      <a href="karin-waswasa.html" aria-current="page">কারিন ও ওয়াসওয়াসা</a>
+      <a href="sopno.html">স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ</a>
+      </div>
+    </div>
+    <div class="dg g-deho">
+      <button class="dgb" aria-expanded="false" aria-controls="dp3">শরীর, রিযিক ও কাজ<span class="cv" aria-hidden="true"></span></button>
+      <div class="dgp" id="dp3" hidden>
+      <a href="rizq.html">ফাক্কুত তা‌তিল — রিযিকের বাধা</a>
+      <a href="atke.html">আটকে থাকা কাজ ও প্রোডাক্টিভিটি</a>
+      <a href="git-pa.html">পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</a>
+      <a href="sthulota.html">স্থূলতা ও ওজন বৃদ্ধি</a>
+      <a href="chul.html">চুল পড়া ও সৌন্দর্য নষ্ট হওয়া</a>
+      </div>
+    </div>
+  </nav>
+
+  <span class="now">কারিন ও ওয়াসওয়াসা</span>
+  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="menu">
+    <span class="bars" aria-hidden="true"></span>সূচি
+  </button>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<nav class="menu" id="menu" aria-label="সংকলনের তালিকা" hidden>
+  <div class="mh">
+    <b>সব সংকলন</b>
+    <button class="mx" id="menuclose" aria-label="মেনু বন্ধ করুন">&times;</button>
+  </div>
+  <div class="ml">
+  <a href="index.html">হোম</a>
+  <div class="mg g-mul">মূল সংকলন</div>
+  <a class="g-mul" href="tair.html">আয়াতুত তাইর</a>
+  <a class="g-mul" href="dua.html">রুকইয়াহর দোয়াসমূহ</a>
+  <a class="g-mul" href="kobor-ayat.html">কবরের জাদুর আয়াত</a>
+  <a class="g-mul" href="kobor-dua.html">কবরের জাদুর দোয়া</a>
+  <a class="g-mul" href="qareen.html">কারীনের দোয়া</a>
+  <a class="g-mul" href="nokkhotro.html">নক্ষত্র ও আসমানের আয়াত</a>
+  <div class="mg g-jinn">জিন ও জাদু</div>
+  <a class="g-jinn" href="hereditary.html">বংশগত জিন (তাবিআ)</a>
+  <a class="g-jinn" href="marid.html">মারিদ জিন</a>
+  <a class="g-jinn" href="danaoala.html">ডানাওয়ালা জিন</a>
+  <a class="g-jinn" href="otyachar.html">জিনের অত্যাচার ও দখলদারি</a>
+  <a class="g-jinn" href="chalan.html">জিন চালান ও মনের কথা প্রকাশ</a>
+  <a class="g-jinn" href="tafreej.html">ঘর ও শরীরের তাহরীজ</a>
+  <a class="g-jinn" href="biched.html">বিচ্ছেদের সিহর</a>
+  <div class="mg g-mon">মন, মাথা ও ঘুম</div>
+  <a class="g-mon" href="mathar-nazar.html">মাথার বদনজর</a>
+  <a class="g-mon" href="mathar-waswasa.html">মাথার ওয়াসওয়াসা</a>
+  <a class="g-mon" href="karin-waswasa.html" aria-current="page">কারিন ও ওয়াসওয়াসা</a>
+  <a class="g-mon" href="sopno.html">স্বপ্ন ও দুঃস্বপ্নের রুকইয়াহ</a>
+  <div class="mg g-deho">শরীর, রিযিক ও কাজ</div>
+  <a class="g-deho" href="rizq.html">ফাক্কুত তা‌তিল — রিযিকের বাধা</a>
+  <a class="g-deho" href="atke.html">আটকে থাকা কাজ ও প্রোডাক্টিভিটি</a>
+  <a class="g-deho" href="git-pa.html">পা ও হাঁটুর গিঁট এবং ছিটানো জাদু</a>
+  <a class="g-deho" href="sthulota.html">স্থূলতা ও ওজন বৃদ্ধি</a>
+  <a class="g-deho" href="chul.html">চুল পড়া ও সৌন্দর্য নষ্ট হওয়া</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+
+<header>
+  <h1>কারিন ও ওয়াসওয়াসা</h1>
+  <div class="ar">الْقَرِينُ وَالْوَسْوَسَة</div>
+  <p>সঙ্গী-শয়তানের কুমন্ত্রণা, সন্দেহ ও অবসেসিভ চিন্তার রুকইয়াহ · ২৮টি অংশ</p>
+  <div class="hbar">
+    <span class="hint">সংখ্যার ঘরে চাপ দিলে গোনা বাড়ে · চেপে ধরে রাখলে শূন্য</span>
+    <button class="rst" id="reset">সব শূন্য করুন</button>
+  </div>
+</header>
+
+
+<details class="method" open>
+  <summary><span class="mi">◉</span>নিজে রুকইয়াহ করার নিয়ম<span class="mx">লুকান</span></summary>
+  <div class="mb">
+  <h4>পদ্ধতি — ধাপে ধাপে</h4>
+  <ol class="mo">
+    <li><b>অযু করে কিবলামুখী হয়ে নিরিবিলি বসুন।</b> মোবাইল দূরে রাখুন।</li>
+    <li><b>নিয়ত করুন</b> — আল্লাহর কালাম দিয়ে আল্লাহর কাছে আরোগ্য চাইছি; কালামের নিজের
+        কোনো শক্তি নেই, শক্তি আল্লাহর।</li>
+    <li><b>শুরুর দোয়াগুলো</b> পড়ুন (প্রথম অধ্যায়)।</li>
+    <li><b>আয়াতগুলো ক্রমানুসারে পড়ুন।</b> পড়ার সময় দুই হাতের তালুতে ফুঁ দিয়ে সমস্যার
+        জায়গায় হাত বুলান।</li>
+    <li><b>পাঠসংখ্যা যতবার বলা আছে ততবার</b> — কম-বেশি করার দরকার নেই।</li>
+    <li><b>মাঝে ১৫ মিনিট নিজের ভাষায়</b> মন খুলে দোয়া করুন। কান্না আসলে আটকাবেন না।</li>
+    <li><b>শেষে সমাপ্তির সূরা ও দোয়া</b> পড়ে পানিতে ফুঁ দিন।</li>
+    <li><b>কমপক্ষে ৪০ দিন</b> চালিয়ে যান। মাঝে বাদ পড়লে হতাশ না হয়ে আবার শুরু করুন।</li>
+  </ol>
+  <h4>দৈনিক সময়সূচি</h4>
+  <div class="mrow"><span class="ml">সকাল</span><span class="mv">ফজরের পর — আয়াত পাঠ ১৫ মিনিট</span></div>
+  <div class="mrow"><span class="ml">সন্ধ্যা</span><span class="mv">মাগরিবের পর — আয়াত পাঠ ১৫ মিনিট</span></div>
+  <div class="mrow"><span class="ml">রাত</span><span class="mv">ঘুমানোর আগে — সমাপ্তির সূরা ও দোয়া, পড়া পানি পান</span></div>
+  <div class="mrow"><span class="ml">সাপ্তাহিক</span><span class="mv">সপ্তাহে একদিন রুকইয়াহ গোসল</span></div>
+  <h4>পড়া তেল ম্যাসাজের জায়গা</h4>
+  <p class="mp">কারিন ও ওয়াসওয়াসার ক্ষেত্রে ফোকাস — <b>মাথার তালু, কপাল ও বুক</b>।</p>
+  <h4>সাপ্লিমেন্ট</h4>
+  <ul class="mu">
+    <li><b>পড়া পানি</b> — এক বোতল পানিতে আয়াতগুলো পড়ে ফুঁ দিন। দিনে ৩ বার:
+        সকালে খালি পেটে, দুপুরে, রাতে ঘুমানোর আগে।</li>
+    <li><b>পড়া মধু</b> — খাঁটি মধুতে ফুঁ দিয়ে প্রতিদিন সকালে এক চামচ (সূরা নাহল ৬৯ পড়ে ফুঁ দিলে ভালো)।</li>
+    <li><b>পড়া অলিভ অয়েল</b> — জয়তুন তেলে আয়াত পড়ে ফুঁ দিয়ে আক্রান্ত জায়গায় ম্যাসাজ,
+        রাতে ঘুমানোর আগে সবচেয়ে ভালো।</li>
+    <li><b>কালোজিরা</b> — প্রতিদিন সকালে ৭টি পড়া মধুর সাথে।</li>
+    <li><b>রুকইয়াহ গোসল</b> — বালতি পানিতে আয়াত পড়ে ফুঁ দিন, সাথে সাত পাতা বরই পাতা বাটা।
+        মাথা থেকে ঢেলে গোসল — সপ্তাহে একদিন।</li>
+    <li><b>ঘরে স্প্রে</b> — পড়া পানি স্প্রে বোতলে নিয়ে ঘরের কোণা, দরজা-জানালা ও
+        বিছানার নিচে ছিটিয়ে দিন।</li>
+  </ul>
+  <h4>দৈনিক আমল</h4>
+  <div class="mrow"><span class="ml">ফজরের পর</span><span class="mv">সূরা ইয়াসীন ১ বার</span></div>
+  <div class="mrow"><span class="ml">আসরের পর</span><span class="mv">সূরা ওয়াকিয়াহ ১ বার</span></div>
+  <div class="mrow"><span class="ml">রাতে</span><span class="mv">সূরা ক্বাফ ৩ বার, সূরা মুলক ১ বার</span></div>
+  <div class="mrow"><span class="ml">ঘুমানোর আগে</span><span class="mv">আয়াতুল কুরসী ১, বাকারার শেষ দুই আয়াত, তিন কুল ৩ করে — হাতে ফুঁ দিয়ে সারা শরীরে</span></div>
+  <div class="mrow"><span class="ml">সকাল-সন্ধ্যা</span><span class="mv">হিসনুল মুসলিমের যিকির নিয়মিত</span></div>
+  <div class="mrow"><span class="ml">প্রতিদিন</span><span class="mv">ফরজ নামাজ জামাতে · ইস্তিগফার ১০০ বার · দরূদ ১০০ বার · সাধ্যমতো সাদাকাহ</span></div>
+  <div class="mn2"><b>একটি কথা।</b> পাঠসংখ্যাগুলো সংকলনের নিজস্ব বিন্যাস, কুরআন-হাদীসে নির্দিষ্ট নয় —
+  সংখ্যা মেলাতে না পারলে অসুবিধা নেই, মন দিয়ে পড়াটাই মূল। আর এই সংকলনে
+  <b>উচ্চারণ দেওয়া হয়নি</b>, কারণ মূল নথিতেও ছিল না।</div>
+  </div>
+</details>
+
+<h2 class="ch">এক · শুরু করার দোয়া</h2>
+<article class="it" id="karin-waswasa-0">
+<div class="ih">
+<span class="no">১</span>
+<span class="ti">বিসমিল্লাহিল্লাযী লা ইয়াদুররু</span>
+<button class="cnt" data-id="karin-waswasa-0" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ</div>
+<div class="tr">বিসমিল্লাহিল্লাযী লা ইয়াদুররু মা‘আসমিহি শাইউন ফিল আরদি ওয়ালা ফিস সামা-ই, ওয়া হুওয়াস সামীউল আলীম।</div>
+<div class="mn">আল্লাহর নামে শুরু করছি, যাঁর নামের সাথে আসমান ও যমীনের কোনো কিছুই ক্ষতি করতে পারে না; তিনি সর্বশ্রোতা, সর্বজ্ঞ।</div>
+<div class="ny"><b>নিয়ত ·</b> সকাল-সন্ধ্যা এই দোয়া পাঠকারীকে কোনো কিছু আকস্মিক ক্ষতি করতে পারে না।</div>
+<div class="nt"><b>উৎস ·</b> তিরমিযী ৩৩৮৮</div>
+</article>
+<article class="it" id="karin-waswasa-1">
+<div class="ih">
+<span class="no">২</span>
+<span class="ti">বিসমিল্লাহির রহমানির রহীম</span>
+<button class="cnt" data-id="karin-waswasa-1" data-target="19"><span class="cv">০</span><span class="cs">/</span><span class="ct">১৯ বার</span></button>
+</div>
+<div class="arx">بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ</div>
+<div class="tr">বিসমিল্লাহির রহমানির রহীম।</div>
+<div class="mn">পরম করুণাময় অসীম দয়ালু আল্লাহর নামে।</div>
+<div class="ny"><b>নিয়ত ·</b> রুকইয়াহ শুরুর আগে মনোযোগ ও নিয়ত স্থির করে পড়ুন।</div>
+</article>
+<article class="it" id="karin-waswasa-2">
+<div class="ih">
+<span class="no">৩</span>
+<span class="ti">আউযু বিকালিমাতিল্লাহিত তাম্মাত</span>
+<button class="cnt" data-id="karin-waswasa-2" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</div>
+<div class="tr">আউযু বিকালিমাতিল্লাহিত তাম্মাতি মিন শাররি মা খালাক।</div>
+<div class="mn">আমি আল্লাহর পরিপূর্ণ কালিমাসমূহের আশ্রয় নিচ্ছি তাঁর সৃষ্টির সকল অনিষ্ট থেকে।</div>
+<div class="nt"><b>উৎস ·</b> মুসলিম ২৭০৮</div>
+</article>
+<h2 class="ch">দুই · আয়াতসমূহ</h2>
+<article class="it" id="karin-waswasa-3">
+<div class="ih">
+<span class="no">১</span>
+<span class="ti">সূরা আন-নাস : ১-৬</span>
+<button class="cnt" data-id="karin-waswasa-3" data-target="11"><span class="cv">০</span><span class="cs">/</span><span class="ct">১১ বার</span></button>
+</div>
+<div class="arx">قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ مَلِكِ ٱلنَّاسِ إِلَٰهِ ٱلنَّاسِ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ</div>
+<div class="mn">বলুন, আমি আশ্রয় গ্রহণ করিতেছি মানুষের পালনকর্তার মানুষের অধিপতির মানুষের মা’বুদের তার অনিষ্ট থেকে, যে কুমন্ত্রণা দেয় ও আত্নগোপন করে যে কুমন্ত্রণা দেয় মানুষের অন্তরে জ্বিনের মধ্য থেকে অথবা মানুষের মধ্য থেকে।</div>
+<div class="ny"><b>নিয়ত ·</b> সূরা নাস — ওয়াসওয়াসার সরাসরি প্র তিষেধক</div>
+</article>
+<article class="it" id="karin-waswasa-4">
+<div class="ih">
+<span class="no">২</span>
+<span class="ti">সূরা আল-মু&#x27;মিনূন : ৯৭-৯৮</span>
+<button class="cnt" data-id="karin-waswasa-4" data-target="11"><span class="cv">০</span><span class="cs">/</span><span class="ct">১১ বার</span></button>
+</div>
+<div class="arx">وَقُل رَّبِّ أَعُوذُ بِكَ مِنۡ هَمَزَٰتِ ٱلشَّيَٰطِينِ وَأَعُوذُ بِكَ رَبِّ أَن يَحۡضُرُونِ</div>
+<div class="mn">বলুনঃ হে আমার পালনকর্তা! আমি শয়তানের প্ররোচনা থেকে আপনার আশ্রয় প্রার্থনা করি এবং হে আমার পালনকর্তা! আমার নিকট তাদের উপস্থিতি থেকে আপনার আশ্রয় প্রার্থনা করি।</div>
+<div class="ny"><b>নিয়ত ·</b> শয় তানের কু মন্</div>
+</article>
+<article class="it" id="karin-waswasa-5">
+<div class="ih">
+<span class="no">৩</span>
+<span class="ti">সূরা আল-আ&#x27;রাফ : ২০০-২০১</span>
+<button class="cnt" data-id="karin-waswasa-5" data-target="11"><span class="cv">০</span><span class="cs">/</span><span class="ct">১১ বার</span></button>
+</div>
+<div class="arx">وَإِمَّا يَنزَغَنَّكَ مِنَ ٱلشَّيۡطَٰنِ نَزۡغࣱ فَٱسۡتَعِذۡ بِٱللَّهِ إِنَّهُۥ سَمِيعٌ عَلِيمٌ إِنَّ ٱلَّذِينَ ٱتَّقَوۡاْ إِذَا مَسَّهُمۡ طَٰٓئِفࣱ مِّنَ ٱلشَّيۡطَٰنِ تَذَكَّرُواْ فَإِذَا هُم مُّبۡصِرُونَ</div>
+<div class="mn">আর যদি শয়তানের প্ররোচনা তোমাকে প্ররোচিত করে, তাহলে আল্লাহর শরণাপন্ন হও তিনিই শ্রবণকারী, মহাজ্ঞানী। যাদের মনে ভয় রয়েছে, তাদের উপর শয়তানের আগমন ঘটার সাথে সাথেই তারা সতর্ক হয়ে যায় এবং তখনই তাদের বিবেচনাশক্তি জাগ্রত হয়ে উঠে।</div>
+<div class="ny"><b>নিয়ত ·</b> প্র রোচনা এলে সাথে সাথে আশ্রয় নেওয়া</div>
+</article>
+<article class="it" id="karin-waswasa-6">
+<div class="ih">
+<span class="no">৪</span>
+<span class="ti">সূরা ফুসসিলাত : ৩৬</span>
+<button class="cnt" data-id="karin-waswasa-6" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">وَإِمَّا يَنزَغَنَّكَ مِنَ ٱلشَّيۡطَٰنِ نَزۡغࣱ فَٱسۡتَعِذۡ بِٱللَّهِ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلۡعَلِيمُ</div>
+<div class="mn">যদি শয়তানের পক্ষ থেকে আপনি কিছু কুমন্ত্রণা অনুভব করেন, তবে আল্লাহর শরণাপন্ন হোন। নিশ্চয় তিনি সর্বশ্রোতা, সর্বজ্ঞ।</div>
+<div class="ny"><b>নিয়ত ·</b> শয় তানের প্র রোচনা এলে আল্লাহর আশ্রয় নাও</div>
+</article>
+<article class="it" id="karin-waswasa-7">
+<div class="ih">
+<span class="no">৫</span>
+<span class="ti">সূরা আন-নাহল : ৯৮-১০০</span>
+<button class="cnt" data-id="karin-waswasa-7" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">فَإِذَا قَرَأۡتَ ٱلۡقُرۡءَانَ فَٱسۡتَعِذۡ بِٱللَّهِ مِنَ ٱلشَّيۡطَٰنِ ٱلرَّجِيمِ إِنَّهُۥ لَيۡسَ لَهُۥ سُلۡطَٰنٌ عَلَى ٱلَّذِينَ ءَامَنُواْ وَعَلَىٰ رَبِّهِمۡ يَتَوَكَّلُونَ إِنَّمَا سُلۡطَٰنُهُۥ عَلَى ٱلَّذِينَ يَتَوَلَّوۡنَهُۥ وَٱلَّذِينَ هُم بِهِۦ مُشۡرِكُونَ</div>
+<div class="mn">অতএব, যখন আপনি কোরআন পাঠ করেন তখন বিতাড়িত শয়তান থেকে আল্লাহর আশ্রয় গ্রহণ করুন। তার আধিপত্য চলে না তাদের উপর যারা বিশ্বাস স্থাপন করে এবং আপন পালন কর্তার উপর ভরসা রাখে। তার আধিপত্য তো তাদের উপরই চলে, যারা তাকে বন্ধু মনে করে এবং যারা তাকে অংশীদার মানে।</div>
+<div class="ny"><b>নিয়ত ·</b> কু রআন পড়ার আগে আশ্রয় প্রার্থনা</div>
+</article>
+<article class="it" id="karin-waswasa-8">
+<div class="ih">
+<span class="no">৬</span>
+<span class="ti">সূরা আর-রা&#x27;দ : ২৮</span>
+<button class="cnt" data-id="karin-waswasa-8" data-target="11"><span class="cv">০</span><span class="cs">/</span><span class="ct">১১ বার</span></button>
+</div>
+<div class="arx">ٱلَّذِينَ ءَامَنُواْ وَتَطۡمَئِنُّ قُلُوبُهُم بِذِكۡرِ ٱللَّهِ أَلَا بِذِكۡرِ ٱللَّهِ تَطۡمَئِنُّ ٱلۡقُلُوبُ</div>
+<div class="mn">যারা বিশ্বাস স্থাপন করে এবং তাদের অন্তর আল্লাহর যিকির দ্বারা শান্তি লাভ করে; জেনে রাখ, আল্লাহর যিকির দ্বারাই অন্তর সমূহ শান্তি পায়।</div>
+<div class="ny"><b>নিয়ত ·</b> আল্লাহর স্মরণেই অন্</div>
+</article>
+<article class="it" id="karin-waswasa-9">
+<div class="ih">
+<span class="no">৭</span>
+<span class="ti">সূরা আল-ফাতহ : ৪</span>
+<button class="cnt" data-id="karin-waswasa-9" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">هُوَ ٱلَّذِيٓ أَنزَلَ ٱلسَّكِينَةَ فِي قُلُوبِ ٱلۡمُؤۡمِنِينَ لِيَزۡدَادُوٓاْ إِيمَٰنࣰا مَّعَ إِيمَٰنِهِمۡ وَلِلَّهِ جُنُودُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِ وَكَانَ ٱللَّهُ عَلِيمًا حَكِيمࣰا</div>
+<div class="mn">তিনি মুমিনদের অন্তরে প্রশান্তি নাযিল করেন, যাতে তাদের ঈমানের সাথে আরও ঈমান বেড়ে যায়। নভোমন্ডল ও ভূমন্ডলের বাহিনীসমূহ আল্লাহরই এবং আল্লাহ সর্বজ্ঞ, প্রজ্ঞাময়।</div>
+<div class="ny"><b>নিয়ত ·</b> মুমিনের অন্</div>
+</article>
+<article class="it" id="karin-waswasa-10">
+<div class="ih">
+<span class="no">৮</span>
+<span class="ti">সূরা আল-বাকারা : ২৮৬</span>
+<button class="cnt" data-id="karin-waswasa-10" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">لَا يُكَلِّفُ ٱللَّهُ نَفۡسًا إِلَّا وُسۡعَهَا لَهَا مَا كَسَبَتۡ وَعَلَيۡهَا مَا ٱكۡتَسَبَتۡ رَبَّنَا لَا تُؤَاخِذۡنَآ إِن نَّسِينَآ أَوۡ أَخۡطَأۡنَا رَبَّنَا وَلَا تَحۡمِلۡ عَلَيۡنَآ إِصۡرࣰا كَمَا حَمَلۡتَهُۥ عَلَى ٱلَّذِينَ مِن قَبۡلِنَا رَبَّنَا وَلَا تُحَمِّلۡنَا مَا لَا طَاقَةَ لَنَا بِهِۦ وَٱعۡفُ عَنَّا وَٱغۡفِرۡ لَنَا وَٱرۡحَمۡنَآ أَنتَ مَوۡلَىٰنَا فَٱنصُرۡنَا عَلَى ٱلۡقَوۡمِ ٱلۡكَٰفِرِينَ</div>
+<div class="mn">আল্লাহ কাউকে তার সাধ্যাতীত কোন কাজের ভার দেন না, সে তাই পায় যা সে উপার্জন করে এবং তাই তার উপর বর্তায় যা সে করে। হে আমাদের পালনকর্তা, যদি আমরা ভুলে যাই কিংবা ভুল করি, তবে আমাদেরকে অপরাধী করো না। হে আমাদের পালনকর্তা! এবং আমাদের উপর এমন দায়িত্ব অর্পণ করো না, যেমন আমাদের পূর্ববর্তীদের উপর অর্পণ করেছ, হে আমাদের প্রভূ! এবং আমাদের দ্বারা ঐ বোঝা বহন করিও না, যা বহন করার শক্তি আমাদের নাই। আমাদের পাপ মোচন কর। আমাদেরকে ক্ষমা কর এবং আমাদের প্রতি দয়া কর। তুমিই আমাদের প্রভু। সুতরাং কাফের সম্প্রদায়ের বিরুদ্ধে আমাদের কে সাহায্যে কর।</div>
+<div class="ny"><b>নিয়ত ·</b> আল্লাহ সাধ্যের বাইরে বোঝা দেন না</div>
+</article>
+<article class="it" id="karin-waswasa-11">
+<div class="ih">
+<span class="no">৯</span>
+<span class="ti">সূরা আয-যুমার : ৫৩</span>
+<button class="cnt" data-id="karin-waswasa-11" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">قُلۡ يَٰعِبَادِيَ ٱلَّذِينَ أَسۡرَفُواْ عَلَىٰٓ أَنفُسِهِمۡ لَا تَقۡنَطُواْ مِن رَّحۡمَةِ ٱللَّهِ إِنَّ ٱللَّهَ يَغۡفِرُ ٱلذُّنُوبَ جَمِيعًا إِنَّهُۥ هُوَ ٱلۡغَفُورُ ٱلرَّحِيمُ</div>
+<div class="mn">বলুন, হে আমার বান্দাগণ যারা নিজেদের উপর যুলুম করেছ তোমরা আল্লাহর রহমত থেকে নিরাশ হয়ো না। নিশ্চয় আল্লাহ সমস্ত গোনাহ মাফ করেন। তিনি ক্ষমাশীল, পরম দয়ালু।</div>
+<div class="ny"><b>নিয়ত ·</b> আল্লাহর রহমত থেকে নিরাশ হয়ো না</div>
+</article>
+<article class="it" id="karin-waswasa-12">
+<div class="ih">
+<span class="no">১০</span>
+<span class="ti">সূরা আশ-শারহ : ১-৮</span>
+<button class="cnt" data-id="karin-waswasa-12" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">أَلَمۡ نَشۡرَحۡ لَكَ صَدۡرَكَ وَوَضَعۡنَا عَنكَ وِزۡرَكَ ٱلَّذِيٓ أَنقَضَ ظَهۡرَكَ وَرَفَعۡنَا لَكَ ذِكۡرَكَ فَإِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرًا إِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرࣰا فَإِذَا فَرَغۡتَ فَٱنصَبۡ وَإِلَىٰ رَبِّكَ فَٱرۡغَب</div>
+<div class="mn">আমি কি আপনার বক্ষ উম্মুক্ত করে দেইনি আমি লাঘব করেছি আপনার বোঝা যা ছিল আপনার জন্যে অতিশয় দুঃসহ। আমি আপনার আলোচনাকে সমুচ্চ করেছি। নিশ্চয় কষ্টের সাথে স্বস্তি রয়েছে। নিশ্চয় কষ্টের সাথে স্বস্তি রয়েছে। অতএব, যখন অবসর পান পরিশ্রম করুন। এবং আপনার পালনকর্তার প্রতি মনোনিবেশ করুন।</div>
+<div class="ny"><b>নিয়ত ·</b> কষ্টের সাথেই স্বস্তি আছে</div>
+</article>
+<article class="it" id="karin-waswasa-13">
+<div class="ih">
+<span class="no">১১</span>
+<span class="ti">সূরা আলে ইমরান : ১৭৩-১৭৪</span>
+<button class="cnt" data-id="karin-waswasa-13" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">ٱلَّذِينَ قَالَ لَهُمُ ٱلنَّاسُ إِنَّ ٱلنَّاسَ قَدۡ جَمَعُواْ لَكُمۡ فَٱخۡشَوۡهُمۡ فَزَادَهُمۡ إِيمَٰنࣰا وَقَالُواْ حَسۡبُنَا ٱللَّهُ وَنِعۡمَ ٱلۡوَكِيلُ فَٱنقَلَبُواْ بِنِعۡمَةࣲ مِّنَ ٱللَّهِ وَفَضۡلࣲ لَّمۡ يَمۡسَسۡهُمۡ سُوٓءࣱ وَٱتَّبَعُواْ رِضۡوَٰنَ ٱللَّهِ وَٱللَّهُ ذُو فَضۡلٍ عَظِيمٍ</div>
+<div class="mn">যাদেরকে লোকেরা বলেছে যে, তোমাদের সাথে মোকাবেলা করার জন্য লোকেরা সমাবেশ করেছে বহু সাজ-সরঞ্জাম; তাদের ভয় কর। তখন তাদের বিশ্বাস আরও দৃঢ়তর হয়ে যায় এবং তারা বলে, আমাদের জন্য আল্লাহই যথেষ্ট; কতই না চমৎকার কামিয়াবীদানকারী। অতঃপর ফিরে এল মুসলমানরা আল্লাহর অনুগ্রহ নিয়ে, তদের কিছুই অনিষ্ট হলো না। তারপর তারা আল্লাহর ইচ্ছার অনুগত হল। বস্তুতঃ আল্লাহর অনুগ্রহ অতি বিরাট।</div>
+<div class="ny"><b>নিয়ত ·</b> হাসবু নাল্লাহু ওয়া নি&#x27;মাল ওয়াকীল</div>
+</article>
+<article class="it" id="karin-waswasa-14">
+<div class="ih">
+<span class="no">১২</span>
+<span class="ti">সূরা ইয়াসীন : ১-৯</span>
+<button class="cnt" data-id="karin-waswasa-14" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">يسٓ وَٱلۡقُرۡءَانِ ٱلۡحَكِيمِ إِنَّكَ لَمِنَ ٱلۡمُرۡسَلِينَ عَلَىٰ صِرَٰطࣲ مُّسۡتَقِيمࣲ تَنزِيلَ ٱلۡعَزِيزِ ٱلرَّحِيمِ لِتُنذِرَ قَوۡمࣰا مَّآ أُنذِرَ ءَابَآؤُهُمۡ فَهُمۡ غَٰفِلُونَ لَقَدۡ حَقَّ ٱلۡقَوۡلُ عَلَىٰٓ أَكۡثَرِهِمۡ فَهُمۡ لَا يُؤۡمِنُونَ إِنَّا جَعَلۡنَا فِيٓ أَعۡنَٰقِهِمۡ أَغۡلَٰلࣰا فَهِيَ إِلَى ٱلۡأَذۡقَانِ فَهُم مُّقۡمَحُونَ وَجَعَلۡنَا مِنۢ بَيۡنِ أَيۡدِيهِمۡ سَدࣰّا وَمِنۡ خَلۡفِهِمۡ سَدࣰّا فَأَغۡشَيۡنَٰهُمۡ فَهُمۡ لَا يُبۡصِرُونَ</div>
+<div class="mn">ইয়া-সীন প্রজ্ঞাময় কোরআনের কসম। নিশ্চয় আপনি প্রেরিত রসূলগণের একজন। সরল পথে প্রতিষ্ঠিত। কোরআন পরাক্রমশালী পরম দয়ালু আল্লাহর তরফ থেকে অবতীর্ণ যাতে আপনি এমন এক জাতিকে সতর্ক করেন, যাদের পূর্ব পুরুষগণকেও সতর্ক করা হয়নি। ফলে তারা গাফেল। তাদের অধিকাংশের জন্যে শাস্তির বিষয় অবধারিত হয়েছে। সুতরাং তারা বিশ্বাস স্থাপন করবে না। আমি তাদের গর্দানে চিবুক পর্যন্ত বেড়ী পরিয়েছি। ফলে তাদের মস্তক উর্দ্ধমুখী হয়ে গেছে। আমি তাদের সামনে ও পিছনে প্রাচীর স্থাপন করেছি, অতঃপর তাদেরকে আবৃত করে দিয়েছি, ফলে তারা দেখে না।</div>
+</article>
+<article class="it" id="karin-waswasa-15">
+<div class="ih">
+<span class="no">১৩</span>
+<span class="ti">সূরা গাফির : ৪৪-৪৫</span>
+<button class="cnt" data-id="karin-waswasa-15" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">فَسَتَذۡكُرُونَ مَآ أَقُولُ لَكُمۡ وَأُفَوِّضُ أَمۡرِيٓ إِلَى ٱللَّهِ إِنَّ ٱللَّهَ بَصِيرُۢ بِٱلۡعِبَادِ فَوَقَىٰهُ ٱللَّهُ سَيِّـَٔاتِ مَا مَكَرُواْ وَحَاقَ بِـَٔالِ فِرۡعَوۡنَ سُوٓءُ ٱلۡعَذَابِ</div>
+<div class="mn">আমি তোমাদেরকে যা বলছি, তোমরা একদিন তা স্মরণ করবে। আমি আমার ব্যাপার আল্লাহর কাছে সমর্পণ করছি। নিশ্চয় বান্দারা আল্লাহর দৃষ্টিতে রয়েছে। অতঃপর আল্লাহ তাকে তাদের চক্রান্তের অনিষ্ট থেকে রক্ষা করলেন এবং ফেরাউন গোত্রকে শোচনীয় আযাব গ্রাস করল।</div>
+<div class="ny"><b>নিয়ত ·</b> ষড় যন্ত্রে র অনিষ্ট থেকে রক্ষা</div>
+</article>
+<article class="it" id="karin-waswasa-16">
+<div class="ih">
+<span class="no">১৪</span>
+<span class="ti">সূরা আল-বাকারা : ২৫৫</span>
+<button class="cnt" data-id="karin-waswasa-16" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُ لَا تَأۡخُذُهُۥ سِنَةࣱ وَلَا نَوۡمࣱ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡ وَلَا يُحِيطُونَ بِشَيۡءࣲ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَا وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ</div>
+<div class="mn">আল্লাহ ছাড়া অন্য কোন উপাস্য নেই, তিনি জীবিত, সবকিছুর ধারক। তাঁকে তন্দ্রাও স্পর্শ করতে পারে না এবং নিদ্রাও নয়। আসমান ও যমীনে যা কিছু রয়েছে, সবই তাঁর। কে আছ এমন, যে সুপারিশ করবে তাঁর কাছে তাঁর অনুমতি ছাড়া? দৃষ্টির সামনে কিংবা পিছনে যা কিছু রয়েছে সে সবই তিনি জানেন। তাঁর জ্ঞানসীমা থেকে তারা কোন কিছুকেই পরিবেষ্টিত করতে পারে না, কিন্তু যতটুকু তিনি ইচ্ছা করেন। তাঁর সিংহাসন সমস্ত আসমান ও যমীনকে পরিবেষ্টিত করে আছে। আর সেগুলোকে ধারণ করা তাঁর পক্ষে কঠিন নয়। তিনিই সর্বোচ্চ এবং সর্বাপেক্ষা মহান।</div>
+<div class="ny"><b>নিয়ত ·</b> আয়াতু ল কু রসী</div>
+</article>
+<h2 class="ch">তিন · বিশেষ দোয়া</h2>
+<article class="it" id="karin-waswasa-17">
+<div class="ih">
+<span class="no">১</span>
+<span class="ti">অন্তর ও মনের ওয়াসওয়াসা পোড়ানো</span>
+<button class="cnt" data-id="karin-waswasa-17" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">اللَّهُمَّ احْرِقْ كُلَّ وَسْوَسَةٍ عَلَى قَلْبِي وَعَقْلِي</div>
+<div class="tr">আল্লাহুম্মাহ্‌রিক কুল্লা ওয়াসওয়াসাতিন আলা কালবী ওয়া আকলী।</div>
+<div class="mn">হে আল্লাহ! আমার অন্তর ও মনে থাকা সমস্ত ওয়াসওয়াসা জ্বালিয়ে দিন।</div>
+</article>
+<article class="it" id="karin-waswasa-18">
+<div class="ih">
+<span class="no">২</span>
+<span class="ti">আধিপত্য বাতিলের দোয়া</span>
+<button class="cnt" data-id="karin-waswasa-18" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">بِسْمِ اللَّهِ يُبْطَلُ كُلُّ تَسَلُّطٍ عَلَى قَلْبِي وَعَقْلِي</div>
+<div class="tr">বিসমিল্লাহি ইউবতালু কুল্লু তাসাল্লুতিন আলা কালবী ওয়া আকলী।</div>
+<div class="mn">আল্লাহর নামে — আমার অন্তর ও মনে সমস্ত আধিপত্য বাতিল করা হলো।</div>
+</article>
+<article class="it" id="karin-waswasa-19">
+<div class="ih">
+<span class="no">৩</span>
+<span class="ti">গিঁট খোলার দোয়া</span>
+<button class="cnt" data-id="karin-waswasa-19" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">اللَّهُمَّ بِقُوَّتِكَ وَقُدْرَتِكَ فُكَّ كُلَّ عُقْدَةٍ عُقِدَتْ عَلَى قَلْبِي وَعَقْلِي</div>
+<div class="tr">আল্লাহুম্মা বিকুওয়্যাতিকা ওয়া কুদরাতিকা ফুক্কা কুল্লা উকদাতিন উকিদাত আলা কালবী ওয়া আকলী।</div>
+<div class="mn">হে আল্লাহ! আপনার শক্তি ও ক্ষমতা দিয়ে আমার অন্তর ও মনে বাঁধা প্রতিটি গিঁট খুলে দিন।</div>
+</article>
+<article class="it" id="karin-waswasa-20">
+<div class="ih">
+<span class="no">৪</span>
+<span class="ti">আমানতু বিল্লাহি ওয়া রুসুলিহ</span>
+<button class="cnt" data-id="karin-waswasa-20" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">آمَنْتُ بِاللَّهِ وَرُسُلِهِ</div>
+<div class="tr">আমানতু বিল্লাহি ওয়া রুসুলিহ।</div>
+<div class="mn">আমি আল্লাহ ও তাঁর রাসূলগণের প্রতি ঈমান এনেছি।</div>
+<div class="nt"><b>উৎস ·</b> সৃষ্টি নিয়ে ওয়াসওয়াসা এলে নবীজি ﷺ এই কথা বলতে ও থেমে যেতে বলেছেন। (মুসলিম ১৩৪)</div>
+</article>
+<article class="it" id="karin-waswasa-21">
+<div class="ih">
+<span class="no">৫</span>
+<span class="ti">দুশ্চিন্তা, দুঃখ ও অলসতা থেকে আশ্রয়</span>
+<button class="cnt" data-id="karin-waswasa-21" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ وَأَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ</div>
+<div class="tr">আল্লাহুম্মা ইন্নী আঊযু বিকা মিনাল হাম্মি ওয়াল হাযানি ওয়া আঊযু বিকা মিনাল আজযি ওয়াল কাসাল।</div>
+<div class="mn">হে আল্লাহ! আমি আপনার আশ্রয় নিচ্ছি দুশ্চিন্তা ও দুঃখ থেকে, এবং আশ্রয় নিচ্ছি অক্ষমতা ও অলসতা থেকে।</div>
+<div class="nt"><b>উৎস ·</b> (বুখারী ৬৩৬৯)</div>
+</article>
+<h2 class="ch">চার · সমাপ্তির সূরা ও দোয়া</h2>
+<article class="it" id="karin-waswasa-22">
+<div class="ih">
+<span class="no">১</span>
+<span class="ti">সূরা আল-ইখলাস : ১-৪</span>
+<button class="cnt" data-id="karin-waswasa-22" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">قُلۡ هُوَ ٱللَّهُ أَحَدٌ ٱللَّهُ ٱلصَّمَدُ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ</div>
+<div class="mn">বলুন, তিনি আল্লাহ, এক আল্লাহ অমুখাপেক্ষী তিনি কাউকে জন্ম দেননি এবং কেউ তাকে জন্ম দেয়নি এবং তার সমতুল্য কেউ নেই।</div>
+<div class="ny"><b>নিয়ত ·</b> তাওহীদের ঘোষণা দিয়ে হৃদয় দৃঢ় করা</div>
+</article>
+<article class="it" id="karin-waswasa-23">
+<div class="ih">
+<span class="no">২</span>
+<span class="ti">সূরা আল-ফালাক : ১-৫</span>
+<button class="cnt" data-id="karin-waswasa-23" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ مِن شَرِّ مَا خَلَقَ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ</div>
+<div class="mn">বলুন, আমি আশ্রয় গ্রহণ করছি প্রভাতের পালনকর্তার তিনি যা সৃষ্টি করেছেন, তার অনিষ্ট থেকে অন্ধকার রাত্রির অনিষ্ট থেকে, যখন তা সমাগত হয় গ্রন্থিতে ফুঁৎকার দিয়ে জাদুকারিনীদের অনিষ্ট থেকে এবং হিংসুকের অনিষ্ট থেকে যখন সে হিংসা করে।</div>
+<div class="ny"><b>নিয়ত ·</b> জাদু, হাসাদ ও রাতের অনিষ্ট থেকে আশ্রয়</div>
+</article>
+<article class="it" id="karin-waswasa-24">
+<div class="ih">
+<span class="no">৩</span>
+<span class="ti">সূরা আন-নাস : ১-৬</span>
+<button class="cnt" data-id="karin-waswasa-24" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ مَلِكِ ٱلنَّاسِ إِلَٰهِ ٱلنَّاسِ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ</div>
+<div class="mn">বলুন, আমি আশ্রয় গ্রহণ করিতেছি মানুষের পালনকর্তার মানুষের অধিপতির মানুষের মা’বুদের তার অনিষ্ট থেকে, যে কুমন্ত্রণা দেয় ও আত্নগোপন করে যে কুমন্ত্রণা দেয় মানুষের অন্তরে জ্বিনের মধ্য থেকে অথবা মানুষের মধ্য থেকে।</div>
+<div class="ny"><b>নিয়ত ·</b> মানুষ ও জিনের ওয়াসওয়াসা থেকে আশ্রয়</div>
+</article>
+<article class="it" id="karin-waswasa-25">
+<div class="ih">
+<span class="no">৪</span>
+<span class="ti">উঈযুকা বিকালিমাতিল্লাহিত তাম্মাহ</span>
+<button class="cnt" data-id="karin-waswasa-25" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">أُعِيذُكَ بِكَلِمَاتِ اللَّهِ التَّامَّةِ مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ وَمِنْ كُلِّ عَيْنٍ لَامَّةٍ</div>
+<div class="tr">উঈযুকা বিকালিমাতিল্লাহিত তাম্মাতি মিন কুল্লি শাইতানিন ওয়া হাম্মাহ, ওয়া মিন কুল্লি আইনিন লাম্মাহ।</div>
+<div class="mn">আমি তোমাকে আল্লাহর পরিপূর্ণ কালিমাসমূহের আশ্রয়ে সোপর্দ করছি — প্রত্যেক শয়তান, বিষাক্ত প্রাণী এবং প্রত্যেক ক্ষতিকর বদনজর থেকে।</div>
+<div class="ny"><b>নিয়ত ·</b> নবীজি ﷺ হাসান ও হুসাইন রাযিয়াল্লাহু আনহুমাকে এই দোয়া পড়ে ঝাড়তেন।</div>
+<div class="nt"><b>উৎস ·</b> বুখারী ৩৩৭১</div>
+</article>
+<article class="it" id="karin-waswasa-26">
+<div class="ih">
+<span class="no">৫</span>
+<span class="ti">বিসমিল্লাহি আরকীক</span>
+<button class="cnt" data-id="karin-waswasa-26" data-target="3"><span class="cv">০</span><span class="cs">/</span><span class="ct">৩ বার</span></button>
+</div>
+<div class="arx">بِسْمِ اللَّهِ أَرْقِيكَ مِنْ كُلِّ شَيْءٍ يُؤْذِيكَ مِنْ شَرِّ كُلِّ نَفْسٍ أَوْ عَيْنٍ حَاسِدٍ اللَّهُ يَشْفِيكَ بِسْمِ اللَّهِ أَرْقِيكَ</div>
+<div class="tr">বিসমিল্লাহি আরকীকা মিন কুল্লি শাইয়িন ইউ’যীক, মিন শাররি কুল্লি নাফসিন আও আইনিন হাসিদ, আল্লাহু ইয়াশফীক, বিসমিল্লাহি আরকীক।</div>
+<div class="mn">আল্লাহর নামে আমি তোমাকে ঝাড়ছি — এমন প্রতিটি জিনিস থেকে যা তোমাকে কষ্ট দেয়, প্রত্যেক প্রাণ ও হিংসুকের চোখের অনিষ্ট থেকে। আল্লাহ তোমাকে আরোগ্য দান করুন। আল্লাহর নামে আমি তোমাকে ঝাড়ছি।</div>
+<div class="ny"><b>নিয়ত ·</b> জিবরীল আলাইহিস সালাম নবীজি ﷺ-কে এভাবে রুকইয়াহ করেছিলেন।</div>
+<div class="nt"><b>উৎস ·</b> মুসলিম ২১৮৬</div>
+</article>
+<article class="it" id="karin-waswasa-27">
+<div class="ih">
+<span class="no">৬</span>
+<span class="ti">আল্লাহুম্মা রাব্বান নাস</span>
+<button class="cnt" data-id="karin-waswasa-27" data-target="7"><span class="cv">০</span><span class="cs">/</span><span class="ct">৭ বার</span></button>
+</div>
+<div class="arx">اللَّهُمَّ رَبَّ النَّاسِ أَذْهِبِ الْبَأْسَ اشْفِ أَنْتَ الشَّافِي لَا شِفَاءَ إِلَّا شِفَاؤُكَ شِفَاءً لَا يُغَادِرُ سَقَمًا</div>
+<div class="tr">আল্লাহুম্মা রাব্বান নাসি, আযহিবিল বা’স, ইশফি আনতাশ শাফী, লা শিফাআ ইল্লা শিফাউক, শিফাআন লা ইউগাদিরু সাকামা।</div>
+<div class="mn">হে আল্লাহ, মানুষের প্রতিপালক! কষ্ট দূর করে দিন, আরোগ্য দান করুন। আপনিই আরোগ্যদাতা, আপনার আরোগ্য ছাড়া কোনো আরোগ্য নেই — এমন আরোগ্য যা কোনো রোগ অবশিষ্ট রাখে না।</div>
+<div class="ny"><b>নিয়ত ·</b> শেষে পানিতে ফুঁ দিয়ে পান করুন।</div>
+<div class="nt"><b>উৎস ·</b> বুখারী ৫৭৪৩</div>
+</article>
+
+
+<footer>
+  <b>রুকইয়াহ — আয়াত ও দোয়া</b><br>
+  সংকলন ও সম্পাদনা — <b>ইবনে নাঈম</b> · Ibn Naim
+</footer>
+
+</div>
+
+<div class="tools">
+  <button class="tool" id="fminus" aria-label="আরবি ছোট">A−</button>
+  <button class="tool" id="fplus" aria-label="আরবি বড়">A+</button>
+  <button class="tool" id="wake" aria-label="স্ক্রিন জাগিয়ে রাখুন">☀</button>
+  <button class="tool" id="tb" aria-label="থিম">◐</button>
+</div>
+<button class="installbtn" id="install" hidden>⤓ ইনস্টল করুন</button>
+<script src="app.js" defer></script>
+</body>
+</html>

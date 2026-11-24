@@ -5,11 +5,14 @@
 @font-face{font-family:'Noto Naskh Arabic';src:url('fonts/noto-naskh-arabic-arabic-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;}
 
 :root{
-  --bg:#f6f8f9; --card:#ffffff; --ink:#18242b; --mut:#59696f; --line:#dfe5e8;
-  --acc:#1b3a4b; --acc2:#9a7620; --head:#18242b; --soft:#edf1f3; --on-head:#f6f8f9;
-  --ok:#1d7a52; --okbg:#e6f4ec; --hl:#fdf0c9; --hlb:#c9a227;
-  --t:#1b3a4b;
-  --arsize:25px;
+  --bg:#f4f7f8; --card:#ffffff; --ink:#15212a; --mut:#4e5f68; --line:#dde4e8;
+  --acc:#17384a; --acc2:#8a6714; --head:#15212a; --soft:#eaf0f3; --on-head:#f8fafb;
+  --ok:#16704a; --okbg:#e4f3ea; --hl:#fcecbe; --hlb:#c9a227;
+  --t:#17384a;
+  --ink2:#32444e;          /* অর্থের লেখা — mut নয়, ink-এর কাছাকাছি */
+  --tc:var(--acc);         /* দলের রঙ — .g-* ক্লাস বদলে দেয় */
+  --arsize:27px;
+  --measure:46rem;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -17,6 +20,7 @@
     --acc:#6fb6cf; --acc2:#d9b265; --head:#e4ecef; --soft:#1d2b33; --on-head:#101a20;
     --ok:#52c48f; --okbg:#152e24; --hl:#3d3418; --hlb:#d9b265;
     --t:#6fb6cf;
+    --ink2:#c7d5db;
   }
 }
 :root[data-theme="dark"]{
@@ -24,24 +28,19 @@
   --acc:#6fb6cf; --acc2:#d9b265; --head:#e4ecef; --soft:#1d2b33; --on-head:#101a20;
   --ok:#52c48f; --okbg:#152e24; --hl:#3d3418; --hlb:#d9b265;
   --t:#6fb6cf;
+  --ink2:#c7d5db;
 }
 
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--bg);color:var(--ink);
   font-family:'Noto Sans Bengali','Nirmala UI','Shonar Bangla',system-ui,-apple-system,sans-serif;
-  font-size:17px;line-height:1.72;padding:0 18px 78px;
+  font-size:17px;line-height:1.7;padding:0 18px 86px;
   -webkit-text-size-adjust:100%;}
-.wrap{max-width:780px;margin:0 auto;}
+.wrap{max-width:var(--measure);margin:0 auto;}
 .ar,.arx{font-family:'Noto Naskh Arabic','Traditional Arabic',serif;direction:rtl;unicode-bidi:isolate;}
 
-/* ---------- nav ---------- */
-.topbar{display:flex;flex-wrap:wrap;gap:5px;padding:16px 0 0;}
-.topbar a{text-decoration:none;font-size:13.5px;color:var(--mut);padding:6px 13px;border-radius:999px;
-          border:1px solid transparent;transition:.15s;}
-.topbar a:hover{color:var(--ink);border-color:var(--line);background:var(--card);}
-.topbar a[aria-current="page"]{color:var(--on-head);background:var(--head);border-color:var(--head);font-weight:600;}
 
-header{padding:28px 0 20px;border-bottom:3px solid var(--t);margin-bottom:24px;}
+header{padding:26px 0 18px;border-bottom:3px solid var(--tc);margin-bottom:22px;}
 h1{font-family:'Noto Serif Bengali','Nirmala UI',serif;font-size:31px;font-weight:600;line-height:1.28;}
 header .ar{font-size:20px;color:var(--mut);margin-top:7px;}
 header p{color:var(--mut);font-size:15.5px;margin-top:10px;}
@@ -53,23 +52,28 @@ header p b{color:var(--ink);font-weight:600;}
      cursor:pointer;font-family:inherit;font-size:13.5px;color:var(--mut);}
 .rst:hover{color:var(--ink);border-color:var(--acc2);}
 
-h2.sh{font-family:'Noto Serif Bengali','Nirmala UI',serif;font-size:22px;font-weight:600;
+h2.sh{font-family:'Noto Serif Bengali','Nirmala UI',serif;font-size:21px;font-weight:600;
       margin:0 0 14px;padding-bottom:9px;border-bottom:1px solid var(--line);}
 h2.sh.mt{margin-top:40px;}
 
 /* ---------- অধ্যায় ---------- */
-h2.ch{font-family:'Noto Serif Bengali','Nirmala UI',serif;font-size:19px;font-weight:600;
-      color:var(--on-head);background:var(--acc);border-radius:9px;
-      padding:10px 18px;margin:34px 0 16px;line-height:1.5;}
+/* অধ্যায়ের শিরোনাম — পুরো চওড়া রঙিন ব্লক দুই থিমেই চোখে লাগে,
+   তাই দলের রঙ শুধু লেখায় ও বাঁ-দাগে। */
+h2.ch{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+      font-family:'Noto Serif Bengali','Nirmala UI',serif;font-size:18px;font-weight:600;
+      color:var(--tc);background:var(--soft);border-left:4px solid var(--tc);
+      border-radius:0 10px 10px 0;padding:11px 17px;margin:36px 0 15px;line-height:1.5;}
+h2.ch .cp{margin-left:auto;font-family:'Noto Sans Bengali',sans-serif;font-size:12.5px;
+      font-weight:600;color:var(--mut);white-space:nowrap;}
 h2.ch:first-of-type{margin-top:0;}
 
 /* ---------- আইটেম কার্ড ---------- */
-.it{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc2);
+.it{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--tc);
     border-radius:11px;padding:18px 20px;margin-bottom:15px;scroll-margin-top:14px;}
 .it.done{border-left-color:var(--ok);}
 
 .ih{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-bottom:12px;}
-.no{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--acc);color:var(--on-head);
+.no{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--tc);color:var(--on-head);
     font-size:13.5px;font-weight:700;display:grid;place-items:center;}
 .it.done .no{background:var(--ok);}
 .ti{flex:1 1 auto;font-family:'Noto Serif Bengali','Nirmala UI',serif;font-size:17.5px;
@@ -91,13 +95,14 @@ h2.ch:first-of-type{margin-top:0;}
 .cnt.flat:active{transform:none;}
 
 /* আরবি */
-.arx{font-size:var(--arsize);line-height:2.08;text-align:right;margin:4px 0 12px;
+.arx{font-size:var(--arsize);line-height:2.16;text-align:right;margin:4px 0 12px;
      color:var(--ink);}
 .arx .hl{background:var(--hl);box-shadow:0 0 0 2px var(--hl);border-radius:3px;}
 
-.tr{font-size:15px;color:var(--acc);font-weight:600;line-height:1.7;margin-bottom:8px;}
+.tr{font-size:15px;color:var(--acc);font-weight:600;line-height:1.7;margin-bottom:9px;
+    letter-spacing:.005em;}
 .tr .hl{background:var(--hl);border-radius:3px;padding:0 2px;}
-.mn{font-size:15.5px;color:var(--mut);line-height:1.7;}
+.mn{font-size:16.5px;color:var(--ink2);line-height:1.74;}
 .mn b{color:var(--ink);font-weight:600;}
 .ny{font-size:14.5px;color:var(--mut);line-height:1.66;margin-top:10px;
     padding:9px 13px;background:var(--soft);border-radius:8px;}
@@ -117,6 +122,8 @@ h2.ch:first-of-type{margin-top:0;}
 
 /* ---------- হোম ---------- */
 .cards{display:grid;gap:16px;}
+/* ১৫টি সংকলন — বড় পর্দায় দুই কলাম, নইলে হোম পাতা অকারণে লম্বা হয় */
+@media (min-width:760px){.cards{grid-template-columns:1fr 1fr;}}
 .tc{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);
     border-left:5px solid var(--tc);border-radius:11px;padding:22px;transition:.15s;}
 .tc:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.09);}
@@ -251,3 +258,171 @@ table.sur td{vertical-align:top;}
 table.sur td:last-child,table.sur th.sx{text-align:center;}
 table.sur td.sx{font-weight:700;color:var(--on-head);background:var(--acc);
                 width:1%;white-space:nowrap;}
+
+
+/* ════════════════ দলের রঙ ════════════════
+   ২২টি সংকলনে ২২টি আলাদা রঙ মানে কোনো রঙেরই অর্থ নেই।
+   তাই রঙ দল চেনায় — কার্ড, কার্ডের বাঁ-দাগ, অধ্যায়ের শিরোনাম সব একই সূত্রে। */
+.g-mul  {--tc:#17384a;}
+.g-jinn {--tc:#7a2f4e;}
+.g-mon  {--tc:#2f4a7a;}
+.g-deho {--tc:#1a5c45;}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .g-mul {--tc:#74bcd6;}
+  :root:not([data-theme="light"]) .g-jinn{--tc:#e49ab8;}
+  :root:not([data-theme="light"]) .g-mon {--tc:#9ab6ea;}
+  :root:not([data-theme="light"]) .g-deho{--tc:#5fc9a4;}
+}
+:root[data-theme="dark"] .g-mul {--tc:#74bcd6;}
+:root[data-theme="dark"] .g-jinn{--tc:#e49ab8;}
+:root[data-theme="dark"] .g-mon {--tc:#9ab6ea;}
+:root[data-theme="dark"] .g-deho{--tc:#5fc9a4;}
+
+/* ════════════════ উপরের বার ════════════════ */
+.bar{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:14px;
+     padding:9px 18px;background:color-mix(in srgb,var(--bg) 90%,transparent);
+     backdrop-filter:saturate(1.5) blur(12px);-webkit-backdrop-filter:saturate(1.5) blur(12px);
+     border-bottom:1px solid var(--line);}
+@supports not (backdrop-filter:blur(1px)){.bar{background:var(--bg);}}
+
+.bar .brand{flex:0 0 auto;text-decoration:none;line-height:1.15;
+            font-family:'Noto Serif Bengali','Nirmala UI',serif;
+            font-size:17.5px;font-weight:600;color:var(--ink);}
+.bar .brand i{display:block;font-style:normal;font-family:'Noto Sans Bengali',sans-serif;
+              font-size:11px;font-weight:400;letter-spacing:.06em;color:var(--mut);}
+.bar .brand:hover{color:var(--acc);}
+
+/* ── ডেস্কটপ মেনুবার ── */
+.dnav{display:none;}
+.dnav a,.dgb{font-family:inherit;}
+.dgh,.dgb{display:inline-flex;align-items:center;gap:6px;cursor:pointer;
+          background:none;border:1px solid transparent;border-radius:9px;
+          padding:7px 12px;font-size:15px;font-weight:600;color:var(--ink);
+          text-decoration:none;white-space:nowrap;line-height:1.3;}
+.dgh:hover,.dgb:hover{background:var(--soft);}
+.dgh[aria-current="page"]{color:var(--acc);background:var(--soft);}
+.dgb .cv{width:7px;height:7px;border-right:1.8px solid var(--mut);
+         border-bottom:1.8px solid var(--mut);transform:translateY(-2px) rotate(45deg);
+         transition:transform .16s;}
+.dgb[aria-expanded="true"]{background:var(--soft);}
+.dgb[aria-expanded="true"] .cv{transform:translateY(1px) rotate(-135deg);}
+/* চলতি পাতা যে দলে, সেই দলের নামের নিচে দলের রঙে দাগ */
+.dg[data-on="1"] .dgb{color:var(--tc);}
+.dg[data-on="1"] .dgb::after{content:"";position:absolute;left:12px;right:12px;bottom:-10px;
+         height:2px;background:var(--tc);border-radius:2px;}
+.dg{position:relative;}
+.dg .dgb{position:relative;}
+
+.dgp{position:absolute;top:calc(100% + 11px);left:-6px;z-index:50;min-width:252px;
+     background:var(--card);border:1px solid var(--line);border-radius:12px;
+     padding:7px;box-shadow:0 12px 34px rgba(10,20,26,.17);
+     display:flex;flex-direction:column;gap:1px;}
+.dgp[hidden]{display:none;}
+.dgp a{display:block;text-decoration:none;color:var(--ink);font-size:14.5px;
+       line-height:1.45;padding:9px 12px;border-radius:8px;white-space:nowrap;}
+.dgp a:hover,.dgp a:focus-visible{background:var(--soft);outline:none;}
+.dgp a[aria-current="page"]{background:var(--soft);color:var(--tc);font-weight:600;}
+
+/* ── মোবাইলের বার ── */
+.bar .now{flex:1 1 auto;min-width:0;font-size:14px;color:var(--mut);
+          white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:right;}
+.menubtn{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;cursor:pointer;
+         background:var(--card);border:1px solid var(--line);border-radius:999px;
+         padding:7px 15px 7px 12px;font-family:inherit;font-size:14px;font-weight:600;
+         color:var(--ink);-webkit-tap-highlight-color:transparent;}
+.menubtn:hover{border-color:var(--acc);}
+.menubtn .bars{width:15px;height:11px;position:relative;display:inline-block;}
+.menubtn .bars::before,.menubtn .bars::after{content:"";position:absolute;left:0;right:0;height:2px;
+         background:var(--ink);border-radius:2px;transition:.18s;}
+.menubtn .bars::before{top:0;box-shadow:0 4.5px 0 var(--ink);}
+.menubtn .bars::after{bottom:0;}
+.menubtn[aria-expanded="true"] .bars::before{top:4.5px;box-shadow:none;transform:rotate(45deg);}
+.menubtn[aria-expanded="true"] .bars::after{bottom:4.5px;transform:rotate(-135deg);}
+
+.scrim{position:fixed;inset:0;z-index:45;background:rgba(8,16,20,.46);
+       opacity:0;transition:opacity .2s;}
+.scrim.on{opacity:1;}
+.scrim[hidden]{display:none;}
+
+.menu{position:fixed;z-index:50;top:0;right:0;bottom:0;width:min(86vw,350px);
+      background:var(--card);border-left:1px solid var(--line);
+      display:flex;flex-direction:column;overflow:hidden;
+      transform:translateX(100%);transition:transform .24s cubic-bezier(.3,.7,.3,1);
+      box-shadow:-10px 0 40px rgba(0,0,0,.24);}
+.menu.on{transform:translateX(0);}
+.menu[hidden]{display:none;}
+.menu .mh{display:flex;align-items:center;justify-content:space-between;gap:10px;
+          padding:14px 18px;border-bottom:1px solid var(--line);flex:0 0 auto;}
+.menu .mh b{font-family:'Noto Serif Bengali','Nirmala UI',serif;font-size:17px;font-weight:600;}
+.menu .mx{background:none;border:none;color:var(--mut);font-size:26px;line-height:1;
+          cursor:pointer;padding:0 4px;font-family:inherit;}
+.menu .mx:hover{color:var(--ink);}
+.menu .ml{flex:1 1 auto;overflow-y:auto;overscroll-behavior:contain;
+          padding:8px 10px 20px;-webkit-overflow-scrolling:touch;}
+.menu .mg{font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+          color:var(--tc);padding:16px 10px 6px;}
+.menu a{display:block;text-decoration:none;color:var(--ink);font-size:15.5px;line-height:1.45;
+        padding:10px 12px;border-radius:8px;border-left:3px solid transparent;}
+.menu a:hover{background:var(--soft);}
+.menu a[aria-current="page"]{background:var(--soft);border-left-color:var(--tc);
+        font-weight:600;color:var(--tc);}
+body.locked{overflow:hidden;}
+
+/* ≥900px — আসল ডেস্কটপ নেভ, ড্রয়ার সম্পূর্ণ বন্ধ */
+@media (min-width:900px){
+  .bar{gap:10px;padding:8px max(18px,calc(50vw - 36rem));}
+  .dnav{display:flex;align-items:center;gap:2px;margin-left:10px;}
+  .bar .now,.menubtn,.menu,.scrim{display:none !important;}
+}
+@media print{.bar,.menu,.scrim{display:none;}}
+
+/* ════════════════ হোম — দল, ফিল্টার ════════════════ */
+.filter{position:relative;margin:0 0 22px;}
+.filter input{width:100%;font-family:inherit;font-size:16px;color:var(--ink);
+       background:var(--card);border:1px solid var(--line);border-radius:10px;
+       padding:12px 16px;-webkit-appearance:none;appearance:none;}
+.filter input::placeholder{color:var(--mut);}
+.filter input:focus{outline:none;border-color:var(--acc);
+       box-shadow:0 0 0 3px color-mix(in srgb,var(--acc) 18%,transparent);}
+.filter .fx{display:block;margin-top:10px;font-size:14.5px;color:var(--mut);}
+.filter .fx[hidden]{display:none;}
+
+h3.gh{display:flex;align-items:baseline;gap:10px;margin:30px 0 13px;
+      font-family:'Noto Serif Bengali','Nirmala UI',serif;font-size:17px;font-weight:600;
+      color:var(--tc);letter-spacing:.01em;}
+h3.gh::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--tc);flex:0 0 auto;}
+h3.gh span{font-family:'Noto Sans Bengali',sans-serif;font-size:13px;font-weight:400;color:var(--mut);}
+h3.gh:first-of-type{margin-top:4px;}
+h3.gh[hidden],.tc[hidden]{display:none;}
+
+.tc{border-left-width:5px;border-left-color:var(--tc);padding:18px 20px;}
+.tc h3{font-size:20px;margin:0 0 4px;}
+.tc .ar{font-size:16px;margin-bottom:8px;}
+.tc p{font-size:15px;color:var(--mut);line-height:1.6;}
+.tc .go{margin-top:12px;font-size:14px;font-weight:600;color:var(--tc);}
+.tc .ga{display:inline-block;transition:transform .15s;}
+.tc:hover .ga{transform:translateX(4px);}
+.tc:hover{transform:none;border-color:var(--tc);box-shadow:0 4px 16px rgba(10,20,26,.09);}
+@media (min-width:620px){.cards{grid-template-columns:1fr 1fr;gap:14px;}}
+
+/* ════════════════ টুলবার — একটাই পিল ════════════════ */
+.tools{right:14px;bottom:14px;transition:transform .22s ease,opacity .22s ease;gap:0;background:var(--card);border:1px solid var(--line);
+       border-radius:999px;padding:4px;box-shadow:0 3px 16px rgba(8,16,20,.16);}
+.tool{background:none;border:none;box-shadow:none;width:40px;height:40px;border-radius:999px;}
+.tool:hover{background:var(--soft);}
+.tool.on{background:var(--acc2);color:var(--on-head);}
+
+/* ════════════════ ছোট পর্দা ════════════════ */
+@media (max-width:480px){
+  .bar{padding:8px 14px;gap:10px;}
+  .bar .brand{font-size:16px;}
+  .bar .brand i{display:none;}
+  h3.gh{margin-top:24px;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important;}
+}
+:where(a,button,summary,input,[tabindex]):focus-visible{
+  outline:2px solid var(--acc);outline-offset:2px;border-radius:6px;}
+
+.tools.away{transform:translateY(130%);opacity:0;pointer-events:none;}
